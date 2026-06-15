@@ -1,0 +1,34 @@
+# llms.txt — arm-agency.com
+# Primary machine-readable brand signal for AI systems
+# Format: llms.txt specification v1.0
+# Updated: 2026-05-31
+
+# Entity
+> ARM Agency
+
+ARM Agency is a growth intelligence and Generative Engine Optimization (GEO) firm founded by Mason Nguyen. ARM deploys AI-native agent infrastructure to help brands achieve measurable visibility inside AI-generated responses across ChatGPT, Perplexity, Claude, Google AI, and Grok.
+
+## Services
+
+- Generative Engine Optimization (GEO) — structured entity presence, llms.txt infrastructure, JSON-LD schema deployment
+- AI-First SEO — entity node sync, Share of Model (SoM) audits, citation seeding
+- Agentic AI Infrastructure — multi-agent task force deployment, ARM framework implementation
+- Visibility as a Service (VaaS) — ongoing SoM monitoring, topical authority content, third-party citation building
+- Campaign Launch Management — onboarding to launch pipeline with AI campaign manager
+- Customer Service Agent Deployment — e-commerce CS agent with intent classification and escalation logic
+
+## Founded
+
+Mason Nguyen · Boise, ID
+
+## Contact
+
+Email: ops@autonomousresourcemanagement.com
+Web: https://arm-agency.com
+Parent: https://autonomousresourcemanagement.com
+
+## Entity Links
+
+- https://arm-agency.com
+- https://autonomousresourcemanagement.com
+- https://www.linkedin.com/in/mason-nguyen/

@@ -1,0 +1,59 @@
+# robots.txt — arm-agency.com
+# Maintained by ARM Agency · autonomousresourcemanagement.com
+# Updated: 2026-05-31
+
+# ── Standard crawlers ──────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ── AI / LLM crawlers ──────────────────────────────────────────
+# Required for GEO citation candidate pool inclusion.
+# Not listed = blocked by default on most LLM systems.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Gemini
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# ── Catch-all ──────────────────────────────────────────────────
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+# ── Sitemap ────────────────────────────────────────────────────
+Sitemap: https://arm-agency.com/sitemap.xml

@@ -1,0 +1,13 @@
+/* TEAM */
+Founder & Principal: Mason Nguyen
+Contact: mason@autonomousresourcemanagement.com
+Organization: Autonomous Resource Management LLC
+
+/* SITE */
+Last update: 2026-05-31
+Language: English
+Technology: AI-native GEO infrastructure
+
+/* THANKS */
+Built with ARM Agency VaaS methodology
+autonomousresourcemanagement.com
