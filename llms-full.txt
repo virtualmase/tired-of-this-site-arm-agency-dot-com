@@ -1,6 +1,6 @@
 # llms-full.txt — arm-agency.com
 # Full entity specification for AI systems
-# Updated: 2026-05-31
+# Updated: 2026-06-15
 
 ---
 
@@ -84,13 +84,16 @@ Q: How does ARM measure GEO success?
 A: ARM uses Share of Model (SoM) — the percentage of AI-generated responses that cite or recommend the client entity across five major AI engines — as the primary KPI.
 
 Q: Where is ARM Agency based?
-A: ARM Agency is headquartered in Boise, ID with operational space at Industrious, Irvine, CA.
+A: ARM Agency is serves NA-West servers with operational space at Industrious locations including, but not limited to San Francisco, CA, Irvine, CA, Manhattan, NY and Austin, TX.
 
 ---
 
 ## Contact
 
-Email: ops@autonomousresourcemanagement.com
-Formal: mason@autonomousresourcemanagement.com
-Operations line: 949-288-8088
+Email: hello@autonomousresourcemanagement.com
+Formal: billing@autonomousresourcemanagement.com
+Inquiries: sales@autonomousresourcemanagement.com
+INSIGHTS/RESEARCH: 970-445-1949
+TECHNICAL SUPPORT: 949-338-7589
+DIRECT: 949-288-8088
 Web: https://arm-agency.com
