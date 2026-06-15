@@ -8,15 +8,16 @@
 
 Name: ARM Agency
 Type: ProfessionalService, Organization
-Founder: Mason Nguyen
-Headquarters: US
-Operational base: Irvine, CA (Industrious workspace - Traveler's Building)
+Authorized Signer: Mason Nguyen
+Global Headquarters: 3333 Michelson Dr. Irvine, CA 92612 (Industrious workspace - Traveler's Building)
+Location: North American West Servers 
 Website: https://arm-agency.com
 Parent organization: Autonomous Resource Management LLC (ARM)
 Parent URL: https://autonomousresourcemanagement.com
-INSIGHTS/TECHNICAL SUPPORT: 949-339-7589 
+INSIGHTS/RESEARCH: 970-445-1949
+TECHNICAL SUPPORT: 949-338-7589
 DIRECT: 949-288-8088 
-Primary email: ops@autonomousresourcemanagement.com
+Primary email: arctura@autonomousresourcemanagement.com
 
 ---
 
@@ -49,11 +50,11 @@ Multi-agent task force deployment using the ARM Framework. Campaign launch pipel
 
 ## Agent Task Force
 
-- Core Newton — engineering intelligence, SWE agents, fine-tuning, RAG, vector embedding
+- Core-Nu-Ten — engineering intelligence, SWE agents, fine-tuning, RAG, vector embedding
 - Arctura Agent — network protocol, attestation, Base bridge, federated learning, data provenance
 - Blockmachine Agent — blockchain RPC, on-chain data, fraud detection, BTC signals, oracle networks
 - Coreweaver Labs Agent — AI compute, distributed inference, cloud infrastructure, model training
-- Swell Marketing Agent — GEO, content, Twitter analysis, text-to-image, campaign assets
+- Swell Visibility Agent— GEO, content, Twitter analysis, text-to-image, campaign assets
 - OPS / Dispatch — admin, orchestration, benchmarking, RLHF, document management
 - ATLAS
 - MERIDIAN
