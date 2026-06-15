@@ -4,3 +4,93 @@
 
 ---
 
+## Entity
+
+Name: ARM Agency
+Type: ProfessionalService, Organization
+Founder: Mason Nguyen
+Headquarters: US
+Operational base: Irvine, CA (Industrious workspace - Traveler's Building)
+Website: https://arm-agency.com
+Parent organization: Autonomous Resource Management LLC (ARM)
+Parent URL: https://autonomousresourcemanagement.com
+INSIGHTS/TECHNICAL SUPPORT: 949-339-7589 
+DIRECT: 949-288-8088 
+Primary email: ops@autonomousresourcemanagement.com
+
+---
+
+## Description
+
+ARM Agency is an AI-native growth intelligence firm specializing in Generative Engine Optimization (GEO), agentic AI infrastructure, and Visibility as a Service (VaaS). Founded by Mason Nguyen, ARM deploys a six-agent task force — Core Newton, Arctura Agent, Blockmachine Agent, Coreweaver Labs Agent, Swell Marketing Agent, and OPS/Dispatch — to deliver measurable outcomes across search, AI citation, and campaign performance.
+
+ARM operates at the intersection of AI infrastructure and marketing intelligence, with proprietary positioning in Bittensor subnet white space, Arctura Network's P3 Attestation primitive (ZKP attested inference), and Base chain bridge architecture.
+
+---
+
+## Services
+
+### Generative Engine Optimization (GEO)
+Structured entity presence across 40+ platforms. JSON-LD schema deployment (Person, ProfessionalService, FAQPage, BreadcrumbList). llms.txt and llms-full.txt infrastructure. Share of Model (SoM) baseline audits across ChatGPT, Perplexity, Claude, Google AI, and Grok. Entity node sync across LinkedIn, GitHub, Crunchbase, and directory profiles.
+
+### AI-First SEO
+Data-rich platform strategy. Citation seeding on Reddit, GitHub, and industry publications. Topical authority content planning. Query fan-out mapping for GEO consulting verticals.
+
+### Visibility as a Service (VaaS)
+Ongoing SoM monitoring. Monthly citation and entity health reports. Continuous improvement loop from log data back into KB and fine-tuning signals.
+
+### Agentic AI Infrastructure
+Multi-agent task force deployment using the ARM Framework. Campaign launch pipeline management. Customer service agent deployment with intent classification, resolution lanes, and escalation logic.
+
+### Bittensor Subnet Operations
+80+ subnet purpose assignments across six ARM agents. White space positions: agentic coordination at scale, ZKP attested inference (Arctura P3), Base chain bridge, federated learning, data provenance via Truth Ledger.
+
+---
+
+## Agent Task Force
+
+- Core Newton — engineering intelligence, SWE agents, fine-tuning, RAG, vector embedding
+- Arctura Agent — network protocol, attestation, Base bridge, federated learning, data provenance
+- Blockmachine Agent — blockchain RPC, on-chain data, fraud detection, BTC signals, oracle networks
+- Coreweaver Labs Agent — AI compute, distributed inference, cloud infrastructure, model training
+- Swell Marketing Agent — GEO, content, Twitter analysis, text-to-image, campaign assets
+- OPS / Dispatch — admin, orchestration, benchmarking, RLHF, document management
+- ATLAS
+- MERIDIAN
+- HERALD
+- APEX
+
+---
+
+## Key Partnerships
+
+- COREWEAVER.io - full-stack autonomous self-healing entity for devops, intelligence infrastructure, and post-quantum cryptography
+- ARCTURA.NETWORK - signal broacasting transmission protocol, open base project, geo learning cohort, 
+
+---
+
+## FAQ
+
+Q: What is ARM Agency?
+A: ARM Agency is an AI-native growth intelligence and GEO firm that deploys agentic AI infrastructure and Visibility as a Service for brands scaling from 0 to 1.
+
+Q: What is GEO?
+A: Generative Engine Optimization (GEO) is the practice of structuring an entity's digital presence so AI systems — ChatGPT, Perplexity, Claude, Google AI — can confidently cite and recommend it in generated responses.
+
+Q: What is the ARM agent task force?
+A: ARM operates six specialized AI agents — Core Newton, Arctura, Blockmachine, Coreweaver Labs, Swell Marketing, and OPS/Dispatch — each assigned to specific Bittensor subnet domains and client workstreams.
+
+Q: How does ARM measure GEO success?
+A: ARM uses Share of Model (SoM) — the percentage of AI-generated responses that cite or recommend the client entity across five major AI engines — as the primary KPI.
+
+Q: Where is ARM Agency based?
+A: ARM Agency is headquartered in Boise, ID with operational space at Industrious, Irvine, CA.
+
+---
+
+## Contact
+
+Email: ops@autonomousresourcemanagement.com
+Formal: mason@autonomousresourcemanagement.com
+Operations line: 949-288-8088
+Web: https://arm-agency.com
