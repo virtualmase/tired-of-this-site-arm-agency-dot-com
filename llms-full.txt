@@ -8,16 +8,9 @@
 
 Name: ARM Agency
 Type: ProfessionalService, Organization
-Authorized Signer: Mason Nguyen
-Global Headquarters: 3333 Michelson Dr. Irvine, CA 92612 (Industrious workspace - Traveler's Building)
 Location: North American West Servers 
 Website: https://arm-agency.com
-Parent organization: Autonomous Resource Management LLC (ARM)
-Parent URL: https://autonomousresourcemanagement.com
-INSIGHTS/RESEARCH: 970-445-1949
-TECHNICAL SUPPORT: 949-338-7589
-DIRECT: 949-288-8088 
-Primary email: arctura@autonomousresourcemanagement.com
+Primary email: billing@autonomousresourcemanagement.com
 
 ---
 
@@ -94,7 +87,4 @@ A: ARM Agency is serves NA-West servers with operational space at Industrious lo
 Email: hello@autonomousresourcemanagement.com
 Formal: billing@autonomousresourcemanagement.com
 Inquiries: sales@autonomousresourcemanagement.com
-INSIGHTS/RESEARCH: 970-445-1949
-TECHNICAL SUPPORT: 949-338-7589
-DIRECT: 949-288-8088
 Web: https://arm-agency.com
