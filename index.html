@@ -784,7 +784,49 @@
       border: none; cursor: pointer;
       transition: background 0.2s, transform 0.15s;
     }
-    .form-submit:hover { background: #00ffb3; transform: translateY(-1px); }
+    .form-submit:hover:not(:disabled) { background: #00ffb3; transform: translateY(-1px); }
+    .form-submit:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+    .form-submit.loading { background: var(--green-dim); }
+
+    /* Form states */
+    .form-success {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center;
+      padding: 3rem 2rem; min-height: 280px;
+    }
+    .form-success-icon {
+      width: 44px; height: 44px; border-radius: 50%;
+      border: 1.5px solid var(--green);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem; color: var(--green);
+      font-size: 1.1rem;
+    }
+    .form-success-hed {
+      font-family: var(--display); font-size: 1.4rem;
+      letter-spacing: 0.04em; color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .form-success-sub {
+      font-family: var(--mono); font-size: 0.72rem;
+      color: var(--muted); line-height: 1.7;
+    }
+    .form-error-msg {
+      font-family: var(--mono); font-size: 0.7rem;
+      color: #ff7070; padding: 0.75rem 0.875rem;
+      border: 1px solid rgba(255,112,112,0.3);
+      background: rgba(255,112,112,0.06);
+      margin-bottom: 1rem; display: none;
+    }
+    .form-error-msg.visible { display: block; }
+    .form-field-error {
+      font-family: var(--mono); font-size: 0.6rem;
+      color: #ff7070; letter-spacing: 0.06em;
+      margin-top: 0.3rem; display: none;
+    }
+    .form-field-error.visible { display: block; }
+    .form-group input.invalid,
+    .form-group select.invalid,
+    .form-group textarea.invalid { border-color: rgba(255,112,112,0.5); }
 
     /* ══════════════════════════════════
        FOOTER
@@ -1211,13 +1253,29 @@
       </div>
 
       <div class="enter d1">
-        <form class="brief-form" action="mailto:mason@autonomousresourcemanagement.com" method="get" enctype="text/plain" aria-label="Mandate activation form">
+        <!-- ─────────────────────────────────────────────────────────────
+             TODO: Replace FORMSPREE_ID below with your actual form ID.
+             1. Go to formspree.io → New Form
+             2. Verify your email address
+             3. Copy the ID (e.g. "xrgjlpqn") and paste it below
+             Full endpoint: https://formspree.io/f/mpqeeweq
+        ───────────────────────────────────────────────────────────────── -->
+        <form class="brief-form" id="mandate-form" novalidate aria-label="Mandate activation form">
           <div class="brief-form-header">
             ARM-BRIEF · MANDATE REQUEST FORM
           </div>
+          <div class="form-error-msg" id="form-error" role="alert">
+            Transmission error — please try again or email mason@autonomousresourcemanagement.com directly.
+          </div>
           <div class="form-group">
-            <label for="bf-name">YOUR NAME</label>
-            <input type="text" id="bf-name" name="name" placeholder="Full name" autocomplete="name">
+            <label for="bf-name">YOUR NAME <span style="color:#ff7070">*</span></label>
+            <input type="text" id="bf-name" name="name" placeholder="Full name" autocomplete="name" required>
+            <div class="form-field-error" id="err-name">Name is required.</div>
+          </div>
+          <div class="form-group">
+            <label for="bf-email">YOUR EMAIL <span style="color:#ff7070">*</span></label>
+            <input type="email" id="bf-email" name="email" placeholder="you@yourdomain.com" autocomplete="email" required>
+            <div class="form-field-error" id="err-email">A valid email address is required.</div>
           </div>
           <div class="form-group">
             <label for="bf-entity">ENTITY / COMPANY</label>
@@ -1248,7 +1306,7 @@
             <label for="bf-context">CONTEXT <span style="font-size:0.55rem; opacity:0.5;">(optional)</span></label>
             <textarea id="bf-context" name="context" placeholder="Brief context on your entity, current visibility, or goals..."></textarea>
           </div>
-          <button type="submit" class="form-submit">SUBMIT MANDATE REQUEST →</button>
+          <button type="submit" class="form-submit" id="form-submit-btn">SUBMIT MANDATE REQUEST →</button>
         </form>
       </div>
     </div>
@@ -1325,6 +1383,105 @@
     // Hero fires immediately
     document.querySelectorAll('#hero .enter, #position .enter').forEach(el => {
       setTimeout(() => el.classList.add('live'), 60);
+    });
+
+    // ── Form handler ──
+    // TODO: Replace YOUR_FORMSPREE_ID with your actual Formspree form ID.
+    //   1. Go to formspree.io → New Form
+    //   2. Verify your email  
+    //   3. Paste the ID here (e.g. 'xrgjlpqn')
+    const FORMSPREE_ID = 'YOUR_FORMSPREE_ID';
+    const FORMSPREE_ENDPOINT = `https://formspree.io/f/${FORMSPREE_ID}`;
+
+    const mandateForm = document.getElementById('mandate-form');
+    const submitBtn   = document.getElementById('form-submit-btn');
+    const formError   = document.getElementById('form-error');
+
+    function setFieldError(fieldId, errId, show) {
+      const field = document.getElementById(fieldId);
+      const err   = document.getElementById(errId);
+      if (show) { field.classList.add('invalid'); err.classList.add('visible'); }
+      else       { field.classList.remove('invalid'); err.classList.remove('visible'); }
+    }
+
+    function validateForm() {
+      let valid = true;
+      const name  = document.getElementById('bf-name').value.trim();
+      const email = document.getElementById('bf-email').value.trim();
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      setFieldError('bf-name',  'err-name',  !name);
+      setFieldError('bf-email', 'err-email', !email || !emailRe.test(email));
+
+      if (!name)                        valid = false;
+      if (!email || !emailRe.test(email)) valid = false;
+      return valid;
+    }
+
+    mandateForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formError.classList.remove('visible');
+
+      if (!validateForm()) return;
+
+      // ── Check Formspree ID is configured ──
+      if (FORMSPREE_ID === 'YOUR_FORMSPREE_ID') {
+        // Fallback: open mailto with prefilled subject when Formspree isn't set up yet
+        const name     = document.getElementById('bf-name').value.trim();
+        const email    = document.getElementById('bf-email').value.trim();
+        const entity   = document.getElementById('bf-entity').value.trim();
+        const mandate  = document.getElementById('bf-mandate').value;
+        const context  = document.getElementById('bf-context').value.trim();
+        const subject  = encodeURIComponent(`ARM Mandate Request — ${entity || name}`);
+        const body     = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\nEntity: ${entity}\nTier: ${mandate}\n\n${context}`
+        );
+        window.location.href = `mailto:mason@autonomousresourcemanagement.com?subject=${subject}&body=${body}`;
+        return;
+      }
+
+      // ── Formspree submission ──
+      submitBtn.textContent = 'TRANSMITTING...';
+      submitBtn.disabled = true;
+      submitBtn.classList.add('loading');
+
+      try {
+        const res = await fetch(FORMSPREE_ENDPOINT, {
+          method:  'POST',
+          headers: { 'Accept': 'application/json' },
+          body:    new FormData(mandateForm)
+        });
+
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+        // Success — replace form contents
+        mandateForm.innerHTML = `
+          <div class="form-success" role="status" aria-live="polite">
+            <div class="form-success-icon" aria-hidden="true">✓</div>
+            <div class="form-success-hed">MANDATE RECEIVED</div>
+            <div class="form-success-sub">
+              We'll audit your entity signal presence<br>
+              and return a recommendation within 48 hours.<br><br>
+              <span style="color:var(--green);opacity:0.6;">
+                mason@autonomousresourcemanagement.com
+              </span>
+            </div>
+          </div>`;
+      } catch (err) {
+        submitBtn.textContent = 'SUBMIT MANDATE REQUEST →';
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('loading');
+        formError.classList.add('visible');
+        console.error('Form submission error:', err);
+      }
+    });
+
+    // Clear field errors on input
+    ['bf-name', 'bf-email'].forEach(id => {
+      document.getElementById(id)?.addEventListener('input', () => {
+        document.getElementById(id).classList.remove('invalid');
+        document.getElementById('err-' + id.replace('bf-', '')).classList.remove('visible');
+      });
     });
   </script>
 
