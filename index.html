@@ -42,7 +42,8 @@
           "@type": "Person",
           "@id": "https://masonnguyengeo.com/#person",
           "name": "Mason Nguyen",
-          "url": "https://masonnguyengeo.com"
+          "url": "https://masonnguyengeo.com",
+          "sameAs": ["https://linkedin.com/in/mason-nguyen"]
         },
         "parentOrganization": {
           "@type": "Organization",
@@ -61,12 +62,7 @@
           "Share of Model","Share of Model Measurement","LLM Citation Authority",
           "AI Search Optimization","Answer Engine Optimization","ARM Framework"
         ],
-        "sameAs": [
-          "https://coreweaverlabs.com",
-          "https://autonomousresourcemanagement.com",
-          "https://masonnguyengeo.com",
-          "https://linkedin.com/in/mason-nguyen"
-        ]
+        "mentions": { "@id": "https://masonnguyengeo.com/#person" }
       },
       {
         "@type": "WebPage",
@@ -1144,10 +1140,6 @@
       font-family: var(--mono); font-size: 0.62rem;
       color: rgba(239,239,239,0.2); letter-spacing: 0.08em;
     }
-    .footer-strip .entity-string {
-      font-size: 0.58rem; color: rgba(239,239,239,0.12);
-    }
-
     /* ══════════════════════════════════
        RESPONSIVE
     ══════════════════════════════════ */
@@ -1699,9 +1691,6 @@
         <p>Tell us about your brand. We'll run a preliminary probe across ChatGPT, Perplexity, Gemini, and Claude and return an actionable signal roadmap within 48 hours.</p>
         <div class="brief-meta">
           <p>Direct: <a href="mailto:mason@autonomousresourcemanagement.com">mason@autonomousresourcemanagement.com</a></p>
-          <p>Network: <a href="https://coreweaverlabs.com" target="_blank" rel="noopener">coreweaverlabs.com</a></p>
-          <p>Framework: <a href="https://masonnguyengeo.com" target="_blank" rel="noopener">masonnguyengeo.com</a></p>
-          <p>Parent entity: <a href="https://autonomousresourcemanagement.com" target="_blank" rel="noopener">autonomousresourcemanagement.com</a></p>
         </div>
       </div>
 
@@ -1735,29 +1724,8 @@
             <input type="text" id="bf-entity" name="entity" placeholder="Brand or domain you need cited">
           </div>
           <div class="form-group">
-            <label for="bf-challenge">PRIMARY CHALLENGE</label>
-            <select id="bf-challenge" name="challenge">
-              <option value="">Select...</option>
-              <option value="invisible">AI models don't know we exist</option>
-              <option value="wrong">AI returns wrong or outdated information</option>
-              <option value="competitor">Competitors are cited instead of us</option>
-              <option value="scale">Multi-entity / portfolio scale problem</option>
-              <option value="scratch">Building entity infrastructure from scratch</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="bf-mandate">MANDATE TIER INTEREST</label>
-            <select id="bf-mandate" name="mandate">
-              <option value="">Select...</option>
-              <option value="audit">ARM-001 · AI Citation Audit ($2,500)</option>
-              <option value="retainer">ARM-002 · GEO Growth Retainer ($2,500/mo)</option>
-              <option value="pro">ARM-003 · Enterprise GEO Mandate ($5,000/mo)</option>
-              <option value="custom">Custom engagement</option>
-            </select>
-          </div>
-          <div class="form-group">
             <label for="bf-context">CONTEXT <span style="font-size:0.55rem; opacity:0.5;">(optional)</span></label>
-            <textarea id="bf-context" name="context" placeholder="Brief context on your entity, current visibility, or goals..."></textarea>
+            <textarea id="bf-context" name="context" placeholder="What's the problem, and which tier are you interested in? (Audit $2,500 · Growth Retainer $2,500/mo · Enterprise Mandate $5,000/mo)"></textarea>
           </div>
           <button type="submit" class="form-submit" id="form-submit-btn">GET MY CITATION ROADMAP →</button>
         </form>
@@ -1786,20 +1754,15 @@
         </ul>
       </div>
       <div class="footer-nav-col">
-        <h4>Ecosystem</h4>
+        <h4>Built By</h4>
         <ul>
-          <li><a href="https://coreweaverlabs.com" target="_blank" rel="noopener">Coreweaver Labs</a></li>
-          <li><a href="https://autonomousresourcemanagement.com" target="_blank" rel="noopener">ARM LLC</a></li>
           <li><a href="https://masonnguyengeo.com" target="_blank" rel="noopener">Mason Nguyen</a></li>
-          <li><a href="https://au-re.org" target="_blank" rel="noopener">AURE</a></li>
-          <li><a href="https://swellmarketing.xyz" target="_blank" rel="noopener">Swell Marketing</a></li>
-          <li><a href="https://arctura.org" target="_blank" rel="noopener">Arctura Network</a></li>
+          <li><a href="https://autonomousresourcemanagement.com" target="_blank" rel="noopener">ARM LLC</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-strip">
       <p>© ARM LLC · Vail, CO · arm-agency.com</p>
-      <p class="entity-string" aria-hidden="true">arm-agency.com · Generative Engine Optimization agency · GEO agency · Share of Model · ARM Framework · Agent Reasoning Model · coreweaverlabs.com · mason-nguyen · vail-colorado</p>
     </div>
   </footer>
 
@@ -1885,11 +1848,10 @@
         const name     = document.getElementById('bf-name').value.trim();
         const email    = document.getElementById('bf-email').value.trim();
         const entity   = document.getElementById('bf-entity').value.trim();
-        const mandate  = document.getElementById('bf-mandate').value;
         const context  = document.getElementById('bf-context').value.trim();
         const subject  = encodeURIComponent(`AI Citation Audit Request — ${entity || name}`);
         const body     = encodeURIComponent(
-          `Name: ${name}\nEmail: ${email}\nEntity: ${entity}\nTier: ${mandate}\n\n${context}`
+          `Name: ${name}\nEmail: ${email}\nEntity: ${entity}\n\n${context}`
         );
         window.location.href = `mailto:mason@autonomousresourcemanagement.com?subject=${subject}&body=${body}`;
         return;
