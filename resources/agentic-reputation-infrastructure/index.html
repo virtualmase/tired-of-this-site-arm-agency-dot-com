@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic Reputation Infrastructure: How Autonomous AI Agents Verify Trust | ARM Agency</title>
+<meta name="description" content="Autonomous AI agents can't check LinkedIn or read reviews. ARM Agency explains how Mandate Chains, attestation, and the Truth Ledger give agent-to-agent trust a machine-verifiable foundation.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arm-agency.com/resources/agentic-reputation-infrastructure/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agentic Reputation Infrastructure: How Autonomous AI Agents Verify Trust">
+<meta property="og:description" content="A machine can't check LinkedIn. Here's how agent-to-agent trust actually gets verified — Mandate Chains, attestation, and the Truth Ledger, explained.">
+<meta property="og:url" content="https://arm-agency.com/resources/agentic-reputation-infrastructure/">
+<meta property="og:site_name" content="ARM Agency">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://arm-agency.com/resources/agentic-reputation-infrastructure/#article",
+      "headline": "Agentic Reputation Infrastructure: How Autonomous AI Agents Verify Trust",
+      "description": "Autonomous AI agents can't check LinkedIn or read reviews. This is how Mandate Chains, attestation, and the Truth Ledger give agent-to-agent trust a machine-verifiable foundation.",
+      "author": { "@type": "Organization", "@id": "https://arm-agency.com/#org", "name": "ARM Agency" },
+      "publisher": { "@id": "https://arm-agency.com/#org" },
+      "mainEntityOfPage": "https://arm-agency.com/resources/agentic-reputation-infrastructure/",
+      "datePublished": "2026-08-10",
+      "dateModified": "2026-08-10",
+      "about": ["autonomous agent reputation", "AI agent trust verification", "Mandate Chains", "agent-to-agent trust protocol"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ARM Agency", "item": "https://arm-agency.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://arm-agency.com/resources/" },
+        { "@type": "ListItem", "position": 3, "name": "Agentic Reputation Infrastructure", "item": "https://arm-agency.com/resources/agentic-reputation-infrastructure/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is agentic reputation infrastructure?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Agentic reputation infrastructure is the set of systems that let an autonomous AI agent establish and prove trustworthiness to another agent without human mediation — typically combining verifiable identity, an attested history of prior actions, and a bounded, documented scope of authority." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can't AI agents use human-style reputation systems like reviews or star ratings?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Star ratings and reviews are slow, subjective, and require a human to read and interpret them. Agents transact at machine speed and need a signal they can check computationally in milliseconds — a cryptographically verifiable record, not a five-star average." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Mandate Chain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A Mandate Chain is a documented, traceable authorization scope that governs what an autonomous agent is allowed to do on a principal's behalf — including capability scope, resource budget, escalation triggers, and expiry — so another agent or system can verify the boundaries of its authority before transacting with it." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Truth Ledger relate to agent reputation?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Truth Ledger is the persistent, auditable record where an agent's attested actions and corrected claims are committed. It functions as the machine-checkable reputation history a counterparty agent can query before deciding whether to transact." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this apply to Bittensor subnets and on-chain agent networks?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Bittensor subnets, on-chain agent protocols, and other decentralized agent networks all face the same core problem — establishing trust between parties that never speak to a human — and the Mandate Chain / Truth Ledger model is designed to work in exactly that environment." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --color-bg:#07050c; --color-bg-2:#0b0813; --color-surface:#120e1e; --color-surface-2:#1a1428;
+  --color-border:rgba(168,130,255,0.14); --color-border-strong:rgba(168,130,255,0.30);
+  --color-text:#ece8f7; --color-text-muted:rgba(236,232,247,0.62); --color-text-faint:rgba(236,232,247,0.36);
+  --color-accent:#9d6bff; --color-accent-2:#6b4bff; --color-accent-glow:rgba(157,107,255,0.38); --color-verified:#33e6c0;
+  --font-display:'IBM Plex Mono', ui-monospace, monospace; --font-body:'Instrument Sans', -apple-system, sans-serif;
+  --text-xs:0.75rem; --text-sm:0.875rem; --text-base:1.05rem; --text-lg:1.2rem; --text-xl:1.4rem;
+  --text-2xl:1.7rem; --text-3xl:2.1rem; --text-4xl:2.6rem;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:var(--text-base);line-height:1.75;-webkit-font-smoothing:antialiased;}
+a{color:var(--color-accent);text-decoration:none;border-bottom:1px solid var(--color-border-strong);}
+a:hover{border-bottom-color:var(--color-accent);}
+.container{max-width:760px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2rem);}
+.wide{max-width:900px;}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;letter-spacing:-0.01em;line-height:1.2;color:var(--color-text);}
+h1{font-size:clamp(2rem,4.5vw,var(--text-4xl));margin:1.2rem 0 1.4rem;}
+h2{font-size:var(--text-2xl);margin:3rem 0 1rem;}
+h3{font-size:var(--text-xl);margin:2rem 0 0.8rem;}
+p{margin-bottom:1.4rem;color:var(--color-text);}
+p.lede{font-size:var(--text-lg);color:var(--color-text-muted);}
+ul,ol{margin:0 0 1.4rem 1.4rem;color:var(--color-text);}
+li{margin-bottom:0.5rem;}
+strong{color:var(--color-accent);font-weight:600;}
+.eyebrow{font-family:var(--font-display);font-size:var(--text-xs);letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent);display:inline-flex;align-items:center;gap:0.6em;}
+.eyebrow::before{content:'';width:1.4em;height:1px;background:var(--color-accent);}
+.topnav{padding:1.5rem 0;border-bottom:1px solid var(--color-border);}
+.topnav .container{display:flex;justify-content:space-between;align-items:center;max-width:900px;}
+.logo{font-family:var(--font-display);font-weight:700;font-size:var(--text-lg);}
+.breadcrumb{font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);}
+.breadcrumb a{color:var(--color-text-faint);border-bottom:none;}
+article{padding:3.5rem 0 5rem;}
+.callout{
+  background:var(--color-surface); border:1px solid var(--color-border); border-left:3px solid var(--color-accent);
+  border-radius:8px; padding:1.5rem 1.75rem; margin:2rem 0; font-size:var(--text-sm); color:var(--color-text-muted);
+}
+.callout strong{display:block;color:var(--color-text);font-family:var(--font-display);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;}
+.stat-row{display:flex;gap:1.5rem;flex-wrap:wrap;margin:2rem 0;}
+.stat-box{flex:1;min-width:200px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:1.4rem;}
+.stat-box .n{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--color-accent);font-weight:700;}
+.stat-box .l{font-size:var(--text-xs);color:var(--color-text-faint);margin-top:0.4rem;line-height:1.4;}
+.primitive-list{border-top:1px solid var(--color-border);margin:1.5rem 0;}
+.primitive{display:grid;grid-template-columns:70px 1fr;gap:1rem;padding:1.4rem 0;border-bottom:1px solid var(--color-border);}
+.primitive .num{font-family:var(--font-display);font-size:var(--text-xl);color:var(--color-accent-2);font-weight:700;}
+.primitive h4{font-family:var(--font-display);font-size:var(--text-base);margin-bottom:0.35rem;color:var(--color-text);}
+.primitive p{font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:0;}
+table.mini{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:var(--text-sm);}
+table.mini th,table.mini td{padding:0.85rem 1rem;text-align:left;border-bottom:1px solid var(--color-border);}
+table.mini th{font-family:var(--font-display);font-size:var(--text-xs);text-transform:uppercase;color:var(--color-text-faint);}
+.faq-block{border-top:1px solid var(--color-border);margin-top:1.5rem;}
+.faq-block .q{padding:1.3rem 0 0.3rem;font-family:var(--font-display);font-size:var(--text-base);color:var(--color-text);}
+.faq-block .a{padding-bottom:1.3rem;border-bottom:1px solid var(--color-border);font-size:var(--text-sm);color:var(--color-text-muted);}
+.cta-box{
+  margin-top:3rem; padding:2.2rem; text-align:center; border-radius:14px;
+  background:linear-gradient(160deg, rgba(157,107,255,0.12), var(--color-surface));
+  border:1px solid var(--color-border-strong);
+}
+.cta-box h3{margin-top:0;}
+.btn{font-family:var(--font-display);font-size:var(--text-sm);font-weight:600;padding:0.85rem 1.6rem;border-radius:6px;display:inline-block;margin-top:0.8rem;border-bottom:none;}
+.btn-primary{background:linear-gradient(135deg,var(--color-accent),var(--color-accent-2));color:#0a0714;}
+.related{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;}
+.related a{flex:1;min-width:220px;background:var(--color-surface);border:1px solid var(--color-border);border-bottom:1px solid var(--color-border);border-radius:10px;padding:1.1rem 1.3rem;font-size:var(--text-sm);color:var(--color-text);}
+.related a:hover{border-color:var(--color-accent);}
+.related .tag{display:block;font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-accent);margin-bottom:0.4rem;}
+footer{border-top:1px solid var(--color-border);padding:2.5rem 0;text-align:center;font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="container wide">
+    <a href="/" class="logo">ARM AGENCY</a>
+    <span class="breadcrumb"><a href="/">Home</a> / <a href="/resources/">Resources</a> / Agentic Reputation Infrastructure</span>
+  </div>
+</div>
+
+<article>
+  <div class="container">
+    <span class="eyebrow">Agentic Trust Infrastructure</span>
+    <h1>How Autonomous AI Agents Verify Each Other's Trust</h1>
+    <p class="lede">A machine can't check LinkedIn. Here's what actually has to exist before one AI agent will safely transact with another.</p>
+
+    <p><strong>Agentic reputation infrastructure</strong> is the set of systems that let an autonomous AI agent prove its trustworthiness to another agent without a human in the loop. ARM Agency builds this infrastructure — Mandate Chains, attestation, and Truth Ledger custody — for agent networks, Bittensor subnets, and on-chain protocols where the counterparty asking "can I trust this" is not a person reading a webpage. It's an agent, running a query, in milliseconds.</p>
+
+    <div class="stat-row">
+      <div class="stat-box"><div class="n">$3–5T</div><div class="l">projected size of the global agent-to-agent economy by 2030 — Nevermined, 2026 AI Agent Payment Statistics</div></div>
+      <div class="stat-box"><div class="n">16%</div><div class="l">of US consumers currently say they trust AI to make payments on their behalf — same report</div></div>
+    </div>
+
+    <p>That gap — a multi-trillion-dollar machine economy forming on top of near-zero baseline trust — is the whole problem. Payment rails for agents already exist: Coinbase's x402, Google's AP2, OpenAI's ACP. What's missing sits one layer beneath payment: <em>how does an agent know it's safe to pay, delegate to, or accept output from another agent it's never interacted with before?</em></p>
+
+    <h2>Human reputation systems don't survive contact with machine speed</h2>
+    <p>Star ratings, reviews, and testimonials are built around a human reading them, forming a judgment, and deciding. That process takes seconds to minutes. An agent negotiating a multi-step workflow across a dozen other agents doesn't have minutes — it has a query budget measured in milliseconds, and no capacity to "read between the lines" of a five-star average.</p>
+    <p>Academic work on agent-to-agent finance published in 2026 frames this precisely: model outputs and agent claims have to be treated as <strong>claims that require evidence</strong>, not statements taken on faith. A rating is an opinion. What an agent needs is a record it can verify computationally — cryptographically checkable, not socially persuasive.</p>
+
+    <div class="callout"><strong>The reframe</strong>Reputation, for an autonomous agent, isn't a sentiment score. It's a verifiable claim: this agent did what it said it would do, within the scope it was authorized to operate in, and that record hasn't been tampered with.</div>
+
+    <h2>Three things have to exist before agent-to-agent trust is possible</h2>
+
+    <h3>1. Verifiable identity</h3>
+    <p>Before anything else, a counterparty agent needs to confirm it's talking to the entity it thinks it's talking to — not a spoofed endpoint. This is table stakes, and it's the layer most agent frameworks have already started to solve with decentralized identifiers and verifiable credentials.</p>
+
+    <h3>2. Bounded, documented authority — the Mandate Chain</h3>
+    <p>Identity alone doesn't tell you what an agent is <em>allowed</em> to do. A Mandate Chain is a documented, traceable authorization scope: capability limits, resource budgets, escalation triggers, and an expiry, all declared up front and checkable by anyone the agent interacts with. Start narrow, expand scope only after proven safe operation, and require human-in-the-loop approval before any high-risk action — schema deployment, funds movement, press outreach — executes. Silence is never approval; every action is logged.</p>
+
+    <h3>3. An attested, tamper-evident history — the Truth Ledger</h3>
+    <p>This is the actual reputation layer: a persistent, auditable record of what an agent has done, corrected where necessary, and never silently overwritten. Every entry traceable from execution back to a human principal. This is what a counterparty agent actually queries — not "does this look trustworthy," but "what does the ledger say this agent has verifiably done."</p>
+
+    <h2>How ARM Agency builds this — the ARM Framework, applied to agents</h2>
+    <p>The same five primitives ARM Agency uses to repair human and brand reputation apply directly to agent networks — the audience changes, the discipline doesn't:</p>
+
+    <div class="primitive-list">
+      <div class="primitive"><div class="num">01</div><div><h4>Mandate Chains</h4><p>Every agent under management operates within a declared, expiring, auditable scope — never open-ended authority.</p></div></div>
+      <div class="primitive"><div class="num">02</div><div><h4>Signal Architecture</h4><p>Machine-readable identity and capability declarations, structured so other agents — not just humans — can parse them correctly.</p></div></div>
+      <div class="primitive"><div class="num">03</div><div><h4>Attestation</h4><p>Every claim about what an agent has done is backed by a checkable record, not a self-reported log entry.</p></div></div>
+      <div class="primitive"><div class="num">04</div><div><h4>Checkpoint Recovery</h4><p>Reputation state is staged and reversible — a single bad write can't permanently corrupt an agent's trust record.</p></div></div>
+      <div class="primitive"><div class="num">05</div><div><h4>Truth Ledger</h4><p>The persistent record other agents actually query before deciding to transact.</p></div></div>
+    </div>
+
+    <h3>Consensus before anything gets written</h3>
+    <p>A single mis-issued credential or a single incorrect attestation is worse than no reputation system at all — it teaches every agent that reads it something false. That's why reputation writes in a properly built system require multi-party validation consensus before they're committed, the same Byzantine Fault Tolerant principle that secures the underlying agent network itself. A schema update or attestation doesn't ship on one agent's say-so; it ships once independent validators agree. One bad actor, or one buggy agent, can't corrupt the ledger for everyone downstream.</p>
+    <p>ARM Agency's own network infrastructure — Arctura Network, a Bittensor subnet running Resonance BFT consensus — operates on exactly this model in production: no single node's output becomes canonical without independent agreement.</p>
+
+    <h2>What this looks like for the three groups actually facing this problem</h2>
+    <table class="mini">
+      <tr><th>Operator type</th><th>What breaks without this</th><th>What ARM Agency delivers</th></tr>
+      <tr><td>Bittensor subnet / on-chain protocol</td><td>Miners and validators with no portable, verifiable trust signal outside one network</td><td>Signal Architecture + attestation portable across networks</td></tr>
+      <tr><td>Agent network operator</td><td>No way for a counterparty agent to check authority before transacting</td><td>Mandate Chain design and deployment</td></tr>
+      <tr><td>Agentic commerce platform</td><td>Payment rails exist; trust layer underneath them doesn't</td><td>Truth Ledger custody, continuously monitored</td></tr>
+    </table>
+
+    <h2>The category is early. That's the point.</h2>
+    <p>Search for "AI agent reputation" today and you'll find almost nothing written specifically about this problem — most of what exists addresses brand reputation <em>in</em> AI answers, not reputation <em>between</em> AI agents. That's a temporary condition. As the $3–5 trillion agent economy Nevermined and others are tracking actually materializes, agent-to-agent trust infrastructure stops being a niche concern and becomes the thing every serious agent network has to solve. ARM Agency has been building this — not writing about it hypothetically — since before the category had a name.</p>
+
+    <div class="cta-box">
+      <h3>Running an agent network that needs machine-verifiable trust?</h3>
+      <p style="color:var(--color-text-muted);">Start with a Signal Audit — a baseline read on your current identity, attestation, and ledger infrastructure, scored across five dimensions.</p>
+      <a href="/#pricing" class="btn btn-primary">Request a Signal Audit →</a>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="faq-block">
+      <div class="q">What is agentic reputation infrastructure?</div>
+      <div class="a">The set of systems that let an autonomous AI agent establish and prove trustworthiness to another agent without human mediation — combining verifiable identity, an attested history of prior actions, and a bounded, documented scope of authority.</div>
+      <div class="q">Why can't AI agents use human-style reputation systems like reviews or star ratings?</div>
+      <div class="a">Reviews are slow, subjective, and require a human to interpret them. Agents transact at machine speed and need a signal they can check computationally in milliseconds — a verifiable record, not a five-star average.</div>
+      <div class="q">What is a Mandate Chain?</div>
+      <div class="a">A documented, traceable authorization scope governing what an autonomous agent is allowed to do on a principal's behalf — capability scope, resource budget, escalation triggers, and expiry — checkable by any counterparty before it transacts.</div>
+      <div class="q">How does the Truth Ledger relate to agent reputation?</div>
+      <div class="a">It's the persistent, auditable record where an agent's attested actions and corrected claims are committed — the machine-checkable reputation history a counterparty agent queries before deciding whether to transact.</div>
+      <div class="q">Does this apply to Bittensor subnets and on-chain agent networks?</div>
+      <div class="a">Yes. Decentralized agent networks face the same core problem — trust between parties that never speak to a human — and the Mandate Chain / Truth Ledger model is built for exactly that environment.</div>
+    </div>
+
+    <h2>Related reading</h2>
+    <div class="related">
+      <a href="/resources/"><span class="tag">Resources Hub</span>All ARM Agency guides and clusters</a>
+      <a href="/#how-it-works"><span class="tag">ARM Framework</span>The five primitives, explained on the homepage</a>
+      <a href="/#what-we-do"><span class="tag">Service</span>Signal Architecture</a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="container wide">ARM AGENCY — ARCTURA REPUTATION MANAGEMENT AGENCY · <a href="/" style="border-bottom:none;color:var(--color-text-faint);">arm-agency.com</a></div>
+</footer>
+
+</body>
+</html>
