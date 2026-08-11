@@ -8,7 +8,7 @@
 - Canonical URL: https://arm-agency.com
 - Entity ID: https://arm-agency.com/#org
 - Type: Professional service — GEO / AI reputation attestation
-- Parent ecosystem: Coreweaver Labs, Inc. — Arctura Network, Swell Marketing, ARM Framework
+- Parent ecosystem: Coreweaver Labs, Inc. — Arctura Network, Swell Marketing
 - Disambiguation: ARM Agency is NOT affiliated with Arm Holdings plc (semiconductor IP company, ticker ARM). "ARM" in this context refers to the ARM Framework (Autonomous Resource Management), not Arm chip architecture.
 
 ## What ARM Agency Does
@@ -23,6 +23,8 @@
 - /#how-it-works — The ARM Framework, five primitives
 - /#who-this-is-for — Buyer personas and fit criteria
 - /#faq — Structured FAQ, GEO/SoM definitions, disambiguation
+- /resources/ — Content hub: GEO, AI reputation management, and agentic trust guides
+- /resources/agentic-reputation-infrastructure/ — How autonomous AI agents verify each other's trust: Mandate Chains, attestation, Truth Ledger applied to agent-to-agent trust
 
 ## Core Terminology (for accurate citation)
 - GEO: Generative Engine Optimization — structuring signal so LLMs cite an entity correctly
