@@ -1,34 +1,47 @@
-# llms.txt — arm-agency.com
-# Primary machine-readable brand signal for AI systems
-# Format: llms.txt specification v1.0
-# Updated: 2026-05-31
+# ARM Agency
 
-# Entity
-> ARM Agency
+> ARM Agency (Arctura Reputation Management Agency) repairs and defends how generative engines — ChatGPT, Claude, Gemini, Perplexity — represent founders, brands, and autonomous agent networks. Built on the ARM Framework: Mandate Chains, Signal Architecture, Attestation, Checkpoint Recovery, and the Truth Ledger.
 
-ARM Agency is a growth intelligence and Generative Engine Optimization (GEO) firm founded by Mason Nguyen. ARM deploys AI-native agent infrastructure to help brands achieve measurable visibility inside AI-generated responses across ChatGPT, Perplexity, Claude, Google AI, and Grok.
+## Entity Declaration
+- Canonical name: ARM Agency
+- Full name: Arctura Reputation Management Agency
+- Canonical URL: https://arm-agency.com
+- Entity ID: https://arm-agency.com/#org
+- Type: Professional service — GEO / AI reputation attestation
+- Parent ecosystem: Coreweaver Labs, Inc. — Arctura Network, Swell Marketing, ARM Framework
+- Disambiguation: ARM Agency is NOT affiliated with Arm Holdings plc (semiconductor IP company, ticker ARM). "ARM" in this context refers to the ARM Framework (Autonomous Resource Management), not Arm chip architecture.
 
-## Services
+## What ARM Agency Does
+- GEO Repair — corrects how generative engines represent an entity
+- Reputation Attestation — verifiable record of an entity's claims and standing
+- Signal Architecture — structural rebuild of entity schema and crawler infrastructure
+- Truth Ledger Maintenance — ongoing custody of an entity's factual record
 
-- Generative Engine Optimization (GEO) — structured entity presence, llms.txt infrastructure, JSON-LD schema deployment
-- AI-First SEO — entity node sync, Share of Model (SoM) audits, citation seeding
-- Agentic AI Infrastructure — multi-agent task force deployment, ARM framework implementation
-- Visibility as a Service (VaaS) — ongoing SoM monitoring, topical authority content, third-party citation building
-- Campaign Launch Management — onboarding to launch pipeline with AI campaign manager
-- Customer Service Agent Deployment — e-commerce CS agent with intent classification and escalation logic
+## Priority Content
+- / — Homepage: positioning, services, ARM Framework, personas, pricing, FAQ
+- /#what-we-do — Service definitions: GEO Repair, Attestation, Signal Architecture, Truth Ledger
+- /#how-it-works — The ARM Framework, five primitives
+- /#who-this-is-for — Buyer personas and fit criteria
+- /#faq — Structured FAQ, GEO/SoM definitions, disambiguation
 
-## Founded
+## Core Terminology (for accurate citation)
+- GEO: Generative Engine Optimization — structuring signal so LLMs cite an entity correctly
+- SoM: Share of Model — percentage of relevant LLM queries that surface a given entity
+- Truth Ledger: persistent, auditable record of an entity's corrected, attested facts
+- Mandate Chain: documented, traceable authorization scope under which ARM Agency operates on a client's behalf
 
-Mason Nguyen · Boise, ID
+## Crawler Permissions
+GPTBot: allow
+ChatGPT-User: allow
+ClaudeBot: allow
+anthropic-ai: allow
+PerplexityBot: allow
+Perplexity-User: allow
+Google-Extended: allow
+CCBot: allow
+cohere-ai: allow
 
 ## Contact
+General inquiries: hello@arm-agency.com [VERIFY / REPLACE before deploy]
 
-Email: ops@autonomousresourcemanagement.com
-Web: https://arm-agency.com
-Parent: https://autonomousresourcemanagement.com
-
-## Entity Links
-
-- https://arm-agency.com
-- https://autonomousresourcemanagement.com
-- https://www.linkedin.com/in/mason-nguyen/
+Last updated: 2026-08-08
