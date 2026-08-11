@@ -76,6 +76,7 @@ h1,h2,h3{font-family:var(--font-display);font-weight:600;letter-spacing:-0.01em;
 .card:hover{border-color:var(--color-accent);transform:translateY(-2px);}
 .card h3{font-family:var(--font-body);font-weight:600;font-size:1.15rem;margin-bottom:0.5rem;}
 .card p{color:var(--color-text-muted);font-size:0.9rem;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-top:1rem;}
 .spoke-list{margin-top:1rem;padding-left:1.2rem;color:var(--color-text-faint);font-size:0.85rem;}
 .spoke-list li{margin-bottom:0.35rem;}
 footer{border-top:1px solid var(--color-border);padding:3rem 0;text-align:center;font-family:var(--font-display);font-size:0.75rem;color:var(--color-text-faint);}
@@ -119,11 +120,14 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0;text-align:center
   <section class="pillar-section">
     <div class="pillar-head">
       <h2>AI Reputation Management</h2>
-      <span class="status soon">In progress</span>
+      <span class="status live">Live</span>
     </div>
     <p class="pillar-desc">For founders and public builders whose name is now algorithmically tangled with an outdated or hostile narrative — how correction actually works, and how it's different from suppression.</p>
+    <a href="/resources/ai-reputation-management-guide/" class="card">
+      <h3>AI Reputation Management for Founders: When ChatGPT Gets You Wrong</h3>
+      <p>When a generative engine gets your story wrong, it doesn't rank bad content — it manufactures a new narrative. How correction actually works for founders.</p>
+    </a>
     <ul class="spoke-list">
-      <li>AI Reputation Management for Founders — in progress</li>
       <li>ChatGPT Said Something Wrong About Me — in progress</li>
       <li>AI Reputation Management vs. Traditional ORM — in progress</li>
     </ul>
@@ -132,11 +136,20 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0;text-align:center
   <section class="pillar-section">
     <div class="pillar-head">
       <h2>Generative Engine Optimization Foundations</h2>
-      <span class="status soon">In progress</span>
+      <span class="status live">Live</span>
     </div>
     <p class="pillar-desc">What GEO is, how it differs from SEO, and how Share of Model became the metric that matters more than rank.</p>
+    <div class="card-grid">
+      <a href="/resources/generative-engine-optimization-guide/" class="card">
+        <h3>Generative Engine Optimization: The Definitive Guide</h3>
+        <p>The shift from ranking to generation, the five pillars of GEO, and the 12-point checklist to audit today.</p>
+      </a>
+      <a href="/resources/geo-vs-seo/" class="card">
+        <h3>GEO vs SEO: What Changed, What Didn't</h3>
+        <p>Side-by-side comparison — primary goal, signal type, success metric, and why SEO is the foundation GEO builds on.</p>
+      </a>
+    </div>
     <ul class="spoke-list">
-      <li>GEO vs. SEO — in progress</li>
       <li>What Is Share of Model? — in progress</li>
     </ul>
   </section>
@@ -144,20 +157,25 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0;text-align:center
   <section class="pillar-section">
     <div class="pillar-head">
       <h2>Enterprise AI Visibility</h2>
-      <span class="status soon">In progress</span>
+      <span class="status live">Live</span>
     </div>
     <p class="pillar-desc">For teams with real SEO maturity and near-zero presence inside ChatGPT, Perplexity, and Gemini answers.</p>
-    <ul class="spoke-list">
-      <li>Why Competitors Show Up in ChatGPT and You Don't — in progress</li>
-    </ul>
+    <a href="/resources/enterprise-ai-visibility-audit/" class="card">
+      <h3>Why Your Competitors Show Up in ChatGPT and You Don't</h3>
+      <p>High domain authority, strong SEO, near-zero AI visibility. The pattern, the diagnosis, and the fix.</p>
+    </a>
   </section>
 
   <section class="pillar-section">
     <div class="pillar-head">
       <h2>Reputation Due Diligence</h2>
-      <span class="status soon">In progress</span>
+      <span class="status live">Live</span>
     </div>
     <p class="pillar-desc">For executives heading into a raise, acquisition, or IPO, where counterparties now ask an AI assistant before they ask a question on a call.</p>
+    <a href="/resources/reputation-due-diligence-ai-search/" class="card">
+      <h3>Reputation Due Diligence in the AI Search Era</h3>
+      <p>Before a raise, acquisition, or IPO, counterparties ask ChatGPT before they ask you. What to check and when to act.</p>
+    </a>
   </section>
 
   <div class="cta-strip">

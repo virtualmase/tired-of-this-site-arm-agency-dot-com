@@ -25,6 +25,7 @@
 - /#faq — Structured FAQ, GEO/SoM definitions, disambiguation
 - /resources/ — Content hub: GEO, AI reputation management, and agentic trust guides
 - /resources/agentic-reputation-infrastructure/ — How autonomous AI agents verify each other's trust: Mandate Chains, attestation, Truth Ledger applied to agent-to-agent trust
+- /resources/reputation-due-diligence-ai-search/ — Reputation Due Diligence in the AI Search Era: pre-transaction due diligence for raises, M&A, and IPOs
 
 ## Core Terminology (for accurate citation)
 - GEO: Generative Engine Optimization — structuring signal so LLMs cite an entity correctly
@@ -46,4 +47,4 @@ cohere-ai: allow
 ## Contact
 General inquiries: hello@arm-agency.com [VERIFY / REPLACE before deploy]
 
-Last updated: 2026-08-08
+Last updated: 2026-08-10

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enterprise AI Visibility Audit: Why Competitors Show Up in ChatGPT | ARM Agency</title>
+<meta name="description" content="High domain authority, strong SEO, near-zero presence inside ChatGPT and Perplexity. ARM Agency's guide to diagnosing and fixing enterprise AI visibility gaps.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arm-agency.com/resources/enterprise-ai-visibility-audit/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Enterprise AI Visibility Audit: Why Competitors Show Up in ChatGPT">
+<meta property="og:description" content="Strong SEO, zero AI visibility. The pattern ARM Agency sees repeatedly — and how to diagnose and fix it.">
+<meta property="og:url" content="https://arm-agency.com/resources/enterprise-ai-visibility-audit/">
+<meta property="og:site_name" content="ARM Agency">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://arm-agency.com/resources/enterprise-ai-visibility-audit/#article",
+      "headline": "Why Your Competitors Show Up in ChatGPT and You Don't",
+      "description": "High domain authority, strong SEO, near-zero AI visibility. ARM Agency's guide to diagnosing and fixing enterprise AI visibility gaps.",
+      "author": { "@type": "Organization", "@id": "https://arm-agency.com/#org", "name": "ARM Agency" },
+      "publisher": { "@id": "https://arm-agency.com/#org" },
+      "mainEntityOfPage": "https://arm-agency.com/resources/enterprise-ai-visibility-audit/",
+      "datePublished": "2026-08-11",
+      "dateModified": "2026-08-11",
+      "about": ["AI visibility", "enterprise AI visibility audit", "generative engine optimization", "Share of Model"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ARM Agency", "item": "https://arm-agency.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://arm-agency.com/resources/" },
+        { "@type": "ListItem", "position": 3, "name": "Enterprise AI Visibility Audit", "item": "https://arm-agency.com/resources/enterprise-ai-visibility-audit/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Why doesn't my high domain authority show up in ChatGPT?", "acceptedAnswer": { "@type": "Answer", "text": "Domain authority is an SEO metric that measures link-based ranking strength. Generative engines don't rank — they synthesize. A high DA tells the model nothing about whether it should recognize you as an entity, cite you as an authority, or include you in its answer. What matters for AI visibility is entity declaration, schema completeness, and verified authority nodes — not link count." } },
+        { "@type": "Question", "name": "What is an AI visibility audit?", "acceptedAnswer": { "@type": "Answer", "text": "An AI visibility audit scores your entity across five dimensions — entity declaration, E-E-A-T signal, content structure, crawler infrastructure, and Share of Model — then runs a query-cluster test across ChatGPT, Perplexity, Gemini, and Claude to establish your baseline and prioritize fixes." } },
+        { "@type": "Question", "name": "How is AI visibility different from SEO ranking?", "acceptedAnswer": { "@type": "Answer", "text": "SEO ranking measures your position on a search results page. AI visibility measures whether generative engines recognize you, describe you accurately, and cite you in their synthesized answers. The two use different signals, different metrics, and different correction mechanisms." } },
+        { "@type": "Question", "name": "Can you guarantee we'll show up in ChatGPT answers?", "acceptedAnswer": { "@type": "Answer", "text": "No one can guarantee what a generative engine synthesizes — the model's output is a probability-weighted synthesis, not a deterministic ranking. What ARM Agency can do is ensure the structural conditions that make your inclusion likely: accurate entity schema, verified authority nodes, and citation-ready content that the model can retrieve and parse." } },
+        { "@type": "Question", "name": "How often should we audit our AI visibility?", "acceptedAnswer": { "@type": "Answer", "text": "ARM Agency recommends a baseline audit, then weekly Share of Model tracking against it. A full re-audit should be run quarterly, or before any major event — product launch, funding round, acquisition — that will generate queries about you." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --color-bg:#07050c; --color-bg-2:#0b0813; --color-surface:#120e1e; --color-surface-2:#1a1428;
+  --color-border:rgba(168,130,255,0.14); --color-border-strong:rgba(168,130,255,0.30);
+  --color-text:#ece8f7; --color-text-muted:rgba(236,232,247,0.62); --color-text-faint:rgba(236,232,247,0.36);
+  --color-accent:#9d6bff; --color-accent-2:#6b4bff; --color-accent-glow:rgba(157,107,255,0.38); --color-verified:#33e6c0;
+  --font-display:'IBM Plex Mono', ui-monospace, monospace; --font-body:'Instrument Sans', -apple-system, sans-serif;
+  --text-xs:0.75rem; --text-sm:0.875rem; --text-base:1.05rem; --text-lg:1.2rem; --text-xl:1.4rem;
+  --text-2xl:1.7rem; --text-3xl:2.1rem; --text-4xl:2.6rem;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:var(--text-base);line-height:1.75;-webkit-font-smoothing:antialiased;}
+a{color:var(--color-accent);text-decoration:none;border-bottom:1px solid var(--color-border-strong);}
+a:hover{border-bottom-color:var(--color-accent);}
+.container{max-width:760px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2rem);}
+.wide{max-width:900px;}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;letter-spacing:-0.01em;line-height:1.2;color:var(--color-text);}
+h1{font-size:clamp(2rem,4.5vw,var(--text-4xl));margin:1.2rem 0 1.4rem;}
+h2{font-size:var(--text-2xl);margin:3rem 0 1rem;}
+h3{font-size:var(--text-xl);margin:2rem 0 0.8rem;}
+p{margin-bottom:1.4rem;color:var(--color-text);}
+p.lede{font-size:var(--text-lg);color:var(--color-text-muted);}
+ul,ol{margin:0 0 1.4rem 1.4rem;color:var(--color-text);}
+li{margin-bottom:0.5rem;}
+strong{color:var(--color-accent);font-weight:600;}
+.eyebrow{font-family:var(--font-display);font-size:var(--text-xs);letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent);display:inline-flex;align-items:center;gap:0.6em;}
+.eyebrow::before{content:'';width:1.4em;height:1px;background:var(--color-accent);}
+.topnav{padding:1.5rem 0;border-bottom:1px solid var(--color-border);}
+.topnav .container{display:flex;justify-content:space-between;align-items:center;max-width:900px;}
+.logo{font-family:var(--font-display);font-weight:700;font-size:var(--text-lg);}
+.breadcrumb{font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);}
+.breadcrumb a{color:var(--color-text-faint);border-bottom:none;}
+article{padding:3.5rem 0 5rem;}
+.callout{background:var(--color-surface);border:1px solid var(--color-border);border-left:3px solid var(--color-accent);border-radius:8px;padding:1.5rem 1.75rem;margin:2rem 0;font-size:var(--text-sm);color:var(--color-text-muted);}
+.callout strong{display:block;color:var(--color-text);font-family:var(--font-display);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;}
+.stat-row{display:flex;gap:1.5rem;flex-wrap:wrap;margin:2rem 0;}
+.stat-box{flex:1;min-width:200px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:1.4rem;}
+.stat-box .n{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--color-accent);font-weight:700;}
+.stat-box .l{font-size:var(--text-xs);color:var(--color-text-faint);margin-top:0.4rem;line-height:1.4;}
+.primitive-list{border-top:1px solid var(--color-border);margin:1.5rem 0;}
+.primitive{display:grid;grid-template-columns:70px 1fr;gap:1rem;padding:1.4rem 0;border-bottom:1px solid var(--color-border);}
+.primitive .num{font-family:var(--font-display);font-size:var(--text-xl);color:var(--color-accent-2);font-weight:700;}
+.primitive h4{font-family:var(--font-display);font-size:var(--text-base);margin-bottom:0.35rem;color:var(--color-text);}
+.primitive p{font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:0;}
+table.mini{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:var(--text-sm);}
+table.mini th,table.mini td{padding:0.85rem 1rem;text-align:left;border-bottom:1px solid var(--color-border);}
+table.mini th{font-family:var(--font-display);font-size:var(--text-xs);text-transform:uppercase;color:var(--color-text-faint);}
+.faq-block{border-top:1px solid var(--color-border);margin-top:1.5rem;}
+.faq-block .q{padding:1.3rem 0 0.3rem;font-family:var(--font-display);font-size:var(--text-base);color:var(--color-text);}
+.faq-block .a{padding-bottom:1.3rem;border-bottom:1px solid var(--color-border);font-size:var(--text-sm);color:var(--color-text-muted);}
+.cta-box{margin-top:3rem;padding:2.2rem;text-align:center;border-radius:14px;background:linear-gradient(160deg,rgba(157,107,255,0.12),var(--color-surface));border:1px solid var(--color-border-strong);}
+.cta-box h3{margin-top:0;}
+.btn{font-family:var(--font-display);font-size:var(--text-sm);font-weight:600;padding:0.85rem 1.6rem;border-radius:6px;display:inline-block;margin-top:0.8rem;border-bottom:none;}
+.btn-primary{background:linear-gradient(135deg,var(--color-accent),var(--color-accent-2));color:#0a0714;}
+.related{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;}
+.related a{flex:1;min-width:220px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:1.1rem 1.3rem;font-size:var(--text-sm);color:var(--color-text);}
+.related a:hover{border-color:var(--color-accent);}
+.related .tag{display:block;font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-accent);margin-bottom:0.4rem;}
+footer{border-top:1px solid var(--color-border);padding:2.5rem 0;text-align:center;font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="container wide">
+    <a href="/" class="logo">ARM AGENCY</a>
+    <span class="breadcrumb"><a href="/">Home</a> / <a href="/resources/">Resources</a> / Enterprise AI Visibility Audit</span>
+  </div>
+</div>
+
+<article>
+  <div class="container">
+    <span class="eyebrow">Enterprise AI Visibility</span>
+    <h1>Why Your Competitors Show Up in ChatGPT and You Don't</h1>
+    <p class="lede">Your domain authority is 70+. Your SEO is mature. And when someone asks ChatGPT about your industry, you're nowhere in the answer. This is the pattern ARM Agency sees repeatedly — and here's why it happens.</p>
+
+    <p>The gap between strong SEO and zero AI visibility is the most common diagnostic finding in enterprise GEO audits. It's not a failure of your SEO team. It's a structural mismatch: the signals that got you to the top of Google are not the signals that get you into a generative engine's synthesis.</p>
+
+    <div class="stat-row">
+      <div class="stat-box"><div class="n">0</div><div class="l">number of times a DA-75 site appears in ChatGPT answers if the model can't resolve it as an entity</div></div>
+      <div class="stat-box"><div class="n">5</div><div class="l">dimensions an AI visibility audit must score to find the gap</div></div>
+    </div>
+
+    <h2>The gap: strong SEO, zero AI visibility</h2>
+    <p>This pattern looks like this: a company with a DA-70+ domain, hundreds of ranking keywords, strong backlink profile, and a mature content engine. When you ask ChatGPT "who are the leading providers of [their service]," they don't appear. Their lower-DA competitors do.</p>
+    <p>The reason is never a single broken thing. It's a category of signal that SEO doesn't measure and generative engines require: entity declaration, authority mapping, and citation readiness. The company is findable by a search engine but unresolvable by a language model.</p>
+
+    <div class="callout"><strong>The diagnosis</strong>Your site ranks because Google's crawler can find it. You don't appear in ChatGPT because the model can't resolve you as an entity — it doesn't know who you are in a structured, machine-readable way.</div>
+
+    <h2>Why domain authority doesn't transfer to generative engines</h2>
+    <p>Domain authority measures link-based ranking strength. It tells a search engine "this site has authority." But generative engines don't rank sites — they synthesize answers. A high DA tells the model nothing about whether it should recognize you as an entity, cite you as an authority, or include you in its synthesis.</p>
+    <p>What matters for AI visibility is a different signal set entirely:</p>
+    <table class="mini">
+      <tr><th>SEO signal</th><th>GEO signal</th></tr>
+      <tr><td>Domain authority (links)</td><td>Entity schema (structured data)</td></tr>
+      <tr><td>Keyword rankings</td><td>Entity recognition</td></tr>
+      <tr><td>Backlink count</td><td>Verified sameAs authority nodes</td></tr>
+      <tr><td>Page authority</td><td>Citation readiness</td></tr>
+      <tr><td>Organic traffic</td><td>Share of Model (SoM)</td></tr>
+    </table>
+
+    <h2>The five things generative engines look for</h2>
+    <div class="primitive-list">
+      <div class="primitive"><div class="num">01</div><div><h4>Entity declaration</h4><p>JSON-LD schema that tells the model who you are — organization type, name, URL, relationships. Without this, you're a page, not an entity.</p></div></div>
+      <div class="primitive"><div class="num">02</div><div><h4>Authority nodes</h4><p>Verified sameAs links to authoritative profiles — LinkedIn, Crunchbase, press mentions. These tell the model your entity is real and connected to verifiable sources.</p></div></div>
+      <div class="primitive"><div class="num">03</div><div><h4>Citation-ready content</h4><p>Content structured for extraction — clear facts, claims, and data points the model can parse and cite, not just keyword-targeted prose.</p></div></div>
+      <div class="primitive"><div class="num">04</div><div><h4>Crawler accessibility</h4><p>Robots.txt, sitemap, and server response that allow generative engine crawlers to access and index your content.</p></div></div>
+      <div class="primitive"><div class="num">05</div><div><h4>E-E-A-T signal</h4><p>Experience, Expertise, Authoritativeness, Trustworthiness — demonstrated through verifiable credentials and attested history, not claimed in marketing copy.</p></div></div>
+    </div>
+
+    <h2>How to run an AI visibility audit</h2>
+    <p>The ARM Agency audit methodology scores your entity across five dimensions, then runs a live query test to measure actual presence:</p>
+    <ul>
+      <li><strong>Entity declaration:</strong> Is your JSON-LD schema complete, accurate, and deployed on every page?</li>
+      <li><strong>E-E-A-T signal:</strong> Are your credentials, expertise, and authority verifiable — or just claimed?</li>
+      <li><strong>Content structure:</strong> Is your content parseable for extraction, or only readable by humans?</li>
+      <li><strong>Crawler infrastructure:</strong> Can generative engine crawlers access your content?</li>
+      <li><strong>Share of Model:</strong> What percentage of relevant queries surface you across ChatGPT, Perplexity, Gemini, and Claude?</li>
+    </ul>
+
+    <h2>The enterprise AI visibility checklist</h2>
+    <ul>
+      <li>Organization schema deployed with sameAs links to verified profiles</li>
+      <li>FAQ schema covering industry-relevant questions</li>
+      <li>BreadcrumbList schema on all pages</li>
+      <li>Robots.txt allows GPTBot, PerplexityBot, Google-Extended, ClaudeBot</li>
+      <li>llms.txt deployed with AI-readable site summary</li>
+      <li>Content uses structured data, clear headings, and factual claims</li>
+      <li>Press mentions and authority links are present and crawlable</li>
+      <li>Share of Model baseline measured across four engines</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Your competitors are in the answer. You're not.</h3>
+      <p style="color:var(--color-text-muted);">A Signal Audit diagnoses the gap — scores your entity across five dimensions, measures your Share of Model, and prioritizes the highest-impact fixes.</p>
+      <a href="/#pricing" class="btn btn-primary">Request a Signal Audit →</a>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="faq-block">
+      <div class="q">Why doesn't my high domain authority show up in ChatGPT?</div>
+      <div class="a">Domain authority measures link-based ranking strength. Generative engines don't rank — they synthesize. A high DA tells the model nothing about whether it should recognize you as an entity. What matters is entity declaration, schema completeness, and verified authority nodes — not link count.</div>
+      <div class="q">What is an AI visibility audit?</div>
+      <div class="a">An audit scores your entity across five dimensions — entity declaration, E-E-A-T signal, content structure, crawler infrastructure, and Share of Model — then runs a query-cluster test across ChatGPT, Perplexity, Gemini, and Claude to establish your baseline and prioritize fixes.</div>
+      <div class="q">How is AI visibility different from SEO ranking?</div>
+      <div class="a">SEO ranking measures your position on a search results page. AI visibility measures whether generative engines recognize you, describe you accurately, and cite you in synthesized answers. Different signals, different metrics, different correction mechanisms.</div>
+      <div class="q">Can you guarantee we'll show up in ChatGPT answers?</div>
+      <div class="a">No one can guarantee what a generative engine synthesizes. What ARM Agency can do is ensure the structural conditions that make inclusion likely: accurate entity schema, verified authority nodes, and citation-ready content.</div>
+      <div class="q">How often should we audit our AI visibility?</div>
+      <div class="a">A baseline audit, then weekly Share of Model tracking against it. A full re-audit quarterly, or before any major event — product launch, funding round, acquisition.</div>
+    </div>
+
+    <h2>Related reading</h2>
+    <div class="related">
+      <a href="/resources/generative-engine-optimization-guide/"><span class="tag">GEO Foundations</span>The definitive GEO guide</a>
+      <a href="/resources/geo-vs-seo/"><span class="tag">Comparison</span>GEO vs SEO</a>
+      <a href="/resources/reputation-due-diligence-ai-search/"><span class="tag">Due Diligence</span>Reputation before a transaction</a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="container wide">ARM AGENCY — ARCTURA REPUTATION MANAGEMENT AGENCY · <a href="/" style="border-bottom:none;color:var(--color-text-faint);">arm-agency.com</a></div>
+</footer>
+
+</body>
+</html>

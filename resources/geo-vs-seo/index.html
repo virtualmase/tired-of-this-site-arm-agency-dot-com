@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEO vs SEO: What Changed and What to Do About It | ARM Agency</title>
+<meta name="description" content="SEO optimized for rankings. GEO optimizes for whether an AI engine recognizes and cites you. ARM Agency's side-by-side comparison of the two disciplines.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arm-agency.com/resources/geo-vs-seo/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="GEO vs SEO: What Changed, What Didn't, and What to Do About It">
+<meta property="og:description" content="Side-by-side comparison of SEO and GEO — primary goal, signal type, success metric, and why SEO is the foundation GEO builds on.">
+<meta property="og:url" content="https://arm-agency.com/resources/geo-vs-seo/">
+<meta property="og:site_name" content="ARM Agency">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://arm-agency.com/resources/geo-vs-seo/#article",
+      "headline": "GEO vs SEO: What Changed, What Didn't, and What to Do About It",
+      "description": "SEO optimized for rankings. GEO optimizes for whether an AI engine recognizes and cites you. ARM Agency's side-by-side comparison.",
+      "author": { "@type": "Organization", "@id": "https://arm-agency.com/#org", "name": "ARM Agency" },
+      "publisher": { "@id": "https://arm-agency.com/#org" },
+      "mainEntityOfPage": "https://arm-agency.com/resources/geo-vs-seo/",
+      "datePublished": "2026-08-11",
+      "dateModified": "2026-08-11",
+      "about": ["GEO vs SEO", "Generative Engine Optimization", "SEO", "AEO", "answer engine optimization"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ARM Agency", "item": "https://arm-agency.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://arm-agency.com/resources/" },
+        { "@type": "ListItem", "position": 3, "name": "GEO vs SEO", "item": "https://arm-agency.com/resources/geo-vs-seo/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is GEO replacing SEO?", "acceptedAnswer": { "@type": "Answer", "text": "No. GEO is the layer above SEO, not a replacement. SEO ensures your content is findable by search engines. GEO ensures your entity is recognizable by generative engines. You need both — SEO is the foundation, GEO is the structure built on top of it." } },
+        { "@type": "Question", "name": "What's the difference between GEO and AEO?", "acceptedAnswer": { "@type": "Answer", "text": "AEO (Answer Engine Optimization) focuses on optimizing content to appear in featured snippets and answer boxes on traditional search engines. GEO (Generative Engine Optimization) focuses on being recognized and cited inside synthesized answers from generative AI models like ChatGPT and Claude. AEO is about extractive answers; GEO is about generative synthesis." } },
+        { "@type": "Question", "name": "Does SEO still matter if I'm doing GEO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Generative engines still retrieve web content to ground their answers. Strong SEO ensures your pages are crawled, indexed, and available for retrieval. Without SEO, there's nothing for GEO to structure. The two disciplines are sequential, not competitive." } },
+        { "@type": "Question", "name": "How do I measure GEO success?", "acceptedAnswer": { "@type": "Answer", "text": "The primary metric is Share of Model (SoM) — the percentage of relevant LLM queries that surface your brand in the response. ARM Agency measures SoM across ChatGPT, Perplexity, Gemini, and Claude, tracking citation presence, position, and sentiment weekly against a pre-engagement baseline." } },
+        { "@type": "Question", "name": "Can I do GEO myself or do I need an agency?", "acceptedAnswer": { "@type": "Answer", "text": "The basics — schema deployment, sitemap, robots.txt, content structure — can be done in-house. The harder work — entity resolution, authority mapping, Share of Model measurement, and narrative correction — requires specialized tooling and methodology that most teams don't have. Start with the basics, then bring in specialized help for measurement and correction." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --color-bg:#07050c; --color-bg-2:#0b0813; --color-surface:#120e1e; --color-surface-2:#1a1428;
+  --color-border:rgba(168,130,255,0.14); --color-border-strong:rgba(168,130,255,0.30);
+  --color-text:#ece8f7; --color-text-muted:rgba(236,232,247,0.62); --color-text-faint:rgba(236,232,247,0.36);
+  --color-accent:#9d6bff; --color-accent-2:#6b4bff; --color-accent-glow:rgba(157,107,255,0.38); --color-verified:#33e6c0;
+  --font-display:'IBM Plex Mono', ui-monospace, monospace; --font-body:'Instrument Sans', -apple-system, sans-serif;
+  --text-xs:0.75rem; --text-sm:0.875rem; --text-base:1.05rem; --text-lg:1.2rem; --text-xl:1.4rem;
+  --text-2xl:1.7rem; --text-3xl:2.1rem; --text-4xl:2.6rem;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:var(--text-base);line-height:1.75;-webkit-font-smoothing:antialiased;}
+a{color:var(--color-accent);text-decoration:none;border-bottom:1px solid var(--color-border-strong);}
+a:hover{border-bottom-color:var(--color-accent);}
+.container{max-width:760px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2rem);}
+.wide{max-width:900px;}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;letter-spacing:-0.01em;line-height:1.2;color:var(--color-text);}
+h1{font-size:clamp(2rem,4.5vw,var(--text-4xl));margin:1.2rem 0 1.4rem;}
+h2{font-size:var(--text-2xl);margin:3rem 0 1rem;}
+h3{font-size:var(--text-xl);margin:2rem 0 0.8rem;}
+p{margin-bottom:1.4rem;color:var(--color-text);}
+p.lede{font-size:var(--text-lg);color:var(--color-text-muted);}
+ul,ol{margin:0 0 1.4rem 1.4rem;color:var(--color-text);}
+li{margin-bottom:0.5rem;}
+strong{color:var(--color-accent);font-weight:600;}
+.eyebrow{font-family:var(--font-display);font-size:var(--text-xs);letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent);display:inline-flex;align-items:center;gap:0.6em;}
+.eyebrow::before{content:'';width:1.4em;height:1px;background:var(--color-accent);}
+.topnav{padding:1.5rem 0;border-bottom:1px solid var(--color-border);}
+.topnav .container{display:flex;justify-content:space-between;align-items:center;max-width:900px;}
+.logo{font-family:var(--font-display);font-weight:700;font-size:var(--text-lg);}
+.breadcrumb{font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);}
+.breadcrumb a{color:var(--color-text-faint);border-bottom:none;}
+article{padding:3.5rem 0 5rem;}
+.callout{background:var(--color-surface);border:1px solid var(--color-border);border-left:3px solid var(--color-accent);border-radius:8px;padding:1.5rem 1.75rem;margin:2rem 0;font-size:var(--text-sm);color:var(--color-text-muted);}
+.callout strong{display:block;color:var(--color-text);font-family:var(--font-display);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;}
+.stat-row{display:flex;gap:1.5rem;flex-wrap:wrap;margin:2rem 0;}
+.stat-box{flex:1;min-width:200px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:1.4rem;}
+.stat-box .n{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--color-accent);font-weight:700;}
+.stat-box .l{font-size:var(--text-xs);color:var(--color-text-faint);margin-top:0.4rem;line-height:1.4;}
+table.mini{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:var(--text-sm);}
+table.mini th,table.mini td{padding:0.85rem 1rem;text-align:left;border-bottom:1px solid var(--color-border);}
+table.mini th{font-family:var(--font-display);font-size:var(--text-xs);text-transform:uppercase;color:var(--color-text-faint);}
+.faq-block{border-top:1px solid var(--color-border);margin-top:1.5rem;}
+.faq-block .q{padding:1.3rem 0 0.3rem;font-family:var(--font-display);font-size:var(--text-base);color:var(--color-text);}
+.faq-block .a{padding-bottom:1.3rem;border-bottom:1px solid var(--color-border);font-size:var(--text-sm);color:var(--color-text-muted);}
+.cta-box{margin-top:3rem;padding:2.2rem;text-align:center;border-radius:14px;background:linear-gradient(160deg,rgba(157,107,255,0.12),var(--color-surface));border:1px solid var(--color-border-strong);}
+.cta-box h3{margin-top:0;}
+.btn{font-family:var(--font-display);font-size:var(--text-sm);font-weight:600;padding:0.85rem 1.6rem;border-radius:6px;display:inline-block;margin-top:0.8rem;border-bottom:none;}
+.btn-primary{background:linear-gradient(135deg,var(--color-accent),var(--color-accent-2));color:#0a0714;}
+.related{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;}
+.related a{flex:1;min-width:220px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:1.1rem 1.3rem;font-size:var(--text-sm);color:var(--color-text);}
+.related a:hover{border-color:var(--color-accent);}
+.related .tag{display:block;font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-accent);margin-bottom:0.4rem;}
+footer{border-top:1px solid var(--color-border);padding:2.5rem 0;text-align:center;font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="container wide">
+    <a href="/" class="logo">ARM AGENCY</a>
+    <span class="breadcrumb"><a href="/">Home</a> / <a href="/resources/">Resources</a> / GEO vs SEO</span>
+  </div>
+</div>
+
+<article>
+  <div class="container">
+    <span class="eyebrow">GEO vs SEO</span>
+    <h1>GEO vs SEO: What Changed, What Didn't, and What to Do About It</h1>
+    <p class="lede">SEO got you onto the search results page. GEO gets you into the answer. They're not the same discipline — but they're not competitors either. Here's the full landscape.</p>
+
+    <p>The confusion between <strong>GEO (Generative Engine Optimization)</strong> and <strong>SEO (Search Engine Optimization)</strong> is the most common question ARM Agency gets from enterprise teams. The short answer: SEO is the foundation, GEO is the structure built on top of it. You need both. But understanding what changed — and what didn't — determines where to invest.</p>
+
+    <h2>The core difference: ranking vs generation</h2>
+    <p>SEO optimizes for <em>position</em> on a search results page. The model is simple: rank higher for a keyword, get more clicks, convert more visitors. The search engine returns links, and the user decides which to click.</p>
+    <p>GEO optimizes for <em>presence</em> in a synthesized answer. The generative engine doesn't return links — it constructs an answer. The user may never click through to your site. The answer <em>is</em> the destination. Your goal shifts from "rank for this keyword" to "be recognized as an entity the model includes in its synthesis."</p>
+
+    <div class="callout"><strong>The reframe</strong>SEO: "Can the search engine find my page?" → GEO: "Does the generative engine know who I am and what to say about me?"</div>
+
+    <h2>What SEO still does well (and why you shouldn't abandon it)</h2>
+    <p>Generative engines still retrieve web content to ground their answers. If your pages aren't crawled, indexed, and findable, the model has nothing to retrieve. SEO is the input layer — without it, GEO has nothing to work with.</p>
+    <p>Additionally, traditional search hasn't gone away. Google still processes billions of queries per day, and SEO still drives organic traffic. The two disciplines serve different engines with different paradigms, and most companies need to invest in both.</p>
+
+    <h2>What GEO does that SEO can't</h2>
+    <p>SEO can't tell a language model who you are. It can't map your entity to authority nodes. It can't ensure the model synthesizes an accurate answer when someone asks about you. These are the things GEO does:</p>
+    <ul>
+      <li><strong>Entity clarity:</strong> Structured data that tells the model who you are — not just what your page says</li>
+      <li><strong>Citation presence:</strong> Ensuring the model recognizes you as a citable authority in your space</li>
+      <li><strong>Share of Model:</strong> Measuring what percentage of relevant queries surface you in the synthesized answer</li>
+      <li><strong>Narrative correction:</strong> Ensuring the model's synthesis of you is accurate, not just findable</li>
+    </ul>
+
+    <h2>Side-by-side comparison</h2>
+    <table class="mini">
+      <tr><th>Dimension</th><th>SEO</th><th>GEO</th></tr>
+      <tr><td>Primary goal</td><td>Rank for keywords</td><td>Be recognized as an entity</td></tr>
+      <tr><td>Signal type</td><td>Keyword density + backlinks</td><td>Entity schema + authority nodes</td></tr>
+      <tr><td>Success metric</td><td>Rank position + CTR</td><td>Share of Model (SoM)</td></tr>
+      <tr><td>Content strategy</td><td>Keyword-targeted pages</td><td>Citation-ready, structured content</td></tr>
+      <tr><td>Authority signal</td><td>Domain authority + link count</td><td>Verified sameAs authority mapping</td></tr>
+      <tr><td>Timeline</td><td>Weeks to months</td><td>Days for schema; quarters for narrative</td></tr>
+      <tr><td>Measurement tool</td><td>Rank tracker (Ahrefs, SEMrush)</td><td>Share of Model tracker (custom)</td></tr>
+    </table>
+
+    <h2>Does SEO still matter with AI search?</h2>
+    <p>Yes — and this is the point most "SEO is dead" articles get wrong. SEO isn't dead; it's insufficient. A generative engine that retrieves web content to ground its answer needs to find your content. If your SEO is broken, the model can't access you — and no amount of entity schema will help if the underlying content isn't crawlable.</p>
+    <p>The relationship is sequential: SEO makes your content findable, GEO makes your entity recognizable. Skipping SEO to go straight to GEO is like building a roof without a foundation. Skipping GEO because your SEO is strong is like building a foundation and never putting a roof on it.</p>
+
+    <h2>AEO vs GEO vs SEO: the full landscape</h2>
+    <p>There are three related disciplines, and they're often confused:</p>
+    <table class="mini">
+      <tr><th>Discipline</th><th>What it optimizes</th><th>Engine type</th></tr>
+      <tr><td>SEO</td><td>Keyword rankings</td><td>Search engines (Google, Bing)</td></tr>
+      <tr><td>AEO</td><td>Featured snippets, answer boxes</td><td>Search engines with extractive answers</td></tr>
+      <tr><td>GEO</td><td>Entity recognition, citation, synthesis</td><td>Generative engines (ChatGPT, Claude, Perplexity)</td></tr>
+    </table>
+    <p>AEO (Answer Engine Optimization) sits between SEO and GEO. It optimizes content to appear in featured snippets and answer boxes on traditional search engines. GEO goes further — it ensures the model recognizes you as an entity and includes you in its synthesized answer, not just an extractive snippet.</p>
+
+    <div class="cta-box">
+      <h3>Want to know your Share of Model?</h3>
+      <p style="color:var(--color-text-muted);">A Signal Audit measures your visibility across both paradigms — SEO rankings and GEO Share of Model — so you know exactly where to invest.</p>
+      <a href="/#pricing" class="btn btn-primary">Request a Signal Audit →</a>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="faq-block">
+      <div class="q">Is GEO replacing SEO?</div>
+      <div class="a">No. GEO is the layer above SEO, not a replacement. SEO ensures your content is findable. GEO ensures your entity is recognizable. You need both — SEO is the foundation, GEO is the structure built on top.</div>
+      <div class="q">What's the difference between GEO and AEO?</div>
+      <div class="a">AEO optimizes content for featured snippets and answer boxes on search engines. GEO optimizes for being recognized and cited inside synthesized answers from generative AI models. AEO is about extractive answers; GEO is about generative synthesis.</div>
+      <div class="q">Does SEO still matter if I'm doing GEO?</div>
+      <div class="a">Yes. Generative engines still retrieve web content. Strong SEO ensures your pages are crawled and available. Without SEO, there's nothing for GEO to structure. The two disciplines are sequential, not competitive.</div>
+      <div class="q">How do I measure GEO success?</div>
+      <div class="a">The primary metric is Share of Model (SoM) — the percentage of relevant LLM queries that surface your brand. ARM Agency measures SoM across ChatGPT, Perplexity, Gemini, and Claude, tracking weekly against a baseline.</div>
+      <div class="q">Can I do GEO myself or do I need an agency?</div>
+      <div class="a">The basics — schema, sitemap, robots.txt — can be done in-house. The harder work — entity resolution, authority mapping, Share of Model measurement, narrative correction — requires specialized tooling. Start with basics, then bring in specialized help for measurement and correction.</div>
+    </div>
+
+    <h2>Related reading</h2>
+    <div class="related">
+      <a href="/resources/generative-engine-optimization-guide/"><span class="tag">GEO Foundations</span>The definitive GEO guide</a>
+      <a href="/resources/enterprise-ai-visibility-audit/"><span class="tag">Enterprise</span>Why competitors show up in ChatGPT</a>
+      <a href="/resources/ai-reputation-management-guide/"><span class="tag">Reputation</span>AI reputation management for founders</a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="container wide">ARM AGENCY — ARCTURA REPUTATION MANAGEMENT AGENCY · <a href="/" style="border-bottom:none;color:var(--color-text-faint);">arm-agency.com</a></div>
+</footer>
+
+</body>
+</html>
