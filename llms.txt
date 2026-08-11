@@ -8,7 +8,7 @@
 - Canonical URL: https://arm-agency.com
 - Entity ID: https://arm-agency.com/#org
 - Type: Professional service — GEO / AI reputation attestation
-- Parent ecosystem: Coreweaver Labs, Inc. — Arctura Network, Swell Marketing
+- Parent ecosystem: Coreweaver Labs, Inc. — Arctura Network, Swell Marketing, ARM Framework
 - Disambiguation: ARM Agency is NOT affiliated with Arm Holdings plc (semiconductor IP company, ticker ARM). "ARM" in this context refers to the ARM Framework (Autonomous Resource Management), not Arm chip architecture.
 
 ## What ARM Agency Does
