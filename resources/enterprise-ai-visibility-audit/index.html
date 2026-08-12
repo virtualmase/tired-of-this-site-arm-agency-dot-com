@@ -115,6 +115,10 @@ table.mini th{font-family:var(--font-display);font-size:var(--text-xs);text-tran
 .related a:hover{border-color:var(--color-accent);}
 .related .tag{display:block;font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-accent);margin-bottom:0.4rem;}
 footer{border-top:1px solid var(--color-border);padding:2.5rem 0;text-align:center;font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);}
+
+@media(max-width:760px){footer .container > div:first-of-type{grid-template-columns:1fr 1fr !important;}}
+@media(max-width:480px){footer .container > div:first-of-type{grid-template-columns:1fr !important;}}
+
 </style>
 </head>
 <body>
@@ -218,7 +222,49 @@ footer{border-top:1px solid var(--color-border);padding:2.5rem 0;text-align:cent
 </article>
 
 <footer>
-  <div class="container wide">ARM AGENCY · <a href="/" style="border-bottom:none;color:var(--color-text-faint);">arm-agency.com</a></div>
+  <div class="container wide">
+    <div style="display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:2.5rem;">
+      <div>
+        <a href="/" style="font-family:var(--font-display);font-weight:700;font-size:1.1rem;border-bottom:none;">ARM AGENCY</a>
+        <p style="color:var(--color-text-muted);font-size:0.85rem;margin-top:0.75rem;max-width:280px;line-height:1.6;">Reputation management for the AI era. We repair how ChatGPT, Claude, Gemini, and Perplexity represent you.</p>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-display);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-faint);margin-bottom:0.9rem;">Engagements</h4>
+        <ul style="display:flex;flex-direction:column;gap:0.5rem;list-style:none;padding:0;">
+          <li><a href="/#pricing" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">Signal Audit — $2,500</a></li>
+          <li><a href="/#pricing" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">GEO Engagement — $8,500/mo</a></li>
+          <li><a href="/#pricing" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">Reputation Retainer — $12,000/mo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-display);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-faint);margin-bottom:0.9rem;">Resources</h4>
+        <ul style="display:flex;flex-direction:column;gap:0.5rem;list-style:none;padding:0;">
+          <li><a href="/resources/" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">All Guides</a></li>
+          <li><a href="/resources/generative-engine-optimization-guide/" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">GEO Guide</a></li>
+          <li><a href="/resources/ai-reputation-management-guide/" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">AI Reputation Guide</a></li>
+          <li><a href="/resources/reputation-due-diligence-ai-search/" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">Due Diligence Guide</a></li>
+          <li><a href="/resources/enterprise-ai-visibility-audit/" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">Enterprise Visibility</a></li>
+          <li><a href="/resources/geo-vs-seo/" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">GEO vs SEO</a></li>
+          <li><a href="/resources/agentic-reputation-infrastructure/" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">Agentic Trust</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-display);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-faint);margin-bottom:0.9rem;">Company</h4>
+        <ul style="display:flex;flex-direction:column;gap:0.5rem;list-style:none;padding:0;">
+          <li><a href="/#how-it-works" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">The ARM Framework</a></li>
+          <li><a href="/#who-this-is-for" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">Who It's For</a></li>
+          <li><a href="/#faq" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">FAQ</a></li>
+          <li><a href="/#pricing" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">Pricing</a></li>
+          <li><a href="tel:+12242759027" style="font-size:0.85rem;color:var(--color-text-muted);border-bottom:none;">+1 (224) 275-9027</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:0.7rem;color:var(--color-text-faint);max-width:820px;margin-top:1.5rem;line-height:1.7;">Part of the Arctura ecosystem. Not affiliated with Arm Holdings plc.</p>
+    <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--color-border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:0.7rem;color:var(--color-text-faint);font-family:var(--font-display);">
+      <span>© 2026 ARM AGENCY. ALL RIGHTS RESERVED.</span>
+      <span>PRIVACY · TERMS</span>
+    </div>
+  </div>
 </footer>
 
 </body>
