@@ -28,4 +28,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://arm-agency.com/sitemap.xml
+Sitemap: https://www.arm-agency.com/sitemap.xml

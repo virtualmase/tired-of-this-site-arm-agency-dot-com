@@ -5,8 +5,8 @@
 ## Entity Declaration
 - Canonical name: ARM Agency
 - Full name: Arctura Reputation Management Agency
-- Canonical URL: https://arm-agency.com
-- Entity ID: https://arm-agency.com/#org
+- Canonical URL: https://www.arm-agency.com
+- Entity ID: https://www.arm-agency.com/#org
 - Type: Professional service — GEO / AI reputation attestation
 - Parent ecosystem: Coreweaver Labs, Inc. — Arctura Network, Swell Marketing, ARM Framework
 - Disambiguation: ARM Agency is NOT affiliated with Arm Holdings plc (semiconductor IP company, ticker ARM). "ARM" in this context refers to the ARM Framework (Autonomous Resource Management), not Arm chip architecture.
@@ -45,6 +45,6 @@ CCBot: allow
 cohere-ai: allow
 
 ## Contact
-General inquiries: hello@arm-agency.com [VERIFY / REPLACE before deploy]
+Use the public Signal Audit request route at https://www.arm-agency.com/audit/ for business inquiries.
 
-Last updated: 2026-08-10
+Last updated: 2026-08-13
