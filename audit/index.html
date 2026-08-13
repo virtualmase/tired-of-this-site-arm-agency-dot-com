@@ -230,6 +230,8 @@ body::before{
 .form-success-msg .check{font-size:2.5rem;color:var(--color-verified);margin-bottom:1rem;}
 .form-success-msg h3{font-family:var(--font-display);font-size:var(--text-lg);margin-bottom:0.5rem;}
 .form-success-msg p{color:var(--color-text-muted);font-size:var(--text-sm);}
+.form-intro{margin:1.25rem 0 1.5rem;color:var(--color-text-muted);font-size:var(--text-sm);}
+.form-note{margin-top:1rem;color:var(--color-text-faint);font-size:var(--text-xs);line-height:1.6;}
 
 /* ---------- Self-guided option ---------- */
 .self-guided{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--color-border);}
@@ -372,16 +374,17 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0 2rem;background:v
     <div class="result-detail" id="resultDetail"></div>
 
     <div class="cta-section">
-      <h3 id="ctaHeadline">Want the full evidence?</h3>
-      <p id="ctaText">A Signal Audit scores all five dimensions with real query tests across ChatGPT, Claude, Gemini, and Perplexity — and gives you a prioritized fix plan within 48 hours.</p>
+      <h3 id="ctaHeadline">Decide whether a Signal Audit is warranted.</h3>
+      <p id="ctaText">A scope review uses your diagnostic result, decision context, and website to determine whether a Signal Audit is the right next step.</p>
 
       <button class="start-btn" onclick="showCaptureForm()" id="bookAuditBtn" style="margin-bottom:0.5rem;">
-        Book a Signal Audit — $2,500
+        Request a scoped Signal Audit
         <span class="arrow">→</span>
       </button>
 
       <!-- Capture form (appears after user clicks book) -->
       <div class="capture-form" id="captureForm">
+        <p class="form-intro">Answer four brief questions so we can assess fit, decision timing, and the right scope. Your diagnostic result is included automatically.</p>
         <div class="form-row">
           <label>Your name</label>
           <input type="text" id="capture-name" required placeholder="Your name" />
@@ -392,22 +395,57 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0 2rem;background:v
         </div>
         <div class="form-row">
           <label>Company</label>
-          <input type="text" id="capture-company" placeholder="Company or brand" />
+          <input type="text" id="capture-company" required placeholder="Company or brand" />
         </div>
         <div class="form-row">
           <label>Website</label>
-          <input type="url" id="capture-url" placeholder="https://" />
+          <input type="url" id="capture-url" required placeholder="https://" />
+        </div>
+        <div class="form-row">
+          <label>What decision is driving this now?</label>
+          <select id="capture-decision" required>
+            <option value="" selected disabled>Select the closest context</option>
+            <option value="transaction_readiness">Fundraise, acquisition, or other transaction readiness</option>
+            <option value="reputation_correction">Public narrative or reputation correction</option>
+            <option value="ai_visibility_baseline">AI visibility or entity baseline</option>
+            <option value="agentic_governance">Agentic infrastructure or governance mandate</option>
+            <option value="other">Other or still defining the decision</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>When do you need an informed decision?</label>
+          <select id="capture-timing" required>
+            <option value="" selected disabled>Select a decision window</option>
+            <option value="within_2_weeks">Within two weeks</option>
+            <option value="within_6_weeks">Within two to six weeks</option>
+            <option value="over_6_weeks">More than six weeks</option>
+            <option value="exploring">Exploring; no fixed window</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>What is your role in the decision?</label>
+          <select id="capture-authority" required>
+            <option value="" selected disabled>Select your decision role</option>
+            <option value="decision_owner">I own the decision</option>
+            <option value="decision_group">I am part of the decision group</option>
+            <option value="researching">I am researching for someone else</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>What would make the audit useful? <span aria-hidden="true">(optional)</span></label>
+          <textarea id="capture-context" placeholder="The decision, risk, or question you need to resolve."></textarea>
         </div>
         <div class="form-row" id="diagnosticResultsRow">
           <input type="hidden" id="capture-diagnostic" />
         </div>
-        <button type="submit" class="btn-primary" id="capture-submit" onclick="submitCapture(event)">Request Audit →</button>
+        <button type="submit" class="btn-primary" id="capture-submit" onclick="submitCapture(event)">Request a scope review →</button>
+        <p class="form-note">This request does not create an engagement. We confirm fit, scope, and delivery capacity before any private payment instruction is sent.</p>
       </div>
 
       <div class="form-success-msg" id="formSuccessMsg">
         <div class="check">✓</div>
-        <h3>Request received.</h3>
-        <p>We'll run your Signal Audit and deliver findings within 48 hours.</p>
+        <h3>Scope review requested.</h3>
+        <p>We will review fit, the decision context, and the appropriate next step before proposing any engagement or payment instruction.</p>
       </div>
 
       <div class="self-guided">
@@ -631,14 +669,14 @@ function showResults() {
 
   // Adjust CTA based on score
   if (pct <= 40) {
-    document.getElementById('ctaHeadline').textContent = 'Multiple breaks — the full audit is worth it.';
-    document.getElementById('ctaText').textContent = 'With ' + pct + '% signal health, a Signal Audit will map every break, run real query tests across 4 AI engines, and give you a prioritized fix plan within 48 hours.';
+    document.getElementById('ctaHeadline').textContent = 'Multiple breaks — confirm the scope before acting.';
+    document.getElementById('ctaText').textContent = 'Your result identifies several constraints. A short scope review can determine whether a full Signal Audit is the appropriate next step.';
   } else if (pct <= 70) {
-    document.getElementById('ctaHeadline').textContent = 'One key gap. The audit will quantify it.';
-    document.getElementById('ctaText').textContent = 'Your ' + weakest.name + ' is the first constraint. A Signal Audit will test it against real queries and give you the specific fix — or you can start with the free GEO guide.';
+    document.getElementById('ctaHeadline').textContent = 'One key gap. Decide whether a baseline is needed.';
+    document.getElementById('ctaText').textContent = 'Your ' + weakest.name + ' is the first constraint. A scope review can determine whether to commission a Signal Audit or begin with the free GEO guide.';
   } else {
-    document.getElementById('ctaHeadline').textContent = "You're in good shape. Optimize from here.";
-    document.getElementById('ctaText').textContent = 'Your signal is mostly healthy. The free GEO guide has the checklist to close remaining gaps — or book an audit for a full baseline.';
+    document.getElementById('ctaHeadline').textContent = "You're in good shape. Choose the next evidence step.";
+    document.getElementById('ctaText').textContent = 'Your signal is mostly healthy. Use the free GEO guide for self-directed work, or request a scope review if you need an evidence-backed baseline.';
   }
 
   document.getElementById('resultsSection').classList.add('active');
@@ -657,19 +695,41 @@ function showCaptureForm() {
 
 async function submitCapture(e) {
   e.preventDefault();
+  const name = document.getElementById('capture-name').value.trim();
+  const email = document.getElementById('capture-email').value.trim();
+  const company = document.getElementById('capture-company').value.trim();
+  const entityUrl = document.getElementById('capture-url').value.trim();
+  const decisionDriver = document.getElementById('capture-decision').value;
+  const timing = document.getElementById('capture-timing').value;
+  const authority = document.getElementById('capture-authority').value;
+  const context = document.getElementById('capture-context').value.trim();
+
+  if (!name || !email || !company || !entityUrl || !decisionDriver || !timing || !authority) {
+    alert('Please complete the required contact and qualification fields.');
+    return;
+  }
+
   const submitBtn = document.getElementById('capture-submit');
-  submitBtn.textContent = 'Submitting...';
+  submitBtn.textContent = 'Sending scope request...';
   submitBtn.disabled = true;
 
+  const diagnosticSummary = document.getElementById('capture-diagnostic').value;
+  const qualificationSummary = [
+    'Decision driver: ' + decisionDriver,
+    'Decision timing: ' + timing,
+    'Decision role: ' + authority,
+    context ? 'Context: ' + context : ''
+  ].filter(Boolean).join('\n');
+
   const payload = {
-    name: document.getElementById('capture-name').value,
-    email: document.getElementById('capture-email').value,
-    company: document.getElementById('capture-company').value || '',
-    entity_url: document.getElementById('capture-url').value || '',
+    name,
+    email,
+    company,
+    entity_url: entityUrl,
     source: 'diagnostic',
     service_interest: 'signal_audit',
-    notes: 'Signal Diagnostic results: ' + document.getElementById('capture-diagnostic').value,
-    priority: 'high'
+    notes: 'Signal Diagnostic results: ' + diagnosticSummary + '\n' + qualificationSummary,
+    priority: timing === 'within_2_weeks' && authority === 'decision_owner' ? 'high' : 'normal'
   };
 
   try {
@@ -682,12 +742,12 @@ async function submitCapture(e) {
       document.getElementById('captureForm').style.display = 'none';
       document.getElementById('formSuccessMsg').classList.add('active');
     } else {
-      submitBtn.textContent = 'Request Audit →';
+      submitBtn.textContent = 'Request a scope review →';
       submitBtn.disabled = false;
       alert('Something went wrong. Please email us or call +1 (224) 275-9027.');
     }
   } catch(err) {
-    submitBtn.textContent = 'Request Audit →';
+    submitBtn.textContent = 'Request a scope review →';
     submitBtn.disabled = false;
     alert('Network error. Please try again or call +1 (224) 275-9027.');
   }
