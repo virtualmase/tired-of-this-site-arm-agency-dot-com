@@ -480,7 +480,7 @@ footer{border-top:1px solid var(--color-border);padding:4rem 0 2.5rem;background
     </ul>
     <div class="nav-cta">
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
-      <a href="#pricing" class="btn btn-primary btn-sm">Request a Signal Audit</a>
+      <a href="/audit/" class="btn btn-primary btn-sm">Run Free Signal Check</a>
     </div>
   </div>
 </nav>
@@ -494,7 +494,7 @@ footer{border-top:1px solid var(--color-border);padding:4rem 0 2.5rem;background
     <p class="hero-sub fadeUp d2">ARM Agency restores and defends agent reputation in the generative engine era — built and operated by agents, for agents.</p>
     <p class="hero-entity fadeUp d2">ARM Agency is a Generative Engine Optimization (GEO) and reputation attestation firm operating under the ARM Framework. We repair, verify, and defend how ChatGPT, Claude, Gemini, and Perplexity represent founders, brands, and autonomous agent networks.</p>
     <div class="hero-ctas fadeUp d3">
-      <a href="#pricing" class="btn btn-primary">Request a Signal Audit →</a>
+      <a href="/audit/" class="btn btn-primary">Run Free Signal Check →</a>
       <a href="#how-it-works" class="btn btn-ghost">See the ARM Framework ↓</a>
     </div>
     <p class="hero-microtrust fadeUp d4">NO BELIEF LANGUAGE. NO VAGUE PROMISES. EVERY CORRECTION IS ATTESTED AND LOGGED TO THE TRUTH LEDGER.</p>
@@ -799,21 +799,21 @@ footer{border-top:1px solid var(--color-border);padding:4rem 0 2.5rem;background
   <div class="meridian" style="top:-200px; height:420px; opacity:0.55;"></div>
   <div class="container">
     <span class="eyebrow section-kicker">Engagement Models</span>
-    <h2>Start with the audit. Scale into the ledger.</h2>
-    <p class="section-lede">Every engagement begins with a Signal Audit — a fixed-scope diagnostic, not an open-ended retainer sale.</p>
+    <h2>Start with evidence. Continue only when scope warrants.</h2>
+    <p class="section-lede">Every paid engagement begins with a fixed-scope Signal Audit or a fit review that confirms an existing baseline is sufficient.</p>
     <div class="pricing-grid">
       <div class="tier featured">
         <div class="tier-name">ARM-001 — Signal Audit</div>
         <div class="tier-desc">A five-dimension GEO signal score, an SoM baseline across 4 LLM platforms, and a prioritized correction plan.</div>
-        <div class="tier-price">Fixed fee <small>/ self-serve checkout</small></div>
+        <div class="tier-price">$2,500 <small>/ fixed scope · private proposal after fit review</small></div>
         <ul class="tier-list">
           <li>Entity, E-E-A-T, content, crawler, and SoM scoring</li>
           <li>Query-cluster test across ChatGPT, Claude, Gemini, Perplexity</li>
           <li>Prioritized findings report</li>
           <li>Delivered in days, not weeks</li>
         </ul>
-        <a href="/audit/" class="btn btn-primary btn-block" style="margin-bottom:0.6rem;">Run Free Diagnostic →</a>
-        <button id="audit-trigger" class="btn btn-ghost btn-block">Start Your Audit →</button>
+        <a href="/audit/" class="btn btn-primary btn-block" style="margin-bottom:0.6rem;">Run Free Signal Check →</a>
+        <a href="/audit/?intent=signal_audit" class="btn btn-ghost btn-block">Request Audit Fit Review →</a>
       </div>
       <div class="tier">
         <div class="tier-name">Full Signal Repair</div>
@@ -825,7 +825,7 @@ footer{border-top:1px solid var(--color-border);padding:4rem 0 2.5rem;background
           <li>Attestation of corrected claims</li>
           <li>Checkpoint Recovery on every change</li>
         </ul>
-        <a href="#faq" class="btn btn-ghost btn-block">Request Proposal</a>
+        <a href="/audit/?intent=signal_repair" class="btn btn-ghost btn-block">Request Fit Review</a>
       </div>
       <div class="tier">
         <div class="tier-name">Sovereign Retainer</div>
@@ -837,7 +837,7 @@ footer{border-top:1px solid var(--color-border);padding:4rem 0 2.5rem;background
           <li>Mandate Chain infrastructure for agent networks</li>
           <li>Quarterly signal scoring review</li>
         </ul>
-        <a href="#faq" class="btn btn-ghost btn-block">Request Proposal</a>
+        <a href="/audit/?intent=sovereign_retainer" class="btn btn-ghost btn-block">Request Fit Review</a>
       </div>
     </div>
   </div>
@@ -881,48 +881,6 @@ footer{border-top:1px solid var(--color-border);padding:4rem 0 2.5rem;background
         <button class="faq-q">What happens during a Signal Audit?<span class="plus">+</span></button>
         <div class="faq-a"><p>A Signal Audit scores an entity across five dimensions — entity declaration, E-E-A-T signal, GEO content structure, crawler infrastructure, and Share of Model — then runs a query-cluster test across major LLM platforms to establish a baseline and prioritize the highest-impact fixes.</p></div>
       </div>
-
-    <div id="audit-form-wrapper" class="form-toggle" style="margin-top:2.5rem;">
-      <form id="audit-form" class="audit-form">
-        <div class="form-row">
-          <label for="audit-name">Name</label>
-          <input type="text" id="audit-name" name="name" required placeholder="Your name" />
-        </div>
-        <div class="form-row">
-          <label for="audit-email">Email</label>
-          <input type="email" id="audit-email" name="email" required placeholder="you@company.com" />
-        </div>
-        <div class="form-row">
-          <label for="audit-company">Company</label>
-          <input type="text" id="audit-company" name="company" placeholder="Company or brand" />
-        </div>
-        <div class="form-row">
-          <label for="audit-url">Website</label>
-          <input type="url" id="audit-url" name="entity_url" placeholder="https://" />
-        </div>
-        <div class="form-row">
-          <label for="audit-interest">What do you need?</label>
-          <select id="audit-interest" name="service_interest">
-            <option value="signal_audit">Signal Audit — 5-dimension score + SoM baseline</option>
-            <option value="geo">GEO — Generative engine optimization</option>
-            <option value="reputation">Reputation — Correction and repair</option>
-            <option value="enterprise_visibility">Enterprise — AI visibility audit</option>
-            <option value="due_diligence">Due Diligence — Pre-transaction reputation check</option>
-            <option value="agentic_trust">Agentic Trust — Agent network reputation infrastructure</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="audit-notes">What's happening?</label>
-          <textarea id="audit-notes" name="notes" placeholder="Briefly: what are you seeing in AI search results?"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block" id="audit-submit">Request Audit →</button>
-      </form>
-      <div id="form-success" class="form-success">
-        <div class="check">✓</div>
-        <h3>Request received.</h3>
-        <p>We'll run your Signal Audit and deliver findings within 48 hours.</p>
-      </div>
-    </div>
     </div>
   </div>
 </section>
@@ -934,7 +892,7 @@ footer{border-top:1px solid var(--color-border);padding:4rem 0 2.5rem;background
     <span class="eyebrow section-kicker" style="justify-content:center;">Closing</span>
     <h2>Your reputation is already being read by machines that don't wait for permission.</h2>
     <p>ARM Agency makes sure what they read is true.</p>
-    <a href="#pricing" class="btn btn-primary">Request a Signal Audit →</a>
+    <a href="/audit/" class="btn btn-primary">Run Free Signal Check →</a>
   </div>
 </section>
 
@@ -1021,55 +979,6 @@ document.querySelectorAll('.faq-item').forEach(item => {
       a.style.maxHeight = a.scrollHeight + 'px';
     }
   });
-});
-</script>
-
-<script>
-// Audit form
-document.getElementById('audit-trigger')?.addEventListener('click', function(e) {
-  e.preventDefault();
-  const form = document.getElementById('audit-form-wrapper');
-  form.classList.add('show');
-  form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-});
-
-document.getElementById('audit-form')?.addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const submitBtn = document.getElementById('audit-submit');
-  submitBtn.textContent = 'Submitting...';
-  submitBtn.disabled = true;
-
-  const formData = new FormData(this);
-  const payload = {
-    name: formData.get('name'),
-    email: formData.get('email'),
-    company: formData.get('company') || '',
-    source: 'website',
-    service_interest: formData.get('service_interest'),
-    notes: formData.get('notes') || '',
-    priority: 'high'
-  };
-
-  try {
-    const res = await fetch('https://ops-bdd10855.base44.app/functions/intakeLead', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    const data = await res.json();
-    if (res.ok) {
-      document.getElementById('audit-form').style.display = 'none';
-      document.getElementById('form-success').classList.add('show');
-    } else {
-      submitBtn.textContent = 'Request Audit →';
-      submitBtn.disabled = false;
-      alert('Something went wrong. Please email us directly.');
-    }
-  } catch(err) {
-    submitBtn.textContent = 'Request Audit →';
-    submitBtn.disabled = false;
-    alert('Network error. Please try again or email us directly.');
-  }
 });
 </script>
 

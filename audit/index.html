@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Signal Diagnostic: Find Your First Constraint | ARM Agency</title>
-<meta name="description" content="Five questions. No email gate. Find the first broken signal link in how AI engines represent your entity — entity declaration, E-E-A-T, content structure, crawler infrastructure, or Share of Model.">
+<title>Free Signal Check: Find the First Constraint to Verify | ARM Agency</title>
+<meta name="description" content="Five questions. No email gate. Identify the first signal constraint to verify before deciding whether an ARM Signal Audit is warranted.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.arm-agency.com/audit/">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Signal Diagnostic — Find Your First Constraint">
-<meta property="og:description" content="Five questions. No email gate. Find where your AI visibility breaks first.">
+<meta property="og:title" content="Free Signal Check — Find the First Constraint to Verify">
+<meta property="og:description" content="Five questions. No email gate. Identify where to verify your AI-representation signal first.">
 <meta property="og:url" content="https://www.arm-agency.com/audit/">
 <meta property="og:site_name" content="ARM Agency">
 
@@ -25,9 +25,9 @@
     {
       "@type": "WebApplication",
       "@id": "https://www.arm-agency.com/audit/#app",
-      "name": "ARM Agency Signal Diagnostic",
+      "name": "ARM Agency Signal Check",
       "url": "https://www.arm-agency.com/audit/",
-      "description": "A free five-question diagnostic that identifies the first broken signal link in how generative AI engines represent your entity.",
+      "description": "A free five-question self-check that identifies the first signal constraint to verify before deciding whether an evidence-producing audit is warranted.",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Any",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
@@ -37,7 +37,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "ARM Agency", "item": "https://www.arm-agency.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Signal Diagnostic", "item": "https://www.arm-agency.com/audit/" }
+        { "@type": "ListItem", "position": 2, "name": "Signal Check", "item": "https://www.arm-agency.com/audit/" }
       ]
     },
     {
@@ -45,23 +45,23 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Is the Signal Diagnostic free?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The five-question diagnostic is completely free and requires no email. You can run it anonymously and leave with a clear understanding of your first constraint." }
+          "name": "Is the Signal Check free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The five-question self-check is free and requires no email. It helps you identify a first constraint to verify; it is not a scored or evidence-producing audit." }
         },
         {
           "@type": "Question",
           "name": "Do I need to enter my email to get results?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. The diagnostic reveals your first constraint immediately after the five questions. Email is only requested if you choose to book a full Signal Audit afterward." }
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The Signal Check provides a self-guided orientation immediately. Contact information is requested only if you choose an Audit Fit Review to discuss a paid evidence baseline." }
         },
         {
           "@type": "Question",
           "name": "What are the five dimensions the diagnostic checks?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The diagnostic maps to ARM Agency's five Signal Audit dimensions: entity declaration, E-E-A-T signal, GEO content structure, crawler infrastructure, and Share of Model measurement." }
+          "acceptedAnswer": { "@type": "Answer", "text": "The Signal Check uses the same five lenses as ARM Agency's Signal Audit: entity declaration, E-E-A-T signal, GEO content structure, crawler infrastructure, and Share of Model measurement." }
         },
         {
           "@type": "Question",
           "name": "What happens after the diagnostic?",
-          "acceptedAnswer": { "@type": "Answer", "text": "You see your weakest dimension — the first constraint to fix — plus a recommendation for whether a full Signal Audit ($2,500) is worth it for your situation, or whether the self-guided findings are enough to act on." }
+          "acceptedAnswer": { "@type": "Answer", "text": "You see the first constraint to verify and can either use the self-guided resources or request an Audit Fit Review. A paid Signal Audit is proposed only after fit, scope, and delivery capacity are reviewed." }
         }
       ]
     }
@@ -268,24 +268,24 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0 2rem;background:v
 <div class="topnav">
   <div class="inner">
     <a href="/" class="logo">ARM AGENCY</a>
-    <span class="breadcrumb"><a href="/">Home</a> / Signal Diagnostic</span>
+    <span class="breadcrumb"><a href="/">Home</a> / Signal Check</span>
   </div>
 </div>
 
 <!-- ==================== HERO ==================== -->
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">Free Signal Diagnostic</span>
+    <span class="eyebrow">Free Signal Check</span>
     <h1>The first broken signal<br>sets the ceiling.</h1>
-    <p>Five questions reveal where your AI visibility breaks first — entity declaration, E-E-A-T, content structure, crawler infrastructure, or Share of Model. No email gate. No vanity score. Just the next thing worth fixing.</p>
+    <p>Five questions help you identify the first signal constraint to verify — entity declaration, E-E-A-T, content structure, crawler infrastructure, or Share of Model. No email gate. No vanity score. Just the next evidence step.</p>
     <button class="start-btn" id="startBtn" onclick="startQuiz()">
-      Run the five questions
+      Run the Signal Check
       <span class="arrow">→</span>
     </button>
     <div class="meta-strip">
       <span>Five questions</span>
       <span>Free · no email required</span>
-      <span>Instant result</span>
+      <span>Self-guided orientation</span>
     </div>
   </div>
 </section>
@@ -378,7 +378,7 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0 2rem;background:v
       <p id="ctaText">A scope review uses your diagnostic result, decision context, and website to determine whether a Signal Audit is the right next step.</p>
 
       <button class="start-btn" onclick="showCaptureForm()" id="bookAuditBtn" style="margin-bottom:0.5rem;">
-        Request a scoped Signal Audit
+        Request an Audit Fit Review
         <span class="arrow">→</span>
       </button>
 
@@ -573,6 +573,7 @@ const detailMap = {
 
 let answers = {};
 let currentQ = 0;
+let serviceInterest = 'signal_audit';
 
 function startQuiz() {
   document.querySelector('.hero').style.display = 'none';
@@ -613,6 +614,7 @@ function answer(qNum, value, btn) {
 }
 
 function showResults() {
+  serviceInterest = 'signal_audit';
   document.getElementById('progressFill').style.width = '100%';
   document.getElementById('quizSection').classList.remove('active');
   document.getElementById('quizSection').style.display = 'none';
@@ -650,18 +652,18 @@ function showResults() {
 
   if (pct <= 40) {
     badge.className = 'result-badge critical';
-    badge.textContent = '⚠ Critical — multiple signal breaks detected';
+    badge.textContent = '⚠ Multiple areas to verify';
   } else if (pct <= 70) {
     badge.className = 'result-badge moderate';
-    badge.textContent = '◆ Moderate — key gaps to address';
+    badge.textContent = '◆ Some areas to verify';
   } else {
     badge.className = 'result-badge healthy';
-    badge.textContent = '✓ Healthy — minor optimizations needed';
+    badge.textContent = '✓ Self-reported strengths present';
   }
 
   // Set headline
   document.getElementById('resultHeadline').innerHTML =
-    `Your first constraint: <span class="constraint-name">${weakest.name}</span>`;
+    `First constraint to verify: <span class="constraint-name">${weakest.name}</span>`;
 
   // Set detail
   document.getElementById('resultDetail').innerHTML =
@@ -670,13 +672,13 @@ function showResults() {
   // Adjust CTA based on score
   if (pct <= 40) {
     document.getElementById('ctaHeadline').textContent = 'Multiple breaks — confirm the scope before acting.';
-    document.getElementById('ctaText').textContent = 'Your result identifies several constraints. A short scope review can determine whether a full Signal Audit is the appropriate next step.';
+    document.getElementById('ctaText').textContent = 'Your self-check points to several constraints. A short fit review can determine whether a full Signal Audit is the appropriate next step.';
   } else if (pct <= 70) {
     document.getElementById('ctaHeadline').textContent = 'One key gap. Decide whether a baseline is needed.';
-    document.getElementById('ctaText').textContent = 'Your ' + weakest.name + ' is the first constraint. A scope review can determine whether to commission a Signal Audit or begin with the free GEO guide.';
+    document.getElementById('ctaText').textContent = 'Your self-check points to ' + weakest.name + ' as the first constraint to verify. A fit review can determine whether to commission a Signal Audit or begin with the free GEO guide.';
   } else {
     document.getElementById('ctaHeadline').textContent = "You're in good shape. Choose the next evidence step.";
-    document.getElementById('ctaText').textContent = 'Your signal is mostly healthy. Use the free GEO guide for self-directed work, or request a scope review if you need an evidence-backed baseline.';
+    document.getElementById('ctaText').textContent = 'Your self-check indicates fewer immediate concerns. Use the free GEO guide for self-directed work, or request a fit review if you need an evidence-backed baseline.';
   }
 
   document.getElementById('resultsSection').classList.add('active');
@@ -684,13 +686,30 @@ function showResults() {
 
   // Store diagnostic results for the capture form
   const diagnosticSummary = scores.map(s => `${s.short}: ${s.answer}`).join(', ');
-  document.getElementById('capture-diagnostic').value = diagnosticSummary;
+  document.getElementById('capture-diagnostic').value = 'Signal Check self-report: ' + diagnosticSummary;
 }
 
 function showCaptureForm() {
   document.getElementById('captureForm').classList.add('active');
   document.getElementById('bookAuditBtn').style.display = 'none';
   document.getElementById('captureForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function startFitReview(intent) {
+  const allowedIntents = ['signal_audit', 'signal_repair', 'sovereign_retainer'];
+  serviceInterest = allowedIntents.includes(intent) ? intent : 'signal_audit';
+  document.querySelector('.hero').style.display = 'none';
+  const results = document.getElementById('resultsSection');
+  results.classList.add('active');
+  document.getElementById('resultBadge').className = 'result-badge moderate';
+  document.getElementById('resultBadge').textContent = 'Private Audit Fit Review';
+  document.getElementById('resultHeadline').innerHTML = 'Start with the decision, <span class="constraint-name">not the deliverable.</span>';
+  document.getElementById('scoreGrid').style.display = 'none';
+  document.getElementById('resultDetail').innerHTML = '<h3>What happens next</h3><p>We review the decision context, scope, and delivery capacity before proposing any paid engagement. A Signal Check is optional for direct requests and can be completed later if it would help the scope discussion.</p>';
+  document.getElementById('ctaHeadline').textContent = 'Request an Audit Fit Review.';
+  document.getElementById('ctaText').textContent = 'Share the decision you need to make. We will confirm the appropriate next step before proposing a Signal Audit, Signal Repair, or Sovereign Retainer.';
+  document.getElementById('capture-diagnostic').value = 'Direct Audit Fit Review request; Signal Check not completed.';
+  showCaptureForm();
 }
 
 async function submitCapture(e) {
@@ -726,9 +745,9 @@ async function submitCapture(e) {
     email,
     company,
     entity_url: entityUrl,
-    source: 'diagnostic',
-    service_interest: 'signal_audit',
-    notes: 'Signal Diagnostic results: ' + diagnosticSummary + '\n' + qualificationSummary,
+    source: diagnosticSummary.startsWith('Direct') ? 'audit_fit_review' : 'signal_check',
+    service_interest: serviceInterest,
+    notes: diagnosticSummary + '\n' + qualificationSummary,
     priority: timing === 'within_2_weeks' && authority === 'decision_owner' ? 'high' : 'normal'
   };
 
@@ -752,6 +771,9 @@ async function submitCapture(e) {
     alert('Network error. Please try again or call +1 (224) 275-9027.');
   }
 }
+
+const directIntent = new URLSearchParams(window.location.search).get('intent');
+if (directIntent) startFitReview(directIntent);
 </script>
 
 </body>
