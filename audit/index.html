@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Free Signal Check: Find the First Constraint to Verify | ARM Agency</title>
-<meta name="description" content="Five questions. No email gate. Identify the first signal constraint to verify before deciding whether an ARM Signal Audit is warranted.">
+<meta name="description" content="Five questions. No email gate. Identify the first evidence, information, or technical condition to verify before deciding whether an ARM Signal Audit is warranted.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.arm-agency.com/audit/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Free Signal Check — Find the First Constraint to Verify">
-<meta property="og:description" content="Five questions. No email gate. Identify where to verify your AI-representation signal first.">
+<meta property="og:description" content="Five questions. No email gate. Identify the first representation condition worth verifying.">
 <meta property="og:url" content="https://www.arm-agency.com/audit/">
 <meta property="og:site_name" content="ARM Agency">
 
@@ -56,7 +56,7 @@
         {
           "@type": "Question",
           "name": "What are the five dimensions the diagnostic checks?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The Signal Check uses the same five lenses as ARM Agency's Signal Audit: entity declaration, E-E-A-T signal, GEO content structure, crawler infrastructure, and Share of Model measurement." }
+          "acceptedAnswer": { "@type": "Answer", "text": "The Signal Check uses five orientation lenses: entity record, evidence context, information clarity, technical access, and a documented observation baseline." }
         },
         {
           "@type": "Question",
@@ -277,7 +277,7 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0 2rem;background:v
   <div class="container">
     <span class="eyebrow">Free Signal Check</span>
     <h1>The first broken signal<br>sets the ceiling.</h1>
-    <p>Five questions help you identify the first signal constraint to verify — entity declaration, E-E-A-T, content structure, crawler infrastructure, or Share of Model. No email gate. No vanity score. Just the next evidence step.</p>
+    <p>Five questions help you identify the first representation condition to verify — entity record, evidence context, information clarity, technical access, or an observation baseline. No email gate. No vanity score. Just the next evidence step.</p>
     <button class="start-btn" id="startBtn" onclick="startQuiz()">
       Run the Signal Check
       <span class="arrow">→</span>
@@ -298,47 +298,47 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0 2rem;background:v
     <!-- Q1 -->
     <div class="q-card" id="q1" style="display:none;">
       <div class="q-label">Question 1 of 5</div>
-      <div class="q-dimension">Dimension: Entity Declaration</div>
-      <div class="q-text">If someone asks ChatGPT "What is [your company]?" — does it give a correct, specific answer with your actual description, founders, and what you do?</div>
+      <div class="q-dimension">Dimension: Entity record</div>
+      <div class="q-text">When a person or system inspects your organization, can it find a clear, supported description of what you do, who is responsible, and which offers are current?</div>
       <div class="q-buttons">
         <button class="q-btn" onclick="answer(1,'yes',this)">YES</button>
         <button class="q-btn" onclick="answer(1,'unsure',this)">UNSURE</button>
         <button class="q-btn" onclick="answer(1,'no',this)">NO</button>
       </div>
-      <div class="q-hint">This checks whether generative engines can identify your entity at the most basic level — name, description, people, and offers.</div>
+      <div class="q-hint">This checks whether the basics — name, description, people, and offers — agree across the pages and records you control.</div>
     </div>
 
     <!-- Q2 -->
     <div class="q-card" id="q2" style="display:none;">
       <div class="q-label">Question 2 of 5</div>
-      <div class="q-dimension">Dimension: E-E-A-T Signal</div>
+      <div class="q-dimension">Dimension: Evidence context</div>
       <div class="q-text">Can independent, credible sources (press, industry publications, repositories) corroborate the expertise and claims you want associated with your brand?</div>
       <div class="q-buttons">
         <button class="q-btn" onclick="answer(2,'yes',this)">YES</button>
         <button class="q-btn" onclick="answer(2,'unsure',this)">UNSURE</button>
         <button class="q-btn" onclick="answer(2,'no',this)">NO</button>
       </div>
-      <div class="q-hint">E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) is a useful lens for reviewing whether important claims have credible support.</div>
+      <div class="q-hint">Experience, expertise, authoritativeness, and trustworthiness can be useful review lenses when important claims need credible support.</div>
     </div>
 
     <!-- Q3 -->
     <div class="q-card" id="q3" style="display:none;">
       <div class="q-label">Question 3 of 5</div>
-      <div class="q-dimension">Dimension: GEO Content Structure</div>
+      <div class="q-dimension">Dimension: Information clarity</div>
       <div class="q-text">Does your website use structured data (JSON-LD schema markup) to explicitly declare your organization, people, services, and relationships to machines — not just humans?</div>
       <div class="q-buttons">
         <button class="q-btn" onclick="answer(3,'yes',this)">YES</button>
         <button class="q-btn" onclick="answer(3,'unsure',this)">UNSURE</button>
         <button class="q-btn" onclick="answer(3,'no',this)">NO</button>
       </div>
-      <div class="q-hint">If crawlers can't parse your structure, they guess — and guesses become the narrative engines repeat about you.</div>
+      <div class="q-hint">Accessible visible content and matching markup make the information easier to inspect. A formal review determines which gaps matter to the accepted scope.</div>
     </div>
 
     <!-- Q4 -->
     <div class="q-card" id="q4" style="display:none;">
       <div class="q-label">Question 4 of 5</div>
-      <div class="q-dimension">Dimension: Crawler Infrastructure</div>
-      <div class="q-text">Do AI crawlers (GPTBot, ClaudeBot, PerplexityBot, CCBot, Google-Extended) have explicit permission to access your important pages — and are those pages actually reachable?</div>
+      <div class="q-dimension">Dimension: Technical access</div>
+      <div class="q-text">Are your important pages reachable, internally linked, and presented with the technical signals that authorized crawlers and browsers can inspect?</div>
       <div class="q-buttons">
         <button class="q-btn" onclick="answer(4,'yes',this)">YES</button>
         <button class="q-btn" onclick="answer(4,'unsure',this)">UNSURE</button>
@@ -350,14 +350,14 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0 2rem;background:v
     <!-- Q5 -->
     <div class="q-card" id="q5" style="display:none;">
       <div class="q-label">Question 5 of 5</div>
-      <div class="q-dimension">Dimension: Share of Model</div>
-      <div class="q-text">Are you tracking how often ChatGPT, Claude, Gemini, and Perplexity mention your brand across relevant queries — and how that changes over time?</div>
+      <div class="q-dimension">Dimension: Observation baseline</div>
+      <div class="q-text">Do you have an agreed context for recording the relevant pages, sources, user paths, and observations before deciding what to change?</div>
       <div class="q-buttons">
         <button class="q-btn" onclick="answer(5,'yes',this)">YES</button>
         <button class="q-btn" onclick="answer(5,'unsure',this)">UNSURE</button>
         <button class="q-btn" onclick="answer(5,'no',this)">NO</button>
       </div>
-      <div class="q-hint">A stable query set creates an observation baseline for comparing inclusion, citations, and framing over time.</div>
+      <div class="q-hint">A stable review context supports documented comparisons over time without promising what any third-party system will do.</div>
     </div>
 
   </div>
@@ -463,36 +463,36 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0 2rem;background:v
     <div class="dim-item">
       <div class="num">01</div>
       <div>
-        <h4>Entity Declaration</h4>
+        <h4>Entity record</h4>
         <p>Can a machine identify you? Names, identifiers, structured data, people, and offers that agree across sources.</p>
       </div>
     </div>
     <div class="dim-item">
       <div class="num">02</div>
       <div>
-        <h4>E-E-A-T Signal</h4>
+        <h4>Evidence context</h4>
         <p>Do credible external sources corroborate your expertise? Experience, expertise, authoritativeness, and trustworthiness — verified, not asserted.</p>
       </div>
     </div>
     <div class="dim-item">
       <div class="num">03</div>
       <div>
-        <h4>GEO Content Structure</h4>
-        <p>Is your content machine-parseable? JSON-LD schema, entity graphs, and citation-ready answers that crawlers can extract without guessing.</p>
+        <h4>Information clarity</h4>
+        <p>Is your information readable and internally consistent? Visible content, structured data, and accessible paths should agree within the scope being reviewed.</p>
       </div>
     </div>
     <div class="dim-item">
       <div class="num">04</div>
       <div>
-        <h4>Crawler Infrastructure</h4>
-        <p>Can AI crawlers actually reach your pages? Robots.txt, sitemaps, server responses, and crawl budget — the plumbing most sites never check.</p>
+        <h4>Technical access</h4>
+        <p>Can authorized systems reach the relevant pages? Robots.txt, sitemaps, server responses, internal links, and stable HTML are reviewed as technical conditions, not outcomes.</p>
       </div>
     </div>
     <div class="dim-item">
       <div class="num">05</div>
       <div>
-        <h4>Share of Model</h4>
-        <p>Are you measuring? A stable query set tracks how often engines mention you, cite you, and frame you — across time, against competitors.</p>
+        <h4>Observation baseline</h4>
+        <p>Do you have a documented context for observing the relevant pages, sources, and user paths before changing a material representation condition?</p>
       </div>
     </div>
   </div>
@@ -503,7 +503,7 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0 2rem;background:v
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="/" style="font-family:var(--font-display);font-weight:700;font-size:1.1rem;">ARM AGENCY</a>
-      <p>Reputation management for the AI era. We repair how ChatGPT, Claude, Gemini, and Perplexity represent you.</p>
+      <p>Evidence-led representation, technical clarity, and governed operating records for consequential public information.</p>
     </div>
     <div class="footer-col">
       <h4>Engagements</h4>
@@ -546,28 +546,28 @@ footer{border-top:1px solid var(--color-border);padding:3rem 0 2rem;background:v
 
 <script>
 const dimensions = [
-  { name: 'Entity Declaration', short: 'Entity', weight: 3 },
-  { name: 'E-E-A-T Signal', short: 'E-E-A-T', weight: 2.5 },
-  { name: 'GEO Content Structure', short: 'Content', weight: 2 },
-  { name: 'Crawler Infrastructure', short: 'Crawler', weight: 2 },
-  { name: 'Share of Model', short: 'SoM', weight: 1.5 }
+  { name: 'Entity record', short: 'Entity', weight: 3 },
+  { name: 'Evidence context', short: 'Evidence', weight: 2.5 },
+  { name: 'Information clarity', short: 'Info', weight: 2 },
+  { name: 'Technical access', short: 'Access', weight: 2 },
+  { name: 'Observation baseline', short: 'Observe', weight: 1.5 }
 ];
 
 const detailMap = {
-  'Entity Declaration': {
-    text: "Your entity isn't clearly identifiable to generative engines. This is the foundation — if ChatGPT can't correctly describe what you do, who founded you, and what you offer, nothing downstream works. Schema markup, consistent NAP (Name, Address, Phone) data, and sameAs links to authoritative profiles are the first fix."
+  'Entity record': {
+    text: "The basic record may be incomplete or inconsistent. A formal review begins with the organization’s name, description, people, offers, identifiers, source locations, and the pages that present them."
   },
-  'E-E-A-T Signal': {
+  'Evidence context': {
     text: "Your claims may need clearer external corroboration. Identify the specific claims, source records, and relevant third-party materials that a formal review should examine."
   },
-  'GEO Content Structure': {
-    text: "Your content isn't machine-parseable. Even great content fails if crawlers can't extract structured facts from it. JSON-LD schema, entity graphs, and citation-ready answer blocks are what make your pages legible to AI — not just to humans."
+  'Information clarity': {
+    text: "The current information may need clearer structure or visible-content-to-markup parity. A formal review identifies the specific pages, claims, and technical relationships that warrant change."
   },
-  'Crawler Infrastructure': {
-    text: "AI crawlers may be blocked or unable to reach important pages. A formal review checks robots.txt, sitemaps, server responses, and whether key evidence is available in accessible HTML."
+  'Technical access': {
+    text: "Important pages may need a technical access review. A formal review checks robots.txt, sitemaps, server responses, internal paths, and whether key evidence is available in accessible HTML."
   },
-  'Share of Model': {
-    text: "You may not have a stable observation baseline. An agreed query set can record mentions, citations, and framing under documented conditions over time."
+  'Observation baseline': {
+    text: "You may not yet have a stable observation baseline. An agreed review context can record relevant pages, sources, access conditions, and later observations without treating correlation as guaranteed causality."
   }
 };
 
