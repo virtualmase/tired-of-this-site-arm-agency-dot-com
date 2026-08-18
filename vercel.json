@@ -1,5 +1,9 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": true,
-  "rewrites": []
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://arm-agency.xyz",
+      "permanent": true
+    }
+  ]
 }
