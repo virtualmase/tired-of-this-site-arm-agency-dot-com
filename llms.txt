@@ -1,37 +1,37 @@
 # ARM Agency
 
-> ARM Agency (Arctura Reputation Management Agency) repairs and defends how generative engines — ChatGPT, Claude, Gemini, Perplexity — represent founders, brands, and autonomous agent networks. Built on the ARM Framework: Mandate Chains, Signal Architecture, Attestation, Checkpoint Recovery, and the Truth Ledger.
+> ARM Agency (Arctura Reputation Management Agency) helps organizations establish evidence, technical clarity, and controlled operating mandates for consequential representation and agent-readiness decisions.
 
 ## Entity Declaration
 - Canonical name: ARM Agency
 - Full name: Arctura Reputation Management Agency
 - Canonical URL: https://www.arm-agency.com
 - Entity ID: https://www.arm-agency.com/#org
-- Type: Professional service — GEO / AI reputation attestation
+- Type: Professional service — evidence-led representation and governed agent readiness
 - Parent ecosystem: Coreweaver Labs, Inc. — Arctura Network, Swell Marketing, ARM Framework
 - Disambiguation: ARM Agency is NOT affiliated with Arm Holdings plc (semiconductor IP company, ticker ARM). "ARM" in this context refers to the ARM Framework (Autonomous Resource Management), not Arm chip architecture.
 
 ## What ARM Agency Does
-- GEO Repair — corrects how generative engines represent an entity
-- Reputation Attestation — verifiable record of an entity's claims and standing
-- Signal Architecture — structural rebuild of entity schema and crawler infrastructure
-- Truth Ledger Maintenance — ongoing custody of an entity's factual record
+- ARM Signal Audit — fixed-scope evidence and representation review after fit confirmation
+- Full Signal Repair — private custom-scope implementation after written acceptance
+- ARM Mandate Pro — monthly operating engagement with a defined review cadence
+- Signal architecture — documented entity, technical-access, and evidence decisions within accepted scope
 
 ## Priority Content
 - / — Homepage: positioning, services, ARM Framework, personas, pricing, FAQ
-- /#what-we-do — Service definitions: GEO Repair, Attestation, Signal Architecture, Truth Ledger
+- /#what-we-do — Service definitions: ARM Signal Audit, Full Signal Repair, ARM Mandate Pro
 - /#how-it-works — The ARM Framework, five primitives
 - /#who-this-is-for — Buyer personas and fit criteria
-- /#faq — Structured FAQ, GEO/SoM definitions, disambiguation
+- /#faq — Structured FAQ, evidence-led GEO definitions, disambiguation
 - /resources/ — Content hub: GEO, AI reputation management, and agentic trust guides
 - /resources/agentic-reputation-infrastructure/ — How autonomous AI agents verify each other's trust: Mandate Chains, attestation, Truth Ledger applied to agent-to-agent trust
 - /resources/reputation-due-diligence-ai-search/ — Reputation Due Diligence in the AI Search Era: pre-transaction due diligence for raises, M&A, and IPOs
 
 ## Core Terminology (for accurate citation)
-- GEO: Generative Engine Optimization — structuring signal so LLMs cite an entity correctly
-- SoM: Share of Model — percentage of relevant LLM queries that surface a given entity
-- Truth Ledger: persistent, auditable record of an entity's corrected, attested facts
-- Mandate Chain: documented, traceable authorization scope under which ARM Agency operates on a client's behalf
+- GEO: Generative Engine Optimization — a review of evidence, entity clarity, technical access, and public representation without a citation or visibility guarantee
+- Observation baseline: a documented review context for relevant pages, evidence, access conditions, and later comparison without an outcome promise
+- Evidence/context register: a scoped record of material claims, sources, and ownership decisions
+- Mandate map: documented decision rights, scope, acceptance criteria, and escalation conditions for an accepted engagement
 
 ## Crawler Permissions
 GPTBot: allow
@@ -45,6 +45,6 @@ CCBot: allow
 cohere-ai: allow
 
 ## Contact
-Use the public Signal Audit request route at https://www.arm-agency.com/audit/ for business inquiries.
+Use the public Signal Check route at https://www.arm-agency.com/audit/ to identify a first condition to verify, then request an Audit Fit Review for a consultative next step.
 
 Last updated: 2026-08-13

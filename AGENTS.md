@@ -26,4 +26,4 @@ Swell and ARM must share one consultative next step. When editing a CTA, preserv
 
 ## Collaboration workflow
 
-Read the relevant page and static assets before editing. Keep copy claim-safe, source-backed, and accessible. After public route or CTA work, inspect the live route directly and record what created a downstream record versus what was view-only. Never add secrets, credentials, raw intake payloads, payment data, or personal prospect information to source control.
+Read the relevant page and static assets before editing. Write code, configuration, comments, tests, commit messages, file names, and implementation-facing documentation in English. Use another language only for explicitly approved public-facing localized content, with an English review note where it affects implementation. Keep copy claim-safe, source-backed, and accessible. After public route or CTA work, inspect the live route directly and record what created a downstream record versus what was view-only. Never add secrets, credentials, raw intake payloads, payment data, or personal prospect information to source control.

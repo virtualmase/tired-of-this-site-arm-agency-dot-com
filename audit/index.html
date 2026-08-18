@@ -696,7 +696,7 @@ function showCaptureForm() {
 }
 
 function startFitReview(intent) {
-  const allowedIntents = ['signal_audit', 'signal_repair', 'sovereign_retainer'];
+  const allowedIntents = ['signal_audit', 'signal_repair', 'arm_mandate_pro'];
   serviceInterest = allowedIntents.includes(intent) ? intent : 'signal_audit';
   document.querySelector('.hero').style.display = 'none';
   const results = document.getElementById('resultsSection');
@@ -707,7 +707,7 @@ function startFitReview(intent) {
   document.getElementById('scoreGrid').style.display = 'none';
   document.getElementById('resultDetail').innerHTML = '<h3>What happens next</h3><p>We review the decision context, scope, and delivery capacity before proposing any paid engagement. A Signal Check is optional for direct requests and can be completed later if it would help the scope discussion.</p>';
   document.getElementById('ctaHeadline').textContent = 'Request an Audit Fit Review.';
-  document.getElementById('ctaText').textContent = 'Share the decision you need to make. We will confirm the appropriate next step before proposing a Signal Audit, Signal Repair, or Sovereign Retainer.';
+  document.getElementById('ctaText').textContent = 'Share the decision you need to make. We will confirm the appropriate next step before proposing an ARM Signal Audit, Full Signal Repair, or ARM Mandate Pro engagement.';
   document.getElementById('capture-diagnostic').value = 'Direct Audit Fit Review request; Signal Check not completed.';
   showCaptureForm();
 }
