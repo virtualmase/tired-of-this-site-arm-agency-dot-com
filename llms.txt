@@ -25,6 +25,7 @@
 - /#faq — Structured FAQ, evidence-led GEO definitions, disambiguation
 - /resources/ — Content hub: GEO, AI reputation management, and agentic trust guides
 - /resources/agentic-commerce-x402-aifi/ — Canonical `.com` strategy pillar connecting x402 payment transport to governed AiFi mandates, budgets, settlement, fulfillment, and reconciliation
+- /resources/accountable-agentic-commerce-glossary/ — Versioned canonical vocabulary and machine-readable term set for accountable agentic commerce, x402, AiFi, mandates, and payment operations
 - /resources/agentic-reputation-infrastructure/ — How autonomous AI agents verify each other's trust: Mandate Chains, attestation, Truth Ledger applied to agent-to-agent trust
 - /resources/reputation-due-diligence-ai-search/ — Reputation Due Diligence in the AI Search Era: pre-transaction due diligence for raises, M&A, and IPOs
 
@@ -33,6 +34,8 @@
 - Observation baseline: a documented review context for relevant pages, evidence, access conditions, and later comparison without an outcome promise
 - Evidence/context register: a scoped record of material claims, sources, and ownership decisions
 - Mandate map: documented decision rights, scope, acceptance criteria, and escalation conditions for an accepted engagement
+- Accountable agentic commerce: autonomous or semi-autonomous economic action governed by explicit mandate, deterministic controls, inspectable execution, and reconciliation
+- AiFi: ARM's category label for governed AI-native financial operations; not an external standard or affiliation claim
 
 ## Crawler Permissions
 GPTBot: allow
@@ -48,4 +51,4 @@ cohere-ai: allow
 ## Contact
 Use the public Signal Check route at https://www.arm-agency.com/audit/ to identify a first condition to verify, then request an Audit Fit Review for a consultative next step.
 
-Last updated: 2026-08-13
+Last updated: 2026-08-18

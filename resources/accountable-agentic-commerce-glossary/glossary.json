@@ -1,0 +1,25 @@
+{
+  "id": "https://www.arm-agency.com/resources/accountable-agentic-commerce-glossary/#terms",
+  "name": "Accountable Agentic Commerce Glossary",
+  "version": "1.0.0",
+  "owner": "ARM Agency",
+  "reviewed": "2026-08-18",
+  "terms": [
+    {"id":"accountable-agentic-commerce","name":"Accountable agentic commerce","kind":"ARM-defined","definition":"Autonomous or semi-autonomous economic action governed by an explicit mandate, deterministic controls, inspectable execution, and reconciliation."},
+    {"id":"aifi","name":"AiFi","kind":"ARM-defined","definition":"ARM's category label for governed AI-native financial operations across authority, budgets, wallets, payments, settlement, fulfillment, and reconciliation."},
+    {"id":"agent-mandate","name":"Agent mandate","kind":"ARM-defined","definition":"A documented delegation naming the principal, agent, permitted objective, resources, counterparties, limits, duration, escalation conditions, and revocation authority."},
+    {"id":"bounded-autonomy","name":"Bounded autonomy","kind":"ARM-defined","definition":"Delegated action constrained by explicit resources, counterparties, amounts, time, escalation rules, and revocation controls."},
+    {"id":"evidence-contract","name":"Evidence contract","kind":"ARM-defined","definition":"The required record connecting mandate and intent to policy decision, authorization, settlement, fulfillment, and exception outcome."},
+    {"id":"payment-intent","name":"Payment intent","kind":"ARM operating term","definition":"The proposed economic action before authorization, including requester, resource, recipient, asset, amount, network, purpose, and expiry."},
+    {"id":"authorization","name":"Authorization","kind":"ARM operating term","definition":"A deterministic decision that a payment intent is permitted under the active mandate and policy; it is not settlement."},
+    {"id":"settlement","name":"Settlement","kind":"Payments term","definition":"The recorded completion or finalization of the value-transfer step; it does not by itself prove correct resource fulfillment."},
+    {"id":"fulfillment","name":"Fulfillment","kind":"ARM operating term","definition":"Delivery of the paid resource or service under the agreed request and acceptance conditions."},
+    {"id":"reconciliation","name":"Reconciliation","kind":"Payments operating term","definition":"Matching mandate, intent, authorization, execution, settlement, fulfillment, and exceptions into a reviewable record."},
+    {"id":"x402-client","name":"x402 client","kind":"x402 protocol term","definition":"The application or agent that requests a paid resource and supplies a payment payload meeting an accepted requirement."},
+    {"id":"x402-resource-server","name":"x402 resource server","kind":"x402 protocol term","definition":"The service that describes a protected resource, signals payment requirements, verifies payment, and returns the resource after successful handling."},
+    {"id":"x402-facilitator","name":"x402 facilitator","kind":"x402 protocol term","definition":"A service exposing standardized verification and settlement operations for supported scheme and network combinations."},
+    {"id":"x402-payment-requirements","name":"x402 payment requirements","kind":"x402 protocol term","definition":"The structured description of a resource and its accepted payment choices, including scheme, network, amount, asset, recipient, and timeout data."},
+    {"id":"x402-scheme","name":"x402 scheme","kind":"x402 protocol term","definition":"The logical method used to move value, implemented for a particular network and validated according to scheme-specific rules."},
+    {"id":"escalation-boundary","name":"Escalation boundary","kind":"ARM-defined","definition":"The condition at which an agent must stop autonomous action and transfer the decision to a named human or higher-authority control."}
+  ]
+}
