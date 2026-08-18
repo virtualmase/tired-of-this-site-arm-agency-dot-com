@@ -4,6 +4,13 @@ Reputation management for the AI era.
 
 Live at [arm-agency.com](https://www.arm-agency.com).
 
+## Publishing boundary
+
+- `arm-agency.com` is published from this repository as the current ARM Agency site.
+- `arm-agency.xyz` is a separate legacy ARM Agency property with its own repository and release history.
+- AI Mastery is a separate editorial property. Links between these sites describe relationships; they do not merge canonical identity or authorize mirrored publication.
+- New `.com` pages must use `https://www.arm-agency.com/...` canonicals. New `.xyz` pages must retain `https://arm-agency.xyz/...` canonicals. Do not add a blanket redirect or cross-domain canonical between the properties.
+
 ## Project Structure
 
 ```
