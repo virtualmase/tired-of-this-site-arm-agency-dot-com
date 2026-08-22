@@ -1,973 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARM Agency | Governed Agent-Readiness &amp; Representation Operations</title>
-<meta name="description" content="ARM Agency helps organizations establish evidence, technical clarity, and controlled operating mandates for representation and agent-ready workflows.">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://www.arm-agency.com/">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="ARM Agency | Representation Is Signal. Keep It Checkable.">
-<meta property="og:description" content="Evidence, technical clarity, and governed agent-readiness mandates for consequential representation decisions.">
-<meta property="og:url" content="https://www.arm-agency.com/">
-<meta property="og:site_name" content="ARM Agency">
-<meta property="og:locale" content="en_US">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ARM Agency | Representation Is Signal. Keep It Checkable.">
-<meta name="twitter:description" content="Evidence, technical clarity, and governed agent-readiness mandates for consequential representation decisions.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- ============================================================
-     ENTITY SCHEMA — rendered in initial HTML, never JS-injected.
-     External identity references are limited to confirmed ecosystem properties.
-     ============================================================ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://www.arm-agency.com/#org",
-      "name": "ARM Agency",
-      "alternateName": "Arctura Reputation Management Agency",
-      "url": "https://www.arm-agency.com",
-      "logo": "https://www.arm-agency.com/logo.png",
-      "description": "ARM Agency helps organizations establish evidence, technical clarity, and controlled mandates for representation and agent-ready workflows.",
-      "areaServed": "Worldwide",
-      "knowsAbout": ["Generative Engine Optimization", "GEO", "evidence-led representation", "entity schema architecture", "agent-friendly website journeys", "agent-readiness governance", "E-E-A-T signal architecture"],
-      "sameAs": [
-        "https://arctura.network",
-        "https://autonomousresourcemanagement.com",
-        "https://coreweaverlabs.com"
-      ],
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "GEO", "description": "Diagnosis and correction of how generative engines represent an entity — facts surfaced, default framing, and structural gaps." }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Reputation", "description": "A verifiable record of an entity's claims, work, and standing — anchored, not asserted." }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Signal", "description": "Structural rebuild of an entity's public presence — JSON-LD entity graph, sameAs authority mapping, crawler infrastructure — so future engines read it correctly by default." }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Ledger", "description": "Ongoing custody of an entity's factual record, kept accurate as engines, indexes, and narratives shift." }
-        }
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.arm-agency.com/#website",
-      "url": "https://www.arm-agency.com",
-      "name": "ARM Agency",
-      "publisher": { "@id": "https://www.arm-agency.com/#org" }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.arm-agency.com/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is GEO (Generative Engine Optimization)?",
-          "acceptedAnswer": { "@type": "Answer", "text": "GEO is commonly used to describe work that improves how an organization’s information can be found and interpreted in generative search. ARM treats it as evidence-led representation work: source clarity, accessible information, technical parity, and reviewable change—not a promise that any model will provide a particular answer." }
-        },
-        {
-          "@type": "Question",
-          "name": "How is GEO different from traditional SEO?",
-          "acceptedAnswer": { "@type": "Answer", "text": "SEO and generative-search work share the same foundations: crawlable pages, helpful information, clear structure, and a sound user experience. ARM adds an evidence and governance lens where the representation or workflow is consequential. Neither discipline can guarantee third-party ranking, citation, or model behavior." }
-        },
-        {
-          "@type": "Question",
-          "name": "Is ARM Agency related to Arm Holdings, the semiconductor company?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. ARM Agency (Arctura Reputation Management Agency) is a reputation attestation and GEO signal firm. It has no affiliation, ownership, or licensing relationship with Arm Holdings plc, the semiconductor IP company known for ARM chip architecture." }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you document current representation conditions?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A written scope can define the relevant pages, evidence sources, user or agent-facing paths, observation conditions, and review date. ARM records what was observed under those conditions and uses that record to decide whether a change is warranted. It does not present third-party output snapshots as guaranteed or universal results." }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a reputation signal repair take?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Timeline depends on the accepted scope, available evidence, approvals, technical access, and third-party systems. A Signal Audit establishes the baseline and proposed sequence; it does not guarantee a change in a third-party AI output." }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you work with autonomous agent networks and on-chain protocols?",
-          "acceptedAnswer": { "@type": "Answer", "text": "ARM can assess whether a documented mandate, evidence/context register, defined access boundary, and acceptance controls are appropriate for a qualified agent-network or protocol workflow. A written scope determines the exact technical work; no third-party system outcome is guaranteed." }
-        },
-        {
-          "@type": "Question",
-          "name": "Is this the same as traditional online reputation management or review gating?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. ARM Agency does not manufacture reviews, suppress true information, or game star ratings. Every accepted public change needs a verifiable record, defined scope, and review path. The work is evidence-led representation and governance, not persuasion." }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens during a Signal Audit?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A Signal Audit records the agreed entity, supported claims, source/context inventory, technical and journey conditions, access boundaries, and first material constraint. It produces a prioritized decision record with owners, dependencies, acceptance criteria, and an appropriate next step; it does not promise a platform-specific outcome." }
-        }
-      ]
-    }
-  ]
-}
-</script>
-
-<style>
-:root{
-  --color-bg:#07050c;
-  --color-bg-2:#0b0813;
-  --color-surface:#120e1e;
-  --color-surface-2:#1a1428;
-  --color-border:rgba(168,130,255,0.14);
-  --color-border-strong:rgba(168,130,255,0.30);
-  --color-text:#ece8f7;
-  --color-text-muted:rgba(236,232,247,0.62);
-  --color-text-faint:rgba(236,232,247,0.36);
-  --color-accent:#9d6bff;
-  --color-accent-2:#6b4bff;
-  --color-accent-glow:rgba(157,107,255,0.38);
-  --color-verified:#33e6c0;
-  --color-warn:#ffb454;
-
-  --font-display:'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
-  --font-body:'Instrument Sans', -apple-system, 'Segoe UI', sans-serif;
-
-  --text-xs:0.75rem; --text-sm:0.875rem; --text-base:1rem; --text-lg:1.125rem;
-  --text-xl:1.25rem; --text-2xl:1.5rem; --text-3xl:1.875rem; --text-4xl:2.25rem;
-  --text-5xl:3rem; --text-6xl:3.75rem; --text-7xl:4.5rem;
-}
-
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  background:var(--color-bg);
-  color:var(--color-text);
-  font-family:var(--font-body);
-  font-size:var(--text-base);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-a{color:inherit;text-decoration:none;}
-ul{list-style:none;}
-img{max-width:100%;display:block;}
-
-.container{width:100%;max-width:1220px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem);}
-section{position:relative;padding:clamp(4.5rem,10vw,8rem) 0;}
-
-/* ---------- Background texture ---------- */
-body::before{
-  content:'';
-  position:fixed;inset:0;
-  background-image:
-    linear-gradient(rgba(157,107,255,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(157,107,255,0.035) 1px, transparent 1px);
-  background-size:64px 64px;
-  pointer-events:none;
-  z-index:0;
-  mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, black 0%, transparent 75%);
-}
-
-/* ---------- Hazy Meridian motif ---------- */
-.meridian{
-  position:absolute; left:0; right:0; height:520px;
-  pointer-events:none; z-index:0;
-  background:
-    radial-gradient(ellipse 60% 100% at 30% 50%, rgba(157,107,255,0.30) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 100% at 75% 40%, rgba(107,75,255,0.24) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 100% at 55% 60%, rgba(51,230,192,0.08) 0%, transparent 65%);
-  filter:blur(70px);
-  animation:meridianDrift 22s ease-in-out infinite alternate;
-}
-@keyframes meridianDrift{
-  0%{transform:translateX(-3%) scale(1);}
-  100%{transform:translateX(3%) scale(1.06);}
-}
-.meridian-line{
-  position:relative; height:1px; width:100%;
-  background:linear-gradient(90deg, transparent, var(--color-border-strong) 20%, var(--color-accent) 50%, var(--color-border-strong) 80%, transparent);
-  overflow:hidden;
-}
-.meridian-line::after{
-  content:'';
-  position:absolute; top:0; left:-30%; width:30%; height:100%;
-  background:linear-gradient(90deg, transparent, rgba(255,255,255,0.9), transparent);
-  animation:sweep 5s ease-in-out infinite;
-  opacity:0.7;
-}
-@keyframes sweep{
-  0%{left:-30%;} 50%{left:100%;} 100%{left:100%;}
-}
-
-/* ---------- Typography ---------- */
-.eyebrow{
-  font-family:var(--font-display);
-  font-size:var(--text-xs);
-  letter-spacing:0.18em;
-  text-transform:uppercase;
-  color:var(--color-accent);
-  display:inline-flex;align-items:center;gap:0.6em;
-}
-.eyebrow::before{content:'';width:1.4em;height:1px;background:var(--color-accent);}
-
-h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;letter-spacing:-0.01em;line-height:1.08;}
-h2{font-size:clamp(1.9rem, 3.2vw, var(--text-5xl));margin-bottom:1rem;}
-h3{font-size:var(--text-xl);margin-bottom:0.6rem;}
-.section-kicker{margin-bottom:1.25rem;}
-.section-lede{color:var(--color-text-muted);font-size:var(--text-lg);max-width:640px;}
-
-.grad-text{
-  background:linear-gradient(120deg, var(--color-text) 20%, var(--color-accent) 60%, var(--color-accent-2) 90%);
-  -webkit-background-clip:text; background-clip:text; color:transparent;
-}
-.mono{font-family:var(--font-display);}
-
-/* ---------- Nav ---------- */
-.nav{
-  position:fixed; top:0; left:0; right:0; z-index:50;
-  padding:1.1rem 0;
-  transition:background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
-  border-bottom:1px solid transparent;
-}
-.nav.scrolled{
-  background:rgba(7,5,12,0.82);
-  backdrop-filter:blur(16px);
-  border-bottom-color:var(--color-border);
-}
-.nav .container{display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:var(--font-display);font-weight:700;font-size:var(--text-lg);letter-spacing:-0.02em;display:flex;align-items:center;gap:0.5rem;}
-.logo-mark{width:9px;height:9px;border-radius:50%;background:var(--color-accent);box-shadow:0 0 14px var(--color-accent-glow);}
-.nav-links{display:flex;gap:2.1rem;font-size:var(--text-sm);color:var(--color-text-muted);}
-.nav-links a{transition:color 0.2s ease;}
-.nav-links a:hover{color:var(--color-text);}
-.nav-cta{display:flex;align-items:center;gap:1rem;}
-.nav-toggle{display:none;background:none;border:none;color:var(--color-text);font-size:1.4rem;cursor:pointer;}
-
-@media (max-width:860px){
-  .nav-links{
-    position:fixed; inset:0 0 0 30%; top:64px;
-    background:var(--color-bg-2); border-left:1px solid var(--color-border);
-    flex-direction:column; padding:2.5rem 1.75rem; gap:1.5rem;
-    transform:translateX(100%); transition:transform 0.35s ease; z-index:49;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARM Agency | AI Buyer Intelligence for High-ACV B2B</title>
+  <meta name="description" content="ARM helps high-ACV B2B teams identify buyer conversations that shape shortlist inclusion, then fix the proof and conversion gaps that make them harder to trust.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.arm-agency.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ARM Agency | Know what shapes the shortlist before sales gets the call.">
+  <meta property="og:description" content="A fixed-scope AI Buyer Intelligence Sprint for high-ACV B2B companies facing a category, launch, pipeline, or competitive trigger.">
+  <meta property="og:url" content="https://www.arm-agency.com/">
+  <meta property="og:site_name" content="ARM Agency">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ARM Agency | AI Buyer Intelligence for High-ACV B2B">
+  <meta name="twitter:description" content="Find the buyer conversations, source gaps, and proof failures that weaken shortlist inclusion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"ProfessionalService",
+        "@id":"https://www.arm-agency.com/#organization",
+        "name":"ARM Agency",
+        "alternateName":"Arctura Reputation Management Agency",
+        "url":"https://www.arm-agency.com/",
+        "description":"ARM helps high-ACV B2B companies identify buyer conversations shaping shortlist inclusion and improve the evidence and conversion surfaces buyers need to trust.",
+        "areaServed":"Worldwide",
+        "knowsAbout":["B2B buyer research","category positioning","evidence-led marketing","sales enablement","AI-assisted buyer research","conversion readiness"]
+      },
+      {
+        "@type":"Service",
+        "@id":"https://www.arm-agency.com/sprint/#service",
+        "name":"AI Buyer Intelligence Sprint",
+        "provider":{"@id":"https://www.arm-agency.com/#organization"},
+        "description":"A fixed-scope 15-business-day engagement that maps high-intent buyer conversations, source and proof gaps, and a 90-day action plan with accountable owners.",
+        "offers":{"@type":"Offer","price":"12500","priceCurrency":"USD","availability":"https://schema.org/InStock"}
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"What does ARM measure?","acceptedAnswer":{"@type":"Answer","text":"ARM documents agreed buyer questions, observed research conditions, source patterns, owned proof surfaces, and commercial action owners. It does not guarantee a particular AI-model answer, citation, ranking, or revenue outcome."}},
+          {"@type":"Question","name":"Who is the Sprint for?","acceptedAnswer":{"@type":"Answer","text":"The Sprint is designed for high-ACV B2B companies with a defined category, named competitors, a multi-stakeholder buying process, a material commercial trigger, and people who can act on the findings within 90 days."}},
+          {"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"The standard AI Buyer Intelligence Sprint is a fixed $12,500 USD engagement delivered in 15 business days. It is scoped before work begins and uses a 60 percent booking payment and 40 percent payment before the executive readout."}}
+        ]
+      }
+    ]
   }
-  .nav-links.open{transform:translateX(0);}
-  .nav-links a{font-size:var(--text-lg);color:var(--color-text);}
-  .nav-toggle{display:block;}
-  .nav-cta .btn-primary{display:none;}
-}
-
-/* ---------- Buttons ---------- */
-.btn{
-  font-family:var(--font-display); font-size:var(--text-sm); font-weight:600;
-  letter-spacing:0.01em; padding:0.85rem 1.65rem; border-radius:6px;
-  display:inline-flex; align-items:center; gap:0.5rem; cursor:pointer;
-  transition:all 0.2s ease; border:1px solid transparent; white-space:nowrap;
-}
-.btn-primary{
-  background:linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
-  color:#0a0714; box-shadow:0 0 0 rgba(0,0,0,0);
-}
-.btn-primary:hover{transform:translateY(-2px); box-shadow:0 12px 32px var(--color-accent-glow);}
-.btn-ghost{background:transparent;border-color:var(--color-border-strong);color:var(--color-text);}
-.btn-ghost:hover{border-color:var(--color-accent);background:rgba(157,107,255,0.06);}
-.btn-sm{padding:0.6rem 1.15rem;font-size:var(--text-xs);}
-.btn-block{width:100%;justify-content:center;}
-
-/* ---------- Hero ---------- */
-.hero{padding-top:clamp(9rem,16vw,12rem);text-align:center;}
-.hero .container{position:relative;z-index:1;}
-.hero h1{font-size:clamp(2.6rem, 6vw + 0.5rem, 5.6rem); max-width:920px; margin:1.4rem auto 1.5rem;}
-.hero-sub{font-size:var(--text-xl); color:var(--color-text-muted); max-width:640px; margin:0 auto 1rem;}
-.hero-entity{font-size:var(--text-sm); color:var(--color-text-faint); max-width:680px; margin:0 auto 2.4rem; line-height:1.65;}
-.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.4rem;}
-.hero-microtrust{font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);letter-spacing:0.02em;}
-
-.fadeUp{animation:fadeUp 0.8s ease both;}
-.fadeUp.d1{animation-delay:0.08s;} .fadeUp.d2{animation-delay:0.16s;}
-.fadeUp.d3{animation-delay:0.24s;} .fadeUp.d4{animation-delay:0.32s;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
-
-/* ---------- Stat bar ---------- */
-.stat-bar{padding-top:2rem;padding-bottom:2rem;}
-.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--color-border);border:1px solid var(--color-border);border-radius:14px;overflow:hidden;}
-.stat-card{background:var(--color-surface);padding:1.9rem 1.5rem;text-align:center;}
-.stat-num{font-family:var(--font-display);font-size:var(--text-4xl);font-weight:700;color:var(--color-accent);}
-.stat-label{font-size:var(--text-sm);color:var(--color-text-muted);margin-top:0.5rem;line-height:1.45;}
-.stat-source{font-size:var(--text-xs);color:var(--color-text-faint);margin-top:0.6rem;font-family:var(--font-display);}
-@media(max-width:860px){.stat-grid{grid-template-columns:repeat(2,1fr);}}
-
-.doctrine-quote{
-  text-align:center;max-width:760px;margin:3rem auto 0;font-family:var(--font-display);
-  font-size:clamp(1.05rem,1.6vw,1.4rem);color:var(--color-text);line-height:1.5;
-}
-.doctrine-quote span{color:var(--color-accent);}
-
-/* ---------- Positioning ---------- */
-.positioning{background:var(--color-bg-2);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);}
-.positioning-body{font-size:var(--text-xl); max-width:780px; line-height:1.7; color:var(--color-text);}
-.positioning-body strong{color:var(--color-accent);font-weight:600;}
-.positioning-body p{margin-bottom:1.2rem;}
-
-/* ---------- Cards / grids ---------- */
-.card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem;}
-.card{
-  background:var(--color-surface); border:1px solid var(--color-border); border-radius:14px;
-  padding:2rem 1.6rem; transition:transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-.card:hover{transform:translateY(-4px); border-color:var(--color-border-strong); box-shadow:0 20px 50px rgba(0,0,0,0.35), 0 0 40px var(--color-accent-glow);}
-.card-index{font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-accent-2);letter-spacing:0.1em;margin-bottom:1rem;}
-.card ul{margin-top:0.9rem;display:flex;flex-direction:column;gap:0.5rem;}
-.card ul li{font-size:var(--text-sm);color:var(--color-text-muted);padding-left:1.1rem;position:relative;}
-.card ul li::before{content:'—';position:absolute;left:0;color:var(--color-accent);}
-.card-tag{margin-top:1.2rem;font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);padding-top:1rem;border-top:1px solid var(--color-border);}
-@media(max-width:1000px){.card-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:560px){.card-grid{grid-template-columns:1fr;}}
-
-/* ---------- Personas ---------- */
-.persona-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:3rem;}
-.persona{
-  background:linear-gradient(160deg, var(--color-surface), var(--color-surface-2));
-  border:1px solid var(--color-border);border-radius:16px;padding:2.2rem;position:relative;overflow:hidden;
-}
-.persona::after{
-  content:'';position:absolute;top:-40%;right:-30%;width:220px;height:220px;border-radius:50%;
-  background:radial-gradient(circle, var(--color-accent-glow), transparent 70%);filter:blur(10px);
-}
-.persona-label{font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-accent);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.6rem;}
-.persona h3{font-size:var(--text-2xl);margin-bottom:0.9rem;position:relative;z-index:1;}
-.persona p{color:var(--color-text-muted);font-size:var(--text-sm);margin-bottom:0.9rem;position:relative;z-index:1;}
-.persona-row{display:flex;gap:0.6rem;font-size:var(--text-sm);margin-top:0.7rem;position:relative;z-index:1;}
-.persona-row .k{font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);white-space:nowrap;padding-top:0.15rem;}
-.persona-row .v{color:var(--color-text);}
-@media(max-width:900px){.persona-grid{grid-template-columns:1fr;}}
-
-.not-fit{
-  margin-top:2rem;padding:1.5rem 1.75rem;border:1px dashed var(--color-border-strong);border-radius:12px;
-  font-size:var(--text-sm);color:var(--color-text-muted);
-}
-.not-fit strong{color:var(--color-warn);font-family:var(--font-display);font-weight:600;}
-
-/* ---------- Process ---------- */
-.process{background:var(--color-bg-2);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);}
-.process-list{margin-top:3rem;}
-.process-item{display:grid;grid-template-columns:90px 1fr;gap:1.5rem;padding:2rem 0;border-top:1px solid var(--color-border);}
-.process-item:last-child{border-bottom:1px solid var(--color-border);}
-.process-num{font-family:var(--font-display);font-size:var(--text-3xl);color:var(--color-accent-2);font-weight:700;}
-.process-body h3{margin-bottom:0.5rem;}
-.process-body p{color:var(--color-text-muted);font-size:var(--text-base);max-width:640px;}
-.process-body .p-meta{margin-top:0.75rem;font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);}
-@media(max-width:640px){.process-item{grid-template-columns:1fr;gap:0.5rem;}}
-
-/* ---------- Proof / audit sample ---------- */
-.proof-panel{
-  margin-top:3rem;background:var(--color-surface);border:1px solid var(--color-border);
-  border-radius:18px;overflow:hidden;
-}
-.proof-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding:1.5rem 1.9rem;border-bottom:1px solid var(--color-border);background:var(--color-surface-2);}
-.proof-head .label{font-family:var(--font-display);font-size:var(--text-xs);color:var(--color-text-faint);letter-spacing:0.08em;text-transform:uppercase;}
-.proof-body{padding:1.9rem;display:grid;grid-template-columns:repeat(5,1fr);gap:1.25rem;}
-.proof-dim{text-align:center;}
-.proof-dim .bar-track{height:6px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;margin:0.9rem 0 0.6rem;}
-.proof-dim .bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg, var(--color-accent-2), var(--color-accent));}
-.proof-dim .score{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;}
-.proof-dim .lbl{font-size:var(--text-xs);color:var(--color-text-muted);margin-top:0.3rem;}
-.proof-dim .before{color:var(--color-text-faint);font-size:var(--text-xs);font-family:var(--font-display);}
-@media(max-width:900px){.proof-body{grid-template-columns:repeat(2,1fr);}}
-
-/* ---------- Comparison table ---------- */
-.compare-wrap{margin-top:3rem;overflow-x:auto;border:1px solid var(--color-border);border-radius:14px;}
-table.compare{width:100%;border-collapse:collapse;min-width:720px;}
-table.compare th, table.compare td{padding:1.1rem 1.25rem;text-align:left;border-bottom:1px solid var(--color-border);font-size:var(--text-sm);}
-table.compare thead th{font-family:var(--font-display);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.06em;color:var(--color-text-faint);background:var(--color-surface-2);}
-table.compare thead th:first-child{color:var(--color-text-faint);}
-table.compare tbody th{font-weight:500;color:var(--color-text-muted);white-space:nowrap;}
-table.compare td.yes{color:var(--color-verified);font-family:var(--font-display);}
-table.compare td.no{color:var(--color-text-faint);font-family:var(--font-display);}
-table.compare .col-arm{background:rgba(157,107,255,0.07);}
-table.compare tbody tr:last-child td, table.compare tbody tr:last-child th{border-bottom:none;}
-
-/* ---------- Pricing ---------- */
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem;align-items:stretch;}
-.tier{background:var(--color-surface);border:1px solid var(--color-border);border-radius:16px;padding:2.2rem;display:flex;flex-direction:column;}
-.tier.featured{border-color:var(--color-accent);background:linear-gradient(160deg, rgba(157,107,255,0.10), var(--color-surface) 60%);position:relative;}
-.tier.featured::before{content:'MOST STARTED HERE';position:absolute;top:-1px;right:1.5rem;transform:translateY(-50%);background:var(--color-accent);color:#0a0714;font-family:var(--font-display);font-size:0.65rem;font-weight:700;letter-spacing:0.06em;padding:0.3rem 0.7rem;border-radius:4px;}
-.tier-name{font-family:var(--font-display);font-size:var(--text-lg);margin-bottom:0.4rem;}
-.tier-desc{color:var(--color-text-muted);font-size:var(--text-sm);margin-bottom:1.4rem;min-height:3.4em;}
-.tier-price{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;margin-bottom:0.3rem;}
-.tier-price small{font-size:var(--text-sm);color:var(--color-text-faint);font-weight:400;}
-.tier-list{margin:1.4rem 0;display:flex;flex-direction:column;gap:0.6rem;flex-grow:1;}
-.tier-list li{font-size:var(--text-sm);color:var(--color-text-muted);padding-left:1.2rem;position:relative;}
-.tier-list li::before{content:'✓';position:absolute;left:0;color:var(--color-verified);font-family:var(--font-display);}
-@media(max-width:960px){.pricing-grid{grid-template-columns:1fr;}}
-
-/* ---------- FAQ ---------- */
-.faq-list{margin-top:3rem;border-top:1px solid var(--color-border);}
-.faq-item{border-bottom:1px solid var(--color-border);}
-.faq-q{width:100%;text-align:left;background:none;border:none;color:var(--color-text);font-family:var(--font-body);font-size:var(--text-lg);font-weight:600;padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:1rem;}
-.faq-q .plus{font-family:var(--font-display);color:var(--color-accent);font-size:1.3rem;transition:transform 0.25s ease;flex-shrink:0;}
-.faq-item.open .faq-q .plus{transform:rotate(45deg);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease;}
-.faq-a p{padding-bottom:1.6rem;color:var(--color-text-muted);font-size:var(--text-base);max-width:760px;line-height:1.65;}
-
-/* ---------- Final CTA ---------- */
-.final-cta{text-align:center;overflow:hidden;}
-.final-cta h2{font-size:clamp(2rem,4vw,3.4rem);max-width:820px;margin:0 auto 1rem;}
-.final-cta p{color:var(--color-text-muted);font-size:var(--text-lg);max-width:560px;margin:0 auto 2.2rem;}
-
-/* ---------- Footer ---------- */
-
-/* ---------- Audit form ---------- */
-.audit-form{max-width:520px;margin:0 auto;padding:2rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:12px;}
-.audit-form .form-row{margin-bottom:1.2rem;}
-.audit-form label{display:block;font-family:var(--font-display);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.06em;color:var(--color-text-faint);margin-bottom:0.5rem;}
-.audit-form input,.audit-form select,.audit-form textarea{width:100%;padding:0.75rem 1rem;background:var(--color-bg-2);border:1px solid var(--color-border);border-radius:8px;color:var(--color-text);font-size:var(--text-sm);font-family:var(--font-body);transition:border-color 0.2s ease;}
-.audit-form input:focus,.audit-form select:focus,.audit-form textarea:focus{outline:none;border-color:var(--color-accent);}
-.audit-form textarea{resize:vertical;min-height:80px;}
-.form-success{display:none;text-align:center;padding:2rem 1rem;}
-.form-success.show{display:block;}
-.form-success .check{font-size:2.5rem;color:var(--color-accent);margin-bottom:1rem;}
-.form-success h3{font-size:var(--text-lg);margin-bottom:0.5rem;}
-.form-success p{color:var(--color-text-muted);font-size:var(--text-sm);}
-.form-toggle{display:none;}
-.form-toggle.show{display:block;}
-
-footer{border-top:1px solid var(--color-border);padding:4rem 0 2.5rem;background:var(--color-bg-2);}
-.footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:2.5rem;}
-.footer-brand p{color:var(--color-text-muted);font-size:var(--text-sm);margin-top:1rem;max-width:320px;line-height:1.65;}
-.footer-col h4{font-family:var(--font-display);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-faint);margin-bottom:1rem;}
-.footer-col ul{display:flex;flex-direction:column;gap:0.6rem;}
-.footer-col a{font-size:var(--text-sm);color:var(--color-text-muted);transition:color 0.2s ease;}
-.footer-col a:hover{color:var(--color-accent);}
-.footer-bottom{margin-top:3.5rem;padding-top:1.75rem;border-top:1px solid var(--color-border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:var(--text-xs);color:var(--color-text-faint);font-family:var(--font-display);}
-.footer-entity{font-size:var(--text-xs);color:var(--color-text-faint);max-width:820px;margin-top:1.5rem;line-height:1.7;}
-@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:520px){.footer-grid{grid-template-columns:1fr;}}
-
-/* ---------- Reveal on scroll ---------- */
-[data-animate]{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease, transform 0.7s ease;}
-[data-animate].visible{opacity:1;transform:none;}
-
-@media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
-}
-</style>
+  </script>
+  <style>
+    :root{--ink:#101424;--ink-2:#172038;--paper:#f5f4ef;--cream:#fbfaf7;--muted:#5f6678;--line:#dcdcd5;--violet:#6851e8;--violet-dark:#4531c4;--mint:#aee9cf;--gold:#ffd37a;--pink:#f1b7dc;--white:#fff;--mono:'DM Mono',ui-monospace,monospace;--sans:'Manrope',system-ui,sans-serif;}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.shell{max-width:1200px;margin:auto;padding:0 28px}.top{background:var(--ink);color:#eef0f9}.notice{border-bottom:1px solid rgba(255,255,255,.14);font:12px var(--mono);letter-spacing:.03em}.notice .shell{min-height:38px;display:flex;align-items:center;gap:9px}.notice i{width:7px;height:7px;border-radius:50%;background:var(--mint);display:inline-block}.nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font:700 17px var(--mono);letter-spacing:-.06em;display:flex;align-items:center;gap:10px}.brand-mark{width:15px;height:15px;border:2px solid var(--mint);border-radius:50%;position:relative}.brand-mark:after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--mint)}.links{display:flex;gap:26px;font-size:14px;color:#cbd0df}.links a:hover{color:#fff}.nav-actions{display:flex;align-items:center;gap:10px}.btn{border:0;border-radius:6px;display:inline-flex;justify-content:center;align-items:center;gap:10px;font-weight:800;font-size:14px;padding:14px 20px;cursor:pointer;transition:transform .18s,background .18s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--mint);color:var(--ink)}.btn-primary:hover{background:#d0f5e3}.btn-light{background:#fff;color:var(--ink)}.btn-dark{background:var(--ink);color:#fff}.btn-ghost{border:1px solid var(--line);background:transparent;color:var(--ink)}.menu{display:none;background:none;color:#fff;border:0;font-size:24px}.hero{background:var(--ink);color:#fff;overflow:hidden;position:relative;padding:76px 0 92px}.hero-grid{position:absolute;inset:0;opacity:.23;background-image:linear-gradient(rgba(179,185,213,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(179,185,213,.25) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(90deg,black,transparent 78%)}.orb{position:absolute;width:630px;height:630px;border-radius:50%;right:-155px;top:-180px;background:radial-gradient(circle at 37% 42%,rgba(174,233,207,.72) 0 1.3%,rgba(104,81,232,.54) 1.7% 11%,rgba(104,81,232,.15) 36%,transparent 64%);filter:blur(1px)}.hero-copy{position:relative;max-width:850px}.eyebrow{font:12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mint);display:flex;align-items:center;gap:10px;margin:0 0 23px}.eyebrow:before{content:'';height:1px;width:34px;background:currentColor}.hero h1{font-size:clamp(42px,6.2vw,78px);line-height:1.01;letter-spacing:-.065em;margin:0;max-width:820px}.hero h1 em{font-style:normal;color:var(--mint)}.hero p{margin:27px 0 32px;max-width:655px;font-size:20px;line-height:1.55;color:#c8cddd}.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}.hero-ctas .btn-ghost{border-color:rgba(255,255,255,.3);color:#fff}.micro{font:12px var(--mono);color:#aeb5c9;margin:20px 0 0}.proof-strip{background:var(--mint);border-bottom:1px solid var(--ink)}.proof-strip .shell{padding-top:20px;padding-bottom:20px;display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:20px;align-items:center}.proof-strip strong{font-size:14px}.proof-strip span{font:12px var(--mono);color:#2f4c47}.section{padding:104px 0}.section-head{max-width:760px;margin-bottom:50px}.section h2{font-size:clamp(31px,4vw,54px);line-height:1.06;letter-spacing:-.055em;margin:0 0 18px}.lede{color:var(--muted);font-size:18px;max-width:660px}.problem{background:var(--cream)}.signal-row{border-top:1px solid var(--line);display:grid;grid-template-columns:72px 1.1fr 1.2fr;gap:30px;padding:24px 0;align-items:start}.signal-row:last-child{border-bottom:1px solid var(--line)}.num{font:13px var(--mono);color:var(--violet)}.signal-row h3{font-size:18px;letter-spacing:-.03em;margin:0}.signal-row p{margin:0;color:var(--muted);font-size:15px}.compare{background:var(--ink);color:#fff}.compare .section-head{margin-bottom:42px}.compare .lede{color:#bec4d7}.compare-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(255,255,255,.2)}.compare-cell{padding:36px;border-right:1px solid rgba(255,255,255,.2)}.compare-cell:last-child{border:0;background:#202c4c}.compare-label{font:12px var(--mono);color:var(--gold);text-transform:uppercase;letter-spacing:.08em}.compare h3{font-size:26px;line-height:1.12;letter-spacing:-.04em;margin:15px 0}.compare ul{padding:0;margin:20px 0 0;list-style:none}.compare li{margin:12px 0;color:#c7cde0;padding-left:20px;position:relative;font-size:15px}.compare li:before{content:'—';position:absolute;left:0;color:var(--pink)}.offer-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:start}.offer-card{background:var(--white);border:1px solid var(--ink);box-shadow:10px 10px 0 var(--violet);padding:38px}.offer-card .label{font:12px var(--mono);color:var(--violet);text-transform:uppercase;letter-spacing:.09em}.price{font-size:54px;letter-spacing:-.07em;line-height:1;margin:15px 0 4px}.price-note{font:13px var(--mono);color:var(--muted)}.offer-card hr{border:0;border-top:1px solid var(--line);margin:26px 0}.deliverables{display:grid;gap:15px}.deliverable{display:grid;grid-template-columns:26px 1fr;gap:10px}.tick{color:var(--violet);font-weight:800}.deliverable strong{font-size:15px;display:block}.deliverable span{font-size:13px;color:var(--muted)}.offer-copy h2{margin-top:0}.fit-list{margin-top:28px;border-top:1px solid var(--line)}.fit-item{display:flex;gap:16px;padding:17px 0;border-bottom:1px solid var(--line)}.fit-item b{font:12px var(--mono);color:var(--violet);padding-top:3px}.fit-item div{font-size:15px}.maps{background:#e9e7de}.map-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.map-card{background:#fff;padding:30px;border:1px solid var(--line)}.map-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.map-top h3{font-size:21px;letter-spacing:-.04em;margin:0}.pill{font:11px var(--mono);border:1px solid var(--line);padding:5px 7px}.mini-table{font-size:12px;border-top:1px solid var(--line)}.mini-row{display:grid;grid-template-columns:1.2fr .9fr .8fr;padding:11px 0;border-bottom:1px solid var(--line);gap:10px}.mini-row strong{font-weight:700}.status{font:11px var(--mono);color:var(--violet)}.steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.step{min-height:210px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:25px}.step:before{counter-increment:step;content:'0' counter(step);font:12px var(--mono);color:var(--violet);display:block;margin-bottom:44px}.step h3{font-size:18px;letter-spacing:-.03em;margin:0 0 9px}.step p{margin:0;color:var(--muted);font-size:14px}.brief{background:var(--violet);color:#fff}.brief-layout{display:grid;grid-template-columns:1fr auto;align-items:end;gap:30px}.brief h2{max-width:700px;margin:0;font-size:clamp(32px,4vw,54px);line-height:1.05;letter-spacing:-.055em}.brief p{font-size:16px;color:#e3ddff;max-width:640px;margin:17px 0 0}.brief .btn{background:var(--mint);color:var(--ink);white-space:nowrap}.faq{max-width:850px}.faq details{border-top:1px solid var(--line);padding:21px 0}.faq details:last-child{border-bottom:1px solid var(--line)}.faq summary{cursor:pointer;font-weight:800;font-size:17px;letter-spacing:-.02em;list-style:none;display:flex;justify-content:space-between;gap:20px}.faq summary:after{content:'+';color:var(--violet);font:22px var(--mono)}.faq details[open] summary:after{content:'−'}.faq p{color:var(--muted);font-size:15px;max-width:690px;margin:15px 0 3px}.footer{background:var(--ink);color:#eef0f9;padding:55px 0 28px}.footer-grid{display:grid;grid-template-columns:1.3fr repeat(3,1fr);gap:28px;padding-bottom:50px}.footer p{color:#aeb5c9;font-size:14px;max-width:300px}.footer h4{font:12px var(--mono);color:var(--mint);letter-spacing:.08em;text-transform:uppercase;margin:0 0 15px}.footer a{display:block;color:#cbd0df;font-size:14px;margin:9px 0}.footer a:hover{color:#fff}.fine{font:12px var(--mono);border-top:1px solid rgba(255,255,255,.16);padding-top:24px;color:#969fb9;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.mobile-links{display:none}
+    @media(max-width:820px){.shell{padding:0 20px}.links,.nav-actions .btn-light{display:none}.menu{display:block}.nav{height:72px}.mobile-links.open{display:grid;gap:16px;padding:0 0 24px;color:#cbd0df;font-size:15px}.hero{padding:52px 0 68px}.hero p{font-size:17px}.proof-strip .shell{grid-template-columns:1fr 1fr;gap:14px}.proof-strip strong{grid-column:1/-1}.section{padding:72px 0}.signal-row{grid-template-columns:42px 1fr;gap:12px}.signal-row p{grid-column:2}.compare-grid,.offer-wrap,.map-grid,.brief-layout{grid-template-columns:1fr}.compare-cell{border-right:0;border-bottom:1px solid rgba(255,255,255,.2)}.compare-cell:last-child{border-bottom:0}.offer-wrap{gap:45px}.offer-card{box-shadow:7px 7px 0 var(--violet);padding:26px}.steps{grid-template-columns:1fr 1fr}.step{min-height:180px}.brief-layout{align-items:start}.brief .btn{width:max-content}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.mini-row{grid-template-columns:1.2fr .8fr}.mini-row span:last-child{display:none}}
+    @media(max-width:520px){.proof-strip .shell{grid-template-columns:1fr}.proof-strip strong{grid-column:auto}.steps,.footer-grid{grid-template-columns:1fr}.footer-brand{grid-column:auto}.hero h1{font-size:42px}.price{font-size:45px}.section-head{margin-bottom:34px}}
+  </style>
 </head>
 <body>
+  <header class="top" id="top">
+    <div class="notice"><div class="shell"><i></i> AI BUYER INTELLIGENCE FOR HIGH-ACV B2B TEAMS</div></div>
+    <nav class="shell nav" aria-label="Primary">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>ARM AGENCY</a>
+      <div class="links"><a href="/sprint/">The Sprint</a><a href="#proof">Sample Maps</a><a href="#fit">Who It Is For</a><a href="/resources/">Resources</a></div>
+      <div class="nav-actions"><a class="btn btn-light" href="/sprint/">View the Sprint</a><a class="btn btn-primary" href="/brief/">Request a Brief <span>→</span></a><button class="menu" id="menuToggle" aria-label="Open menu">☰</button></div>
+    </nav>
+    <div class="shell mobile-links" id="mobileLinks"><a href="/sprint/">The Sprint</a><a href="#proof">Sample Maps</a><a href="#fit">Who It Is For</a><a href="/resources/">Resources</a><a href="/brief/">Request a Brief →</a></div>
+  </header>
 
-<!-- ============================= NAV ============================= -->
-<nav class="nav" id="nav">
-  <div class="container">
-    <a href="#top" class="logo"><span class="logo-mark"></span>ARM AGENCY</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#what-we-do">Services</a></li>
-      <li><a href="#who-this-is-for">Who It's For</a></li>
-      <li><a href="#how-it-works">Framework</a></li>
-      <li><a href="/resources/">Resources</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ul>
-    <div class="nav-cta">
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
-      <a href="/audit/" class="btn btn-primary btn-sm">Run Free Signal Check</a>
-    </div>
-  </div>
-</nav>
+  <main>
+    <section class="hero">
+      <div class="hero-grid"></div><div class="orb"></div>
+      <div class="shell hero-copy">
+        <p class="eyebrow">The AI Buyer Intelligence Sprint</p>
+        <h1>Know what shapes the <em>shortlist</em> before sales gets the call.</h1>
+        <p>ARM helps high-ACV B2B teams identify the buyer conversations, source gaps, and proof failures that make an otherwise strong company harder to trust during research and evaluation.</p>
+        <div class="hero-ctas"><a class="btn btn-primary" href="/brief/">Request a Category Presence Brief <span>→</span></a><a class="btn btn-ghost" href="/sprint/">See the fixed scope</a></div>
+        <p class="micro">15 BUSINESS DAYS · $12,500 FIXED SCOPE · NO RANKING OR REVENUE GUARANTEES</p>
+      </div>
+    </section>
 
-<!-- ============================= HERO ============================= -->
-<header class="hero" id="top">
-  <div class="meridian" style="top:0;"></div>
-  <div class="container">
-    <span class="eyebrow fadeUp">Arctura Representation Management Agency — Evidence before execution</span>
-    <h1 class="fadeUp d1">Representation Is Signal.<br><span class="grad-text">Keep It Checkable.</span></h1>
-    <p class="hero-sub fadeUp d2">ARM Agency helps organizations make consequential public information and agent-facing workflows evidence-led, technically clear, and governable.</p>
-    <p class="hero-entity fadeUp d2">ARM Agency operates at the intersection of representation, technical clarity, and controlled mandates. We document the evidence, access, decision rights, and acceptance conditions that an accepted scope requires.</p>
-    <div class="hero-ctas fadeUp d3">
-      <a href="/audit/" class="btn btn-primary">Run Free Signal Check →</a>
-      <a href="#how-it-works" class="btn btn-ghost">See the ARM Framework ↓</a>
-    </div>
-    <p class="fadeUp d3" style="max-width:680px;margin:1.1rem 0 0;color:var(--color-text-muted);font-size:var(--text-sm);">The ordered path: Signal Check → Audit Fit Review → written scope → private collection. <a href="https://swellmarketing.xyz/fit-review/?utm_source=arm-agency.com&amp;utm_medium=website&amp;utm_campaign=arm_fit_review_preparation__home_hero&amp;utm_content=home_hero" style="color:var(--color-accent);border-bottom:1px solid var(--color-border-strong);">What to bring to a fit review →</a></p>
-    <p class="hero-microtrust fadeUp d4">NO OUTCOME GUARANTEES. NO VAGUE PROMISES. EVERY ACCEPTED CHANGE HAS AN EVIDENCE, SCOPE, AND REVIEW RECORD.</p>
-  </div>
-</header>
+    <section class="proof-strip"><div class="shell"><strong>For teams selling expensive, research-heavy decisions.</strong><span>Category launch</span><span>Competitive displacement</span><span>Enterprise proof gap</span></div></section>
 
-<!-- ============================= OPERATING PRINCIPLES ============================= -->
-<section class="stat-bar" data-animate>
-  <div class="container">
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="stat-num">01</div>
-        <div class="stat-label">Start with a documented baseline, not a promise.</div>
-        <div class="stat-source">EVIDENCE BEFORE INTERVENTION</div>
+    <section class="section problem" id="problem">
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow" style="color:var(--violet)">The commercial problem</p><h2>Your buyer arrives with a conclusion before your team gets to explain the category.</h2><p class="lede">They have already compared vendors, read reviews, evaluated implementation risk, and asked whether your product is credible for their environment. The question is whether the evidence they encounter makes the next step easier—or harder.</p></div>
+        <div class="signal-row"><span class="num">01</span><h3>Shortlist inclusion is being shaped outside your homepage.</h3><p>Category coverage, comparison pages, third-party proof, technical documentation, review surfaces, and communities influence which companies feel credible enough to evaluate.</p></div>
+        <div class="signal-row"><span class="num">02</span><h3>Your sales team inherits missing proof as objection handling.</h3><p>When deployment, security, integrations, ROI, or vertical relevance cannot be verified quickly, the buyer carries doubt into the evaluation and the AE is forced to repair it.</p></div>
+        <div class="signal-row"><span class="num">03</span><h3>Visibility software shows a symptom, not the accountable next move.</h3><p>A dashboard can list a mention. It usually cannot show which buyer question matters, why a source is persuasive, who should fix the gap, or how to test the commercial effect.</p></div>
       </div>
-      <div class="stat-card">
-        <div class="stat-num">02</div>
-        <div class="stat-label">Define scope, authority, and acceptance criteria before work begins.</div>
-        <div class="stat-source">MANDATE BEFORE EXECUTION</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">03</div>
-        <div class="stat-label">Attach each material claim to an inspectable source record.</div>
-        <div class="stat-source">ATTESTATION BEFORE AMPLIFICATION</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">04</div>
-        <div class="stat-label">Review the documented result before changing the next layer.</div>
-        <div class="stat-source">CHECKPOINTS BEFORE SCALE</div>
-      </div>
-    </div>
-    <p class="doctrine-quote">A third-party answer is not a promise. It is a signal to <span>inspect</span>, <span>scope</span>, and improve only where the evidence supports action.</p>
-  </div>
-</section>
+    </section>
 
-<!-- ============================= POSITIONING ============================= -->
-<section class="positioning" id="positioning" data-animate>
-  <div class="container">
-    <span class="eyebrow section-kicker">Positioning</span>
-    <div class="positioning-body">
-      <p>Generative systems, search interfaces, and browser agents increasingly mediate how people inspect an organization. The relevant question is not whether any third-party system will say a particular thing; it is whether the organization can present accurate, accessible, and supported information when that inspection happens.</p>
-      <p>ARM Agency exists to make that work governable: <strong>through evidence, structure, defined authority, and a reviewable record.</strong></p>
-      <p style="font-size:var(--text-sm);color:var(--color-text-muted);">For the evidence-state and claim-boundary method behind this work, read AURE's canonical definition of <a href="https://aure.autonomousresourcemanagement.com/claim-architecture">AI Claim Architecture</a>.</p>
-    </div>
-  </div>
-  <div class="meridian" style="bottom:-260px; height:400px; opacity:0.5;"></div>
-</section>
-
-<!-- ============================= WHAT WE DO ============================= -->
-<section id="what-we-do" data-animate>
-  <div class="container">
-    <span class="eyebrow section-kicker">What We Do</span>
-    <h2>Four disciplines. One reviewable record.</h2>
-    <p class="section-lede">Each discipline addresses a specific gap between what an organization can support and how people, search systems, or browser agents can inspect it.</p>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-index">01 / REPRESENTATION REVIEW</div>
-        <h3>GEO</h3>
-        <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Assess the evidence, technical, and information conditions that shape how an entity can be found and interpreted, then prioritize an accepted scope.</p>
-        <ul>
-          <li>Documented representation observations under agreed conditions</li>
-          <li>Entity graph and structured-data parity review</li>
-          <li>Prioritized evidence and technical constraints</li>
-        </ul>
-        <div class="card-tag">Built for: founders, brands, invisible-to-LLM enterprises</div>
-      </div>
-      <div class="card">
-        <div class="card-index">02 / ATTESTATION</div>
-        <h3>Reputation</h3>
-        <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Establish an evidence and context record for the claims, work, and decisions an engagement may safely address.</p>
-        <ul>
-          <li>Claims backed by sourced, checkable records</li>
-          <li>Person and Organization schema with verified sameAs nodes</li>
-          <li>No manufactured reviews, no suppression — only correction</li>
-        </ul>
-        <div class="card-tag">Built for: pre-diligence executives, public builders</div>
-      </div>
-      <div class="card">
-        <div class="card-index">03 / TECHNICAL CLARITY</div>
-        <h3>Signal</h3>
-        <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Improve the structural and interaction conditions that make approved information clear to people, search systems, and browser agents.</p>
-        <ul>
-          <li>Visible-content and structured-data parity within scope</li>
-          <li>Accessible, stable, and machine-readable path checks</li>
-          <li>Source-led information architecture, not keyword volume</li>
-        </ul>
-        <div class="card-tag">Built for: autonomous networks, on-chain protocols</div>
-      </div>
-      <div class="card">
-        <div class="card-index">04 / OPERATING RECORD</div>
-        <h3>Ledger</h3>
-        <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Maintain the accepted evidence, scope, decision, and change record so operating work remains reviewable over time.</p>
-        <ul>
-          <li>Documented observations only when the scope calls for them</li>
-          <li>Staged, reversible corrections — nothing overwritten blindly</li>
-          <li>Review rhythm defined by the accepted mandate</li>
-        </ul>
-        <div class="card-tag">Built for: anyone whose signal must stay correct, indefinitely</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================= WHO THIS IS FOR ============================= -->
-<section id="who-this-is-for" data-animate>
-  <div class="container">
-    <span class="eyebrow section-kicker">Who This Is For</span>
-    <h2>Four ways signal breaks.</h2>
-    <p class="section-lede">Agents — human or autonomous — operating where generative engines mediate reputation before a human ever does.</p>
-    <div class="persona-grid">
-      <div class="persona">
-        <div class="persona-label">Persona 01</div>
-        <h3>The Founder Under Algorithmic Fire</h3>
-        <p>A public builder whose name is now algorithmically tangled with a bad review cycle, a lawsuit, or a competitor's SEO attack — and the damage has migrated from Google's front page into what ChatGPT says when someone asks "who is [name]."</p>
-        <div class="persona-row"><span class="k">SIGNAL</span><span class="v">Searches their own name and gets outdated or hostile framing from an AI answer engine before they get to tell their own story.</span></div>
-        <div class="persona-row"><span class="k">DELIVERED</span><span class="v">Signal Audit → GEO → Person schema and attestation.</span></div>
-      </div>
-      <div class="persona">
-        <div class="persona-label">Persona 02</div>
-        <h3>The Autonomous Network Operator</h3>
-        <p>Running an agent network, a Bittensor subnet, or an on-chain protocol where the relevant data, authority, and operating boundaries must be explicit before a workflow is delegated.</p>
-        <div class="persona-row"><span class="k">SIGNAL</span><span class="v">The required facts, decision rights, or workflow boundaries are not documented in a usable form.</span></div>
-        <div class="persona-row"><span class="k">DELIVERED</span><span class="v">A scoped mandate map, evidence/context register, and acceptance-control design.</span></div>
-        <div class="persona-row"><span class="k">READ</span><span class="v"><a href="/resources/agentic-reputation-infrastructure/" style="color:var(--color-accent);border-bottom:1px solid var(--color-border-strong);">How autonomous AI agents verify each other's trust →</a></span></div>
-      </div>
-      <div class="persona">
-        <div class="persona-label">Persona 03</div>
-        <h3>The Enterprise Brand With an Unclear Public Record</h3>
-        <p>Years of search investment can still leave unresolved entity, evidence, or technical-access questions when a buyer checks public information before a vendor conversation.</p>
-        <div class="persona-row"><span class="k">SIGNAL</span><span class="v">The public record is inconsistent, difficult to inspect, or missing the evidence a buyer needs for a consequential decision.</span></div>
-        <div class="persona-row"><span class="k">DELIVERED</span><span class="v">A scoped evidence, entity, and technical-access review with an accepted next step.</span></div>
-      </div>
-      <div class="persona">
-        <div class="persona-label">Persona 04</div>
-        <h3>The Pre-Diligence Executive</h3>
-        <p>Heading into a raise, an acquisition, an IPO, or a board search — where counterparties now ask an AI assistant to summarize the company and its leadership before any call is scheduled.</p>
-        <div class="persona-row"><span class="k">SIGNAL</span><span class="v">Reputation exposure gets discovered during diligence instead of before it.</span></div>
-        <div class="persona-row"><span class="k">DELIVERED</span><span class="v">Full record audit and Truth Ledger custody ahead of the event.</span></div>
-      </div>
-    </div>
-    <div class="not-fit"><strong>Not a fit:</strong> businesses seeking fake reviews, keyword-stuffed content mills, or reputation "suppression" through manufactured PR. ARM Agency attests to what's true and corrects what's wrong — it doesn't manufacture appearances.</div>
-  </div>
-</section>
-
-<!-- ============================= HOW IT WORKS ============================= -->
-<section class="process" id="how-it-works" data-animate>
-  <div class="container">
-    <span class="eyebrow section-kicker">How It Works</span>
-    <h2>Five primitives. One discipline.</h2>
-    <p class="section-lede">Built on the ARM Framework. We operate only within a documented, traceable mandate from the entity we represent.</p>
-    <div class="process-list">
-      <div class="process-item">
-        <div class="process-num">01</div>
-        <div class="process-body">
-          <h3>Mandate Chains</h3>
-          <p>We operate only within a documented, traceable mandate from the entity we represent — scope, budget, and escalation triggers declared up front.</p>
-          <div class="p-meta">GOVERNANCE LAYER</div>
+    <section class="section compare">
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">Not another dashboard</p><h2>Move from monitoring a mention to governing the buyer decision.</h2><p class="lede">The Sprint is designed to produce a shared commercial action record, not a false promise to control an answer engine.</p></div>
+        <div class="compare-grid">
+          <div class="compare-cell"><span class="compare-label">What most teams receive</span><h3>AI visibility reporting</h3><ul><li>A brand mention or sentiment score</li><li>A competitive prompt list</li><li>A generic list of content opportunities</li><li>No shared owner or acceptance test</li></ul></div>
+          <div class="compare-cell"><span class="compare-label">What ARM delivers</span><h3>Buyer intelligence that can be acted on</h3><ul><li>The high-intent questions that affect a buyer decision</li><li>The sources and proof gaps shaping the answer</li><li>A review of the buyer’s validation path after discovery</li><li>Five to eight owner-led actions for the next 90 days</li></ul></div>
         </div>
       </div>
-      <div class="process-item">
-        <div class="process-num">02</div>
-        <div class="process-body">
-          <h3>Signal</h3>
-          <p>We map how an entity currently reads across engines, then rebuild the structure beneath it — schema, entity graph, crawler infrastructure.</p>
-          <div class="p-meta">DIAGNOSTIC + STRUCTURAL LAYER</div>
-        </div>
-      </div>
-      <div class="process-item">
-        <div class="process-num">03</div>
-        <div class="process-body">
-          <h3>Attestation</h3>
-          <p>Every claim we correct or introduce is backed by a verifiable record, not opinion — sourced, checkable, and logged.</p>
-          <div class="p-meta">VERIFICATION LAYER</div>
-        </div>
-      </div>
-      <div class="process-item">
-        <div class="process-num">04</div>
-        <div class="process-body">
-          <h3>Checkpoint Recovery</h3>
-          <p>Reputation work is staged and reversible. Nothing is overwritten without a recoverable prior state.</p>
-          <div class="p-meta">SAFETY LAYER</div>
-        </div>
-      </div>
-      <div class="process-item">
-        <div class="process-num">05</div>
-        <div class="process-body">
-          <h3>Truth Ledger</h3>
-          <p>The corrected record is committed to a persistent, auditable ledger — the new source of truth for future signal.</p>
-          <div class="p-meta">PERSISTENCE LAYER</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============================= PROOF / METHODOLOGY ============================= -->
-<section id="proof" data-animate>
-  <div class="container">
-    <span class="eyebrow section-kicker">Inside a Signal Audit</span>
-    <h2>Document the signal before deciding what to repair.</h2>
-    <p class="section-lede">Every Signal Audit records the agreed entity, evidence, query set, access conditions, and the first constraint worth addressing. No public score or outcome is implied before the work is scoped.</p>
-    <div class="proof-panel">
-      <div class="proof-head">
-        <span class="label">Signal Audit record — methodology view</span>
-        <span class="label mono" style="color:var(--color-accent);">BASELINE BEFORE DECISION</span>
+    <section class="section" id="sprint">
+      <div class="shell offer-wrap">
+        <div class="offer-copy"><p class="eyebrow" style="color:var(--violet)">The product</p><h2>One tightly scoped sprint. One decision system your team can use.</h2><p class="lede">The AI Buyer Intelligence Sprint is for a company with a real commercial trigger, defined competitors, and people who can act on the findings. We map the conversation before we recommend the work.</p><div class="fit-list" id="fit"><div class="fit-item"><b>01</b><div><strong>You sell a high-consideration outcome.</strong><br>Typical annual contract value is $75,000+ or the decision carries strategic significance.</div></div><div class="fit-item"><b>02</b><div><strong>You have a trigger in the next 180 days.</strong><br>A launch, category move, deal-cycle problem, competitive shift, transaction, or trust event is creating urgency.</div></div><div class="fit-item"><b>03</b><div><strong>You can act when the evidence is clear.</strong><br>Marketing, sales, and relevant proof owners can make changes within 90 days.</div></div></div><p style="margin-top:28px"><a class="btn btn-dark" href="/sprint/">Explore the Sprint <span>→</span></a></p></div>
+        <aside class="offer-card"><span class="label">AI Buyer Intelligence Sprint</span><div class="price">$12,500</div><div class="price-note">FIXED SCOPE · 15 BUSINESS DAYS · 60/40 PAYMENT</div><hr><div class="deliverables"><div class="deliverable"><b class="tick">✓</b><div><strong>Buyer Conversation Map</strong><span>The 20–40 questions that influence category inclusion, comparison, evaluation, and trust.</span></div></div><div class="deliverable"><b class="tick">✓</b><div><strong>Shortlist / Source Gap Map</strong><span>What shapes the answer, where alternatives gain confidence, and the minimum defensible action.</span></div></div><div class="deliverable"><b class="tick">✓</b><div><strong>Proof & Conversion Review</strong><span>Whether an AI-referred buyer can verify implementation, security, fit, and outcome evidence.</span></div></div><div class="deliverable"><b class="tick">✓</b><div><strong>90-Day Action Register</strong><span>Five to eight actions with named owners, dependencies, acceptance tests, and measures.</span></div></div></div><p style="margin:28px 0 0"><a class="btn btn-primary" style="width:100%" href="/brief/">Check your fit <span>→</span></a></p></aside>
       </div>
-      <div class="proof-body">
-        <div class="proof-dim">
-          <div class="before">Record</div>
-          <div class="score">·</div>
-          <div class="bar-track"><div class="bar-fill" style="width:20%;"></div></div>
-          <div class="lbl">Entity Declaration</div>
-        </div>
-        <div class="proof-dim">
-          <div class="before">Source</div>
-          <div class="score">·</div>
-          <div class="bar-track"><div class="bar-fill" style="width:35%;"></div></div>
-          <div class="lbl">E-E-A-T Signal</div>
-        </div>
-        <div class="proof-dim">
-          <div class="before">Inspect</div>
-          <div class="score">·</div>
-          <div class="bar-track"><div class="bar-fill" style="width:50%;"></div></div>
-          <div class="lbl">GEO Content</div>
-        </div>
-        <div class="proof-dim">
-          <div class="before">Test</div>
-          <div class="score">·</div>
-          <div class="bar-track"><div class="bar-fill" style="width:65%;"></div></div>
-          <div class="lbl">Crawler Infrastructure</div>
-        </div>
-        <div class="proof-dim">
-          <div class="before">Review</div>
-          <div class="score">·</div>
-          <div class="bar-track"><div class="bar-fill" style="width:80%;"></div></div>
-          <div class="lbl">Observation baseline</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============================= COMPARISON ============================= -->
-<section id="compare" data-animate>
-  <div class="container">
-    <span class="eyebrow section-kicker">How We Choose Work</span>
-    <h2>Five controls before a recommendation.</h2>
-    <div class="compare-wrap">
-      <table class="compare">
-        <thead>
-          <tr>
-            <th>Control</th>
-            <th class="col-arm">What the ARM method records</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>Entity and claim record</th>
-            <td class="col-arm yes">Named identifiers, supported claims, and source locations</td>
-          </tr>
-          <tr>
-            <th>Evaluation context</th>
-            <td class="col-arm yes">Agreed query set, observation date, and access conditions</td>
-          </tr>
-          <tr>
-            <th>Intervention plan</th>
-            <td class="col-arm yes">Scope, owner, dependency, and acceptance test</td>
-          </tr>
-          <tr>
-            <th>Change control</th>
-            <td class="col-arm yes">Documented, reviewable changes with a recovery path where applicable</td>
-          </tr>
-          <tr>
-            <th>Review cadence</th>
-            <td class="col-arm yes">Defined only after scope, capacity, and decision needs are confirmed</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+    <section class="section maps" id="proof">
+      <div class="shell"><div class="section-head"><p class="eyebrow" style="color:var(--violet)">What the work looks like</p><h2>Two maps turn a vague concern into an owned plan.</h2><p class="lede">Every priority conclusion is tied to a documented observation, a relevant buyer question, and a person who can change the condition.</p></div>
+        <div class="map-grid"><article class="map-card"><div class="map-top"><h3>Buyer Conversation Map</h3><span class="pill">SAMPLE</span></div><div class="mini-table"><div class="mini-row"><strong>Conversation</strong><strong>Buyer stage</strong><strong>Owner</strong></div><div class="mini-row"><span>“Best platforms for enterprise multi-cloud data security?”</span><span class="status">SHORTLIST</span><span>Product Marketing</span></div><div class="mini-row"><span>“{{Company}} vs {{Competitor}} on integration maturity?”</span><span class="status">COMPARISON</span><span>Solutions Engineering</span></div><div class="mini-row"><span>“How long does implementation take in a regulated environment?”</span><span class="status">VALIDATION</span><span>Professional Services</span></div></div></article>
+        <article class="map-card"><div class="map-top"><h3>Shortlist / Source Gap Map</h3><span class="pill">SAMPLE</span></div><div class="mini-table"><div class="mini-row"><strong>Observed condition</strong><strong>Gap</strong><strong>Action</strong></div><div class="mini-row"><span>Competitor cited as the enterprise default</span><span class="status">CATEGORY PROOF</span><span>Build evidence-led category surface</span></div><div class="mini-row"><span>Integration response lacks client evidence</span><span class="status">TECHNICAL PROOF</span><span>Publish verified integration matrix</span></div><div class="mini-row"><span>Security material is stale and fragmented</span><span class="status">TRUST PATH</span><span>Rebuild current trust-center index</span></div></div></article></div>
+        <p style="margin-top:28px"><a class="btn btn-dark" href="/sprint/">See the full deliverable structure <span>→</span></a></p>
+      </div>
+    </section>
 
-<!-- ============================= PRICING ============================= -->
-<section id="pricing" data-animate>
-  <div class="meridian" style="top:-200px; height:420px; opacity:0.55;"></div>
-  <div class="container">
-    <span class="eyebrow section-kicker">Engagement Models</span>
-    <h2>Start with evidence. Continue only when scope warrants.</h2>
-    <p class="section-lede">Every paid engagement begins with a fixed-scope Signal Audit or a fit review that confirms an existing baseline is sufficient.</p>
-    <div class="pricing-grid">
-      <div class="tier featured">
-        <div class="tier-name">ARM-001 — Signal Audit</div>
-        <div class="tier-desc">A fixed-scope evidence baseline and prioritized decision record for the first material representation or agent-readiness constraint.</div>
-        <div class="tier-price">$2,500 <small>/ fixed scope · private proposal after fit review</small></div>
-        <ul class="tier-list">
-          <li>Entity, evidence, content, technical path, and observation review</li>
-          <li>Agreed source/context inventory and documented observation conditions</li>
-          <li>Prioritized findings, owners, and decision points</li>
-          <li>Timeline confirmed after fit review and access review</li>
-        </ul>
-        <a href="/audit/" class="btn btn-primary btn-block" style="margin-bottom:0.6rem;">Run Free Signal Check →</a>
-        <a href="/audit/?intent=signal_audit" class="btn btn-ghost btn-block">Request Audit Fit Review →</a>
-        <a href="https://swellmarketing.xyz/fit-review/?utm_source=arm-agency.com&amp;utm_medium=website&amp;utm_campaign=arm_fit_review_preparation__signal_audit&amp;utm_content=signal_audit" style="display:inline-block;margin-top:0.9rem;color:var(--color-accent);font-size:var(--text-sm);border-bottom:1px solid var(--color-border-strong);">What to bring to an Audit Fit Review →</a>
-      </div>
-      <div class="tier">
-        <div class="tier-name">Full Signal Repair</div>
-        <div class="tier-desc">Source-led representation and technical change, scoped to the accepted audit findings.</div>
-        <div class="tier-price">Custom scope</div>
-        <ul class="tier-list">
-          <li>Everything in the Signal Audit</li>
-          <li>Full entity graph and schema deployment</li>
-          <li>Attestation of corrected claims</li>
-          <li>Checkpoint Recovery on every change</li>
-        </ul>
-        <a href="/audit/?intent=signal_repair" class="btn btn-ghost btn-block">Request Fit Review</a>
-        <a href="https://swellmarketing.xyz/fit-review/?utm_source=arm-agency.com&amp;utm_medium=website&amp;utm_campaign=arm_fit_review_preparation__signal_repair&amp;utm_content=signal_repair" style="display:inline-block;margin-top:0.9rem;color:var(--color-accent);font-size:var(--text-sm);border-bottom:1px solid var(--color-border-strong);">What to bring to a Fit Review →</a>
-      </div>
-      <div class="tier">
-        <div class="tier-name">ARM Mandate Pro</div>
-        <div class="tier-desc">Ongoing governance for teams and qualified agent-network workflows with an accepted mandate.</div>
-        <div class="tier-price">$5,000 <small>/ month · private proposal after fit review</small></div>
-        <ul class="tier-list">
-          <li>Defined operating and governance cadence</li>
-          <li>Evidence/context register and representation-record maintenance within scope</li>
-          <li>Mandate, access, acceptance, and escalation controls for qualified workflows</li>
-          <li>Review against accepted scope and capacity</li>
-        </ul>
-        <a href="/audit/?intent=sovereign_retainer" class="btn btn-ghost btn-block">Request Fit Review</a>
-        <a href="https://swellmarketing.xyz/fit-review/?utm_source=arm-agency.com&amp;utm_medium=website&amp;utm_campaign=arm_fit_review_preparation__arm_mandate_pro&amp;utm_content=arm_mandate_pro" style="display:inline-block;margin-top:0.9rem;color:var(--color-accent);font-size:var(--text-sm);border-bottom:1px solid var(--color-border-strong);">What to bring to a Fit Review →</a>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="section"><div class="shell"><div class="section-head"><p class="eyebrow" style="color:var(--violet)">How the sprint runs</p><h2>Evidence first. Action only when an owner can carry it.</h2></div><div class="steps"><div class="step"><h3>Frame the decision</h3><p>We lock the business trigger, buyer, category, competitors, proof boundary, and the commercial question that needs an answer.</p></div><div class="step"><h3>Map the conversations</h3><p>Buyer voice, sales evidence, and category behavior become a limited question set—not an unlimited prompt list.</p></div><div class="step"><h3>Trace the gap</h3><p>We document observed conditions, source patterns, owned proof surfaces, conflicts, and the buyer validation path.</p></div><div class="step"><h3>Assign the next move</h3><p>Leadership receives five to eight decisions with owners, dependencies, acceptance tests, and a 90-day measurement plan.</p></div></div></div></section>
 
-<!-- ============================= FAQ ============================= -->
-<section id="faq" data-animate>
-  <div class="container">
-    <span class="eyebrow section-kicker">Frequently Asked</span>
-    <h2>Questions we get — and questions the engines ask.</h2>
-    <div class="faq-list" id="faqList">
-      <div class="faq-item">
-        <button class="faq-q">What is GEO (Generative Engine Optimization)?<span class="plus">+</span></button>
-        <div class="faq-a"><p>GEO is commonly used to describe work that improves how an organization’s information can be found and interpreted in generative search. ARM treats it as evidence-led representation work: source clarity, accessible information, technical parity, and reviewable change—not a promise that any model will provide a particular answer.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How is GEO different from traditional SEO?<span class="plus">+</span></button>
-        <div class="faq-a"><p>SEO and generative-search work share the same foundations: crawlable pages, helpful information, clear structure, and a sound user experience. ARM adds an evidence and governance lens where the representation or workflow is consequential. Neither discipline can guarantee third-party ranking, citation, or model behavior.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Is ARM Agency related to Arm Holdings, the semiconductor company?<span class="plus">+</span></button>
-        <div class="faq-a"><p>No. ARM Agency (Arctura Reputation Management Agency) is a reputation attestation and GEO signal firm with no affiliation, ownership, or licensing relationship with Arm Holdings plc, the semiconductor IP company behind ARM chip architecture.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How do you document current representation conditions?<span class="plus">+</span></button>
-        <div class="faq-a"><p>A written scope can define the relevant pages, evidence sources, user or agent-facing paths, observation conditions, and review date. ARM records what was observed under those conditions and uses that record to decide whether a change is warranted. It does not present third-party output snapshots as guaranteed or universal results.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How long does a reputation signal repair take?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Timeline depends on the accepted scope, available evidence, approvals, technical access, and third-party systems. A Signal Audit establishes the baseline and proposed sequence; it does not guarantee a change in a third-party AI output.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do you work with autonomous agent networks and on-chain protocols?<span class="plus">+</span></button>
-        <div class="faq-a"><p>ARM can assess whether a documented mandate, evidence/context register, access boundary, and acceptance controls are appropriate for a qualified agent-network or protocol workflow. The written scope determines the technical work; no third-party system outcome is guaranteed.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Is this the same as traditional online reputation management or review gating?<span class="plus">+</span></button>
-        <div class="faq-a"><p>No. We do not manufacture reviews, suppress true information, or game star ratings. Every accepted public change needs a verifiable record, defined scope, and review path. The work is evidence-led representation and governance, not persuasion.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">What happens during a Signal Audit?<span class="plus">+</span></button>
-        <div class="faq-a"><p>A Signal Audit records the agreed entity, supported claims, source/context inventory, technical and journey conditions, access boundaries, and first material constraint. It produces a prioritized decision record with owners, dependencies, acceptance criteria, and an appropriate next step; it does not promise a platform-specific outcome.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="section brief"><div class="shell brief-layout"><div><p class="eyebrow" style="color:var(--mint)">Start with a real question</p><h2>Request a Category Presence Brief before you commission a Sprint.</h2><p>Share your category, buyer, trigger, and competitors. We will assess whether a full Sprint is justified—not send you an automated score.</p></div><a class="btn" href="/brief/">Request the brief <span>→</span></a></div></section>
 
-<!-- ============================= FINAL CTA ============================= -->
-<section class="final-cta" data-animate>
-  <div class="meridian" style="top:0;height:600px;"></div>
-  <div class="container">
-    <span class="eyebrow section-kicker" style="justify-content:center;">Closing</span>
-    <h2>Your information will be inspected under conditions you do not control.</h2>
-    <p>ARM Agency helps you establish the evidence, structure, and operating controls you can control.</p>
-    <a href="/audit/" class="btn btn-primary">Run Free Signal Check →</a>
-  </div>
-</section>
+    <section class="section"><div class="shell faq"><div class="section-head"><p class="eyebrow" style="color:var(--violet)">Frequently asked</p><h2>Clear boundaries make the work more useful.</h2></div><details><summary>Does ARM guarantee AI rankings, citations, or a specific answer?</summary><p>No. Third-party systems vary by context, time, location, model, and user. ARM documents agreed observation conditions and focuses on the evidence, proof, and conversion surfaces the company can actually govern.</p></details><details><summary>What makes a company a fit for the Sprint?</summary><p>A fit has a high-value B2B sale, a defined category and competitor set, a material trigger in the next 180 days, usable buyer or pipeline evidence, an executive sponsor, and owners able to act within 90 days.</p></details><details><summary>What happens after the Sprint?</summary><p>The executive team decides whether its internal owners can execute the action register, whether a discrete proof-surface project is appropriate, or whether a three-month activation cadence is justified. ARM does not force a retainer where the evidence does not support one.</p></details><details><summary>What is the Category Presence Brief?</summary><p>It is a short human-reviewed fit assessment built around three buyer conversations and the prospect’s current trigger. It is not a public score, a free audit, or a promise to diagnose every condition before scope is agreed.</p></details></div></section>
+  </main>
 
-<!-- ============================= FOOTER ============================= -->
-<footer id="contact">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="#top" class="logo"><span class="logo-mark"></span>ARM AGENCY</a>
-        <p>Evidence-led representation and governed agent-readiness operations for consequential organizational decisions.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Engagements</h4>
-        <ul>
-          <li><a href="#pricing">Signal Audit — $2,500</a></li>
-          <li><a href="#pricing">Full Signal Repair — private proposal after fit review</a></li>
-          <li><a href="#pricing">ARM Mandate Pro — $5,000/mo</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="/resources/">All Guides</a></li>
-          <li><a href="/resources/generative-engine-optimization-guide/">GEO Guide</a></li>
-          <li><a href="/resources/ai-reputation-management-guide/">AI Reputation Guide</a></li>
-          <li><a href="/resources/reputation-due-diligence-ai-search/">Due Diligence Guide</a></li>
-          <li><a href="/resources/enterprise-ai-visibility-audit/">Enterprise Visibility</a></li>
-          <li><a href="/resources/geo-vs-seo/">GEO vs SEO</a></li>
-          <li><a href="/resources/agentic-reputation-infrastructure/">Agentic Trust</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#how-it-works">The ARM Framework</a></li>
-          <li><a href="#who-this-is-for">Who It's For</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="/terms/">Terms</a></li>
-          <li><a href="tel:+12242759027">+1 (224) 275-9027</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="footer-entity">Part of the Arctura ecosystem. Not affiliated with Arm Holdings plc.</p>
-    <div class="footer-bottom">
-      <span>© 2026 ARM AGENCY. ALL RIGHTS RESERVED.</span>
-      <span><a href="/privacy/" style="color:var(--color-text-faint);text-decoration:none;">PRIVACY</a> · <a href="/terms/" style="color:var(--color-text-faint);text-decoration:none;">TERMS</a></span>
-    </div>
-  </div>
-</footer>
-
-<script>
-// Sticky nav
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 20);
-});
-
-// Mobile nav toggle
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-}, { threshold: 0.08 });
-document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-
-// FAQ accordion
-document.querySelectorAll('.faq-item').forEach(item => {
-  const q = item.querySelector('.faq-q');
-  const a = item.querySelector('.faq-a');
-  q.addEventListener('click', () => {
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(open => {
-      open.classList.remove('open');
-      open.querySelector('.faq-a').style.maxHeight = null;
-    });
-    if (!isOpen) {
-      item.classList.add('open');
-      a.style.maxHeight = a.scrollHeight + 'px';
-    }
-  });
-});
-</script>
-
+  <footer class="footer"><div class="shell"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>ARM AGENCY</a><p>AI Buyer Intelligence for high-ACV B2B teams facing a category, launch, pipeline, or competitive trigger.</p></div><div><h4>Start here</h4><a href="/brief/">Request a Brief</a><a href="/sprint/">The Sprint</a><a href="#fit">Fit criteria</a></div><div><h4>Proof</h4><a href="#proof">Sample maps</a><a href="/resources/">Resources</a><a href="/audit/">Self-guided orientation</a></div><div><h4>Company</h4><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="tel:+12242759027">+1 (224) 275-9027</a></div></div><div class="fine"><span>© 2026 ARM AGENCY. ALL RIGHTS RESERVED.</span><span>Evidence-led buyer intelligence. Not affiliated with Arm Holdings plc.</span></div></div></footer>
+  <script>
+    const toggle=document.getElementById('menuToggle');const mobile=document.getElementById('mobileLinks');
+    toggle.addEventListener('click',()=>{const open=mobile.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰'});
+  </script>
 </body>
 </html>
