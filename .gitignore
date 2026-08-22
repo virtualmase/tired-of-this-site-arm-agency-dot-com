@@ -1,0 +1,21 @@
+# Local dependencies and build artifacts
+node_modules/
+dist/
+.vercel/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local working material and private client evidence
+_private/
+local-notes/
+*.log
+
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
