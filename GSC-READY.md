@@ -26,6 +26,8 @@ Start the built server with `npm start`, then confirm:
 
 ## Deployment preview
 
+- [ ] The Vercel project Framework Preset is **Next.js**, not **Other**.
+- [ ] Vercel Output Directory is unset/default; it is not `public/`.
 - [ ] The hosting build uses Node.js 20.9 or newer.
 - [ ] The preview deployment is tied to the intended commit SHA.
 - [ ] Repeat the route, 404, redirect, asset, metadata, and synthetic form checks against the preview URL.
@@ -36,6 +38,7 @@ Start the built server with `npm start`, then confirm:
 ## Production
 
 - [ ] Confirm the promoted deployment SHA.
+- [ ] Confirm both `www.arm-agency.com` and `arm-agency.com` resolve to the promoted deployment, especially after a rollback.
 - [ ] Check all sitemap URLs from outside the authenticated hosting dashboard.
 - [ ] Confirm `https://www.arm-agency.com/robots.txt` references the canonical sitemap.
 - [ ] Confirm `https://www.arm-agency.com/sitemap.xml` serves the expected 16 canonical URLs.

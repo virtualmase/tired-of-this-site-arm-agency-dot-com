@@ -103,14 +103,18 @@ The Brief form still posts directly to the configured Base44 intake endpoint. Ve
 
 Pushes may trigger a deployment if the GitHub repository is connected to Vercel, but that external connection is not asserted by this repository.
 
+The Vercel project must use the **Next.js** Framework Preset and leave Output Directory unset so Vercel uses the framework build output. `public/` contains input assets; it is not a deployable site root. A project configured as **Other** can auto-select `public/` as its output and return platform 404s even when `next build` succeeds. Verify these project settings with `vercel project inspect` before relying on a preview or production build.
+
 Before promoting a deployment:
 
-1. Complete [GSC-READY.md](GSC-READY.md).
-2. Confirm the deployment preview returns 200 for all sitemap URLs.
-3. Confirm legacy redirects return a permanent redirect to the canonical destination.
-4. Confirm images, CSS, icons, `robots.txt`, and `sitemap.xml` return 200.
-5. Perform a synthetic Brief form submission and verify receipt without exposing personal data.
-6. Record the deployment URL and commit SHA in the release notes or deployment system.
+1. Confirm the hosting project reports the Next.js Framework Preset and no custom Output Directory.
+2. Complete [GSC-READY.md](GSC-READY.md).
+3. Confirm the deployment preview returns 200 for all sitemap URLs.
+4. Confirm legacy redirects return a permanent redirect to the canonical destination.
+5. Confirm images, CSS, icons, `robots.txt`, and `sitemap.xml` return 200.
+6. Perform a synthetic Brief form submission and verify receipt without exposing personal data.
+7. Record the deployment URL and commit SHA in the release notes or deployment system.
+8. After promotion or rollback, inspect `www.arm-agency.com` and `arm-agency.com` directly; a Ready deployment does not prove the custom-domain aliases moved.
 
 ## Rollback
 
