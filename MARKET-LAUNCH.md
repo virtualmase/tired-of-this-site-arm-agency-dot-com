@@ -33,7 +33,7 @@ The PDF did not provide source links for its numerical claims. Those figures are
 
 ### Anonymous traffic
 
-Vercel Web Analytics records aggregated, cookie-free page views and referrers. The current Hobby plan supports page views but not custom events. Do not add paid event tracking or a second analytics provider without an owner decision and privacy review.
+Vercel Web Analytics records aggregated, cookie-free page views. The current Hobby plan supports aggregate visitors and page views but not custom events or UTM-filtered analytics queries. Campaign attribution remains attached to successful Brief records. Do not add paid event tracking, Web Analytics Plus, or a second analytics provider without an owner decision and privacy review.
 
 Review these paths separately:
 
@@ -116,8 +116,9 @@ For communities or partner referrals, change the source and medium; never encode
 | Production DNS, TLS, sitemap, and legacy redirects | Pass |
 | Brief validation, abuse friction, timeout, and accessible error state | Pass |
 | Controlled Lead creation test | Pass |
-| Anonymous page-view analytics | Enabled; production verification pending deployment |
-| Source attribution in successful Brief records | Browser test passed; production verification pending deployment |
+| Anonymous page-view analytics | Pass; production script, collection POST, and aggregate API count verified |
+| Source attribution in successful Brief records | Instrumentation live and mocked payload test passed; verify notes on the next real Brief |
+| Browser security headers and content policy | Configured; production verification pending deployment |
 | Base44 notification delivery and downstream automation | Unverified; manual Lead review required |
 | Legal contracting entity | Owner confirmation required before paid scope |
 | Backend rate limiting and restrictive CORS | Not available in this repository |

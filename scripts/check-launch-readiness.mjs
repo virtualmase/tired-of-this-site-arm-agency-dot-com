@@ -46,7 +46,17 @@ for (const required of ['cookie-free page-view analytics', 'Vercel Web Analytics
   if (!privacy.includes(required)) fail(`privacy disclosure missing: ${required}`);
 }
 
-const redirects = JSON.parse(read('vercel.json')).redirects;
+const vercelConfig = JSON.parse(read('vercel.json'));
+const redirects = vercelConfig.redirects;
+const headers = vercelConfig.headers?.find((rule) => rule.source === '/(.*)')?.headers || [];
+for (const key of ['Content-Security-Policy', 'Referrer-Policy', 'Permissions-Policy', 'X-Content-Type-Options', 'X-Frame-Options']) {
+  if (!headers.some((header) => header.key === key)) fail(`security header missing: ${key}`);
+}
+const csp = headers.find((header) => header.key === 'Content-Security-Policy')?.value || '';
+for (const required of ["default-src 'self'", "frame-ancestors 'none'", 'https://ops-bdd10855.base44.app', 'https://fonts.googleapis.com', 'https://fonts.gstatic.com']) {
+  if (!csp.includes(required)) fail(`Content-Security-Policy allowance missing: ${required}`);
+}
+
 const legacyRoutes = [
   'generative-engine-optimization-guide',
   'geo-vs-seo',
