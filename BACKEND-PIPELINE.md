@@ -1,8 +1,8 @@
 # ARM Agency — Backend Pipeline & Operations Scaffold
 
-**Version:** 1.1
-**Last updated:** 2026-08-22
-**Status:** External Base44 scaffold; public Lead intake verified, paid-Sprint mapping pending operator confirmation
+**Version:** 1.2
+**Last updated:** 2026-08-23
+**Status:** External Base44 scaffold plus repo-owned case contract; public Lead intake verified, production adapters pending owner decisions
 
 > **Current-offer boundary:** The public site offers a no-cost Category Presence Brief followed, when fit and scope are confirmed, by a $12,500 AI Buyer Intelligence Sprint. The Base44 schema and function source are not stored in this repository and still use legacy enum and entity names. Those names below describe the external compatibility layer; they are not approved public product names.
 
@@ -333,6 +333,13 @@ Prior documentation describes these functions as Base44 HTTP endpoints callable 
 | AI Buyer Intelligence Sprint | Written scope before private collection; public price is $12,500 with 60/40 payment timing | Public scope and terms are live | Before the first paid Sprint, explicitly map the legacy Opportunity, Client, Campaign, and Deliverable enums to the four Sprint deliverables |
 
 Do not infer a paid-Sprint mapping from `enterprise_visibility`, `visibility_audit`, or any other legacy enum. Until the external function configuration is reviewed, process a qualified Sprint manually under written scope and record the four approved deliverables without promising an automated scaffold.
+
+The repo-owned operating contract in [`operations/case-contract.json`](./operations/case-contract.json)
+now defines the current offer independently of those legacy enums. It provides a
+sanitized event envelope, state transitions, exact 60/40 payment order, four-
+deliverable QA gate, one-time artifact-bound approvals, and adoption/outcome
+events. It is an executable compatibility target, not evidence that Base44 or a
+payment system is connected to it. See [`operations/README.md`](./operations/README.md).
 
 ### 6.1 Legacy Service Type → Campaign → Deliverable Mapping
 

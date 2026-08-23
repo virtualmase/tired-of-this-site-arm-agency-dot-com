@@ -1,0 +1,187 @@
+{
+  "contract_version": 1,
+  "case_id_pattern": "^arm_[a-z0-9][a-z0-9_-]{2,63}$",
+  "event_id_pattern": "^evt_[a-z0-9][a-z0-9_-]{2,63}$",
+  "approval_id_pattern": "^apr_[a-z0-9][a-z0-9_-]{2,63}$",
+  "actor_types": ["agent", "human", "system", "external"],
+  "prohibited_data_keys": [
+    "name",
+    "email",
+    "phone",
+    "address",
+    "contact",
+    "contact_name",
+    "contact_email",
+    "company",
+    "payload",
+    "notes",
+    "cookie",
+    "token",
+    "secret",
+    "password",
+    "card_number",
+    "bank_account"
+  ],
+  "authority_boundaries": [
+    "claim",
+    "publication",
+    "external_communication",
+    "crm_mutation",
+    "contract_scope",
+    "payment",
+    "private_data_access",
+    "private_data_sharing",
+    "deletion"
+  ],
+  "commercial_terms": {
+    "currency": "USD",
+    "total_usd": 12500,
+    "booking_payment_usd": 7500,
+    "final_payment_usd": 5000,
+    "delivery_business_days": 15
+  },
+  "required_deliverables": [
+    "buyer_conversation_map",
+    "shortlist_source_gap_map",
+    "proof_conversion_review",
+    "action_register_90_day"
+  ],
+  "human_only_events": [
+    "fit.decision_recorded",
+    "collection.authorized",
+    "action.approved",
+    "case.closed"
+  ],
+  "events": {
+    "brief.received": {
+      "from": [null],
+      "to": "brief_received",
+      "required_data": ["source_channel", "trigger_type", "decision_window_band", "acv_band"]
+    },
+    "fit.review_started": {
+      "from": ["brief_received"],
+      "to": "fit_review",
+      "required_data": ["reviewer_role"]
+    },
+    "fit.decision_recorded": {
+      "from": ["fit_review"],
+      "to_by_data": {
+        "field": "decision",
+        "values": {
+          "proceed": "scope_preparation",
+          "decline": "declined"
+        }
+      },
+      "required_data": ["decision", "reason_codes"]
+    },
+    "scope.drafted": {
+      "from": ["scope_preparation"],
+      "to": "awaiting_scope_approval",
+      "required_data": ["artifact_digest"]
+    },
+    "approval.requested": {
+      "from": ["*"],
+      "to": "same",
+      "required_data": ["approval_id", "action", "boundaries", "artifact_digest", "destination_class", "expires_at"]
+    },
+    "approval.decided": {
+      "from": ["*"],
+      "to": "same",
+      "required_data": ["approval_id", "decision"]
+    },
+    "scope.issued": {
+      "from": ["awaiting_scope_approval"],
+      "to": "scope_issued",
+      "required_data": ["approval_id", "artifact_digest"],
+      "approval_action": "scope.issue",
+      "approval_boundaries": ["external_communication", "contract_scope"]
+    },
+    "scope.accepted": {
+      "from": ["scope_issued"],
+      "to": "awaiting_booking_payment",
+      "required_data": ["acceptance_record_digest"]
+    },
+    "booking_payment.requested": {
+      "from": ["awaiting_booking_payment"],
+      "to": "same",
+      "required_data": ["approval_id", "artifact_digest", "amount_usd", "currency"],
+      "required_values": {"amount_usd": 7500, "currency": "USD"},
+      "approval_action": "payment.request.booking",
+      "approval_boundaries": ["payment", "external_communication"]
+    },
+    "booking_payment.confirmed": {
+      "from": ["awaiting_booking_payment"],
+      "to": "booked",
+      "required_data": ["payment_record_digest", "amount_usd", "currency"],
+      "required_values": {"amount_usd": 7500, "currency": "USD"}
+    },
+    "collection.authorized": {
+      "from": ["booked"],
+      "to": "evidence_collection",
+      "required_data": ["authorization_record_digest", "permitted_use"]
+    },
+    "evidence.registered": {
+      "from": ["evidence_collection", "delivery"],
+      "to": "same",
+      "required_data": ["evidence_id", "source_class", "observed_at", "freshness_review_at", "permitted_use", "confidence"]
+    },
+    "delivery.started": {
+      "from": ["evidence_collection"],
+      "to": "delivery",
+      "required_data": ["delivery_due_at"]
+    },
+    "action.registered": {
+      "from": ["delivery", "delivered", "adoption"],
+      "to": "same",
+      "required_data": ["action_id", "owner_role", "dependency", "acceptance_test", "measure", "review_at"]
+    },
+    "delivery.qa_completed": {
+      "from": ["delivery"],
+      "to": "awaiting_delivery_approval",
+      "required_data": ["qa_result", "deliverables", "artifact_digest"],
+      "required_values": {"qa_result": "pass"}
+    },
+    "final_payment.requested": {
+      "from": ["awaiting_delivery_approval"],
+      "to": "same",
+      "required_data": ["approval_id", "artifact_digest", "amount_usd", "currency"],
+      "required_values": {"amount_usd": 5000, "currency": "USD"},
+      "approval_action": "payment.request.final",
+      "approval_boundaries": ["payment", "external_communication"]
+    },
+    "final_payment.confirmed": {
+      "from": ["awaiting_delivery_approval"],
+      "to": "same",
+      "required_data": ["payment_record_digest", "amount_usd", "currency"],
+      "required_values": {"amount_usd": 5000, "currency": "USD"}
+    },
+    "deliverables.sent": {
+      "from": ["awaiting_delivery_approval"],
+      "to": "delivered",
+      "required_data": ["approval_id", "artifact_digest"],
+      "required_prior_events": ["final_payment.confirmed", "delivery.qa_completed"],
+      "approval_action": "deliverables.send",
+      "approval_boundaries": ["claim", "external_communication", "private_data_sharing"]
+    },
+    "adoption.review_started": {
+      "from": ["delivered"],
+      "to": "adoption",
+      "required_data": ["review_window_days"]
+    },
+    "action.approved": {
+      "from": ["delivered", "adoption"],
+      "to": "same",
+      "required_data": ["action_id", "decision"]
+    },
+    "outcome.observed": {
+      "from": ["adoption"],
+      "to": "same",
+      "required_data": ["action_id", "outcome_type", "evidence_ref", "observed_at"]
+    },
+    "case.closed": {
+      "from": ["declined", "delivered", "adoption"],
+      "to": "closed",
+      "required_data": ["reason_code", "learning_review_due_at"]
+    }
+  }
+}

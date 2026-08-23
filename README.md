@@ -25,6 +25,10 @@ Live at [arm-agency.com](https://www.arm-agency.com).
 ├── robots.txt                             # Crawler directives
 ├── sitemap.xml                            # URL map
 ├── vercel.json                            # Deployment config
+├── operations/
+│   ├── case-contract.json                 # Measurable lifecycle and authority gates
+│   ├── README.md                          # Operating-control boundaries and adapter rules
+│   └── examples/                          # Synthetic validator fixtures, never real cases
 ├── resources/
 │   ├── index.html                       # Resources hub
 │   ├── signal-orchestration-guide/       # Intent and evidence to action
@@ -41,6 +45,10 @@ Live at [arm-agency.com](https://www.arm-agency.com).
 
 - [Backend Pipeline & Operations Scaffold](./BACKEND-PIPELINE.md) — Existing Base44 schema, verified public-intake mapping, and the remaining Sprint close/deal mapping decision.
 - [Market Launch Operating Record](./MARKET-LAUNCH.md) — Current positioning, measurement definitions, controlled-launch cadence, and unresolved gates.
+- [Operating Control Plane](./operations/README.md) — Executable case lifecycle, human-approval contract, privacy boundary, and adapter rules.
+- [Autonomous Operations Roadmap](./AUTONOMY-ROADMAP.md) — Evidence-backed capability state, owner decisions, and dependency-ordered production rollout.
+- [Perplexity Computer Prompt Pack](./PERPLEXITY-COMPUTER-PROMPTS.md) — Guarded research, qualification, delivery, and operating prompts.
+- [Docker Gordon Prompt Pack](./DOCKER-GORDON-PROMPTS.md) — Guarded local validation, preview, security, and Docker diagnostic prompts.
 - [Sales Campaign Roadmap](./SALES-CAMPAIGN-ROADMAP.md) — Archived legacy plan; not approved current offer guidance.
 - [Content Silo Strategy](./CONTENT-SILO-keyword-clusters-and-internal-linking.md) — Archived legacy content plan; not approved current conversion guidance.
 
@@ -52,4 +60,11 @@ The public Brief submits to an external Base44 `intakeLead` function using a leg
 
 See [BACKEND-PIPELINE.md](./BACKEND-PIPELINE.md) before changing intake fields or processing the first paid Sprint.
 
-Run `node scripts/check-launch-readiness.mjs` before a production push.
+Run these contract checks before a production push:
+
+```bash
+node scripts/check-launch-readiness.mjs
+node scripts/check-audit-contract.mjs
+node scripts/check-image-seo.mjs
+node scripts/check-case-ledger.mjs
+```

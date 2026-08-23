@@ -119,6 +119,8 @@ For communities or partner referrals, change the source and medium; never encode
 | Anonymous page-view analytics | Pass; production script, collection POST, and aggregate API count verified |
 | Source attribution in successful Brief records | Instrumentation live and mocked payload test passed; verify notes on the next real Brief |
 | Browser security headers and content policy | Pass; production headers and mocked form path verified |
+| Repo-owned case lifecycle and approval contract | Pass; synthetic proceed and decline paths plus adversarial checks |
+| Production case-ledger store and external adapters | Not connected; owner architecture and access decisions required |
 | Base44 notification delivery and downstream automation | Unverified; manual Lead review required |
 | Legal contracting entity | Owner confirmation required before paid scope |
 | Backend rate limiting and restrictive CORS | Not available in this repository |
