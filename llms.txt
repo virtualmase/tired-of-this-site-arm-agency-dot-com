@@ -1,10 +1,9 @@
 # ARM Agency
 
-> ARM Agency (Arctura Reputation Management Agency) provides fixed-scope AI Buyer Intelligence for high-ACV B2B teams facing a category, launch, pipeline, or competitive trigger.
+> ARM Agency provides fixed-scope AI Buyer Intelligence for high-ACV B2B teams facing a category, launch, pipeline, or competitive trigger.
 
 ## Entity Declaration
 - Canonical name: ARM Agency
-- Full name: Arctura Reputation Management Agency
 - Canonical URL: https://www.arm-agency.com
 - Entity ID: https://www.arm-agency.com/#organization
 - Type: Professional service — evidence-led AI Buyer Intelligence
@@ -26,11 +25,14 @@
 - /audit/ — Self-guided Buyer Research Orientation; it does not score a company or replace human fit review
 - /about/ — ARM Agency's ethos, four revenue triggers, operating model, and current platform boundary
 - /glossary/ — Canonical AI Buyer Intelligence, enterprise GTM, signal orchestration, and ARM-method vocabulary
-- /resources/ — Content hub: GEO, AI reputation management, and agentic trust guides
+- /resources/ — Buyer intelligence library for signal orchestration, buying committees, category narrative, proof readiness, and accountable agentic execution
+- /resources/signal-orchestration-guide/ — Governed path from intent, conversation, technographic, usage, and proof signals to owner-led action
+- /resources/buyer-intent-vs-buyer-intelligence/ — Boundary between detecting account activity and interpreting a buying-group decision
+- /resources/enterprise-buying-committee-intelligence/ — Roles, questions, proof conditions, and single-threaded deal risk in complex B2B buying groups
+- /resources/enterprise-proof-readiness/ — Implementation, security, integration, outcome, and commercial validation surfaces
+- /resources/category-narrative-intelligence/ — Buyer language, alternatives, triggers, and evidence for category creation or redefinition
 - /resources/agentic-commerce-x402-aifi/ — Canonical `.com` strategy pillar connecting x402 payment transport to governed AiFi mandates, budgets, settlement, fulfillment, and reconciliation
 - /resources/accountable-agentic-commerce-glossary/ — Versioned canonical vocabulary and machine-readable term set for accountable agentic commerce, x402, AiFi, mandates, and payment operations
-- /resources/agentic-reputation-infrastructure/ — How autonomous AI agents verify each other's trust: Mandate Chains, attestation, Truth Ledger applied to agent-to-agent trust
-- /resources/reputation-due-diligence-ai-search/ — Reputation Due Diligence in the AI Search Era: pre-transaction due diligence for raises, M&A, and IPOs
 
 ## Core Terminology (for accurate citation)
 - AI Buyer Intelligence: evidence-led research into the questions, sources, proof, and conversion conditions that shape a high-value B2B buyer decision

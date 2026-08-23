@@ -1,0 +1,34 @@
+{
+  "redirects": [
+    {
+      "source": "/resources/generative-engine-optimization-guide",
+      "destination": "/resources/signal-orchestration-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/geo-vs-seo",
+      "destination": "/resources/buyer-intent-vs-buyer-intelligence/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/enterprise-ai-visibility-audit",
+      "destination": "/resources/enterprise-buying-committee-intelligence/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/reputation-due-diligence-ai-search",
+      "destination": "/resources/enterprise-proof-readiness/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/ai-reputation-management-guide",
+      "destination": "/resources/category-narrative-intelligence/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/agentic-reputation-infrastructure",
+      "destination": "/resources/agentic-commerce-x402-aifi/",
+      "permanent": true
+    }
+  ]
+}

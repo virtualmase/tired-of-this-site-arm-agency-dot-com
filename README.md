@@ -27,12 +27,11 @@ Live at [arm-agency.com](https://www.arm-agency.com).
 ├── vercel.json                            # Deployment config
 ├── resources/
 │   ├── index.html                       # Resources hub
-│   ├── agentic-reputation-infrastructure/  # Flagship pillar
-│   ├── ai-reputation-management-guide/    # Pillar: reputation
-│   ├── generative-engine-optimization-guide/ # Pillar: GEO
-│   ├── geo-vs-seo/                      # Pillar: comparison
-│   ├── enterprise-ai-visibility-audit/   # Pillar: enterprise
-│   └── reputation-due-diligence-ai-search/ # Pillar: due diligence
+│   ├── signal-orchestration-guide/       # Intent and evidence to action
+│   ├── buyer-intent-vs-buyer-intelligence/ # Signal vs decision boundary
+│   ├── enterprise-buying-committee-intelligence/ # Buying-group map
+│   ├── enterprise-proof-readiness/       # Buyer validation surfaces
+│   └── category-narrative-intelligence/  # Category creation and redefinition
 ├── CONTENT-SILO-keyword-clusters-and-internal-linking.md  # Content strategy
 ├── BACKEND-PIPELINE.md                  # Backend ops documentation
 └── SALES-CAMPAIGN-ROADMAP.md            # Archived legacy sales roadmap
