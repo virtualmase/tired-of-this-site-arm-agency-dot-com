@@ -277,6 +277,15 @@ handle `invoice.finalized`, `invoice.paid`, `invoice.payment_failed`, and
 final invoice still follows delivery QA. Tax calculation remains disabled unless
 the business confirms an active registration for the buyer's jurisdiction.
 
+The private operator route at `/api/operations/stripe/invoices` creates, adds the
+catalog Price to, finalizes, and emails a Stripe-hosted invoice. It is not linked
+from any public page. It accepts only a bearer-protected JSON request containing
+an opaque case ID, Stripe Customer ID, installment, opaque source digest, and the
+written-acceptance or delivery-authorization digest. Deterministic Stripe
+idempotency keys make retries converge on the same invoice and line item. The
+route needs `STRIPE_SECRET_KEY` from Vercel's managed Stripe integration and a
+32-byte-or-longer `ARM_OPERATIONS_TOKEN`; neither value belongs in this repo.
+
 ## Metrics this enables
 
 Across an approved private store, event timestamps can support:
