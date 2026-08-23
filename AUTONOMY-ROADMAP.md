@@ -10,7 +10,7 @@ private data, contracts, and other consequential decisions.
 | Capability | Current state | Authoritative evidence | What is still missing |
 | --- | --- | --- | --- |
 | Attract relevant demand | Partial | Production site, active resource silo, image sitemap, Vercel analytics checks, `MARKET-LAUNCH.md` | A measured content/outreach cadence and enough real observations to select channels |
-| Capture demand | Partial | Production Category Presence Brief created a Base44 Lead in a controlled test; `BACKEND-PIPELINE.md` | Verified notification delivery, named daily owner, and read-only event adapter |
+| Capture demand | Partial | Production Category Presence Brief created a Base44 Lead in a controlled test; pure privacy-preserving translation passes `scripts/check-brief-event-candidate.mjs` | Verified notification delivery, named daily owner, Base44 read access, private ID/HMAC service, and ledger append |
 | Qualify demand | Contract ready, operation manual | `operations/case-contract.json` requires a human fit decision and reason codes | Approved private review queue, response target, and production event store |
 | Scope and book work | Contract ready, not connected | Artifact-bound scope approval, written acceptance, approved $7,500 request, and confirmation order pass contract tests | Legal contracting entity, approved document/payment systems, and adapters |
 | Produce evidence-led work | Contract and prompt workflow ready | Four-deliverable QA gate, evidence register fields, `PERPLEXITY-COMPUTER-PROMPTS.md` | Approved private client workspace and a real attended Sprint proving the workflow |
@@ -128,6 +128,7 @@ node scripts/check-launch-readiness.mjs
 node scripts/check-audit-contract.mjs
 node scripts/check-image-seo.mjs
 node scripts/check-case-ledger.mjs
+node scripts/check-brief-event-candidate.mjs
 node scripts/case-ledger.mjs validate operations/examples/qualified-sprint.jsonl
 node scripts/portfolio-metrics.mjs operations/examples/qualified-sprint.jsonl operations/examples/declined-brief.jsonl
 ```
@@ -137,8 +138,9 @@ that an external adapter, notification, customer operation, or payment is live.
 
 ## Next executable slice
 
-The highest-leverage next build is the Base44 read-only adapter plus private-ledger
-deployment. It is blocked by the Base44 access route and private-store decision,
-not by application code. Until those are authorized, manual Lead review remains
-the correct production control while the repository contract supplies the event
-format, validator, test fixtures, and metrics.
+The highest-leverage next build is the external-I/O half of the Base44 read-only
+adapter plus private-ledger deployment. The pure translator, privacy checks, form-
+drift checks, event validator, fixtures, and metrics are ready. Connection is
+blocked by the Base44 access route, HMAC key custody, and private-store decision.
+Until those are authorized, manual Lead review remains the correct production
+control.

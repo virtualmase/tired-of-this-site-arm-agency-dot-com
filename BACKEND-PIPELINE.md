@@ -341,6 +341,12 @@ deliverable QA gate, one-time artifact-bound approvals, and adoption/outcome
 events. It is an executable compatibility target, not evidence that Base44 or a
 payment system is connected to it. See [`operations/README.md`](./operations/README.md).
 
+The repository also contains a pure dry-run translator for the verified public
+Brief shape. It emits only approved classifications, completeness flags,
+timestamps, opaque IDs, and a caller-supplied HMAC source digest. It does not read
+Base44, copy identity fields, or append to a production ledger. Run
+`node scripts/check-brief-event-candidate.mjs` to verify form-to-contract mapping.
+
 ### 6.1 Legacy Service Type → Campaign → Deliverable Mapping
 
 The following matrix is retained as a snapshot of the previously documented `closeDeal()` contract. It has not been verified against current external function source and does not define the public offer.

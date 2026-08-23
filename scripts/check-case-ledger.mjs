@@ -94,7 +94,7 @@ assert.equal(portfolio.funnel_counts.brief_received, 2);
 assert.equal(portfolio.funnel_counts.fit_proceeded, 1);
 assert.equal(portfolio.funnel_counts.sprint_booked, 1);
 assert.equal(portfolio.funnel_counts.deliverables_sent, 1);
-assert.equal(portfolio.trigger_counts.category, 1);
+assert.equal(portfolio.trigger_counts.category_launch, 1);
 assert.equal(portfolio.trigger_counts.pipeline, 1);
 assert.equal(portfolio.decline_reason_counts.decision_window_outside_fit, 1);
 assert.equal(portfolio.approvals.consumed, 4);

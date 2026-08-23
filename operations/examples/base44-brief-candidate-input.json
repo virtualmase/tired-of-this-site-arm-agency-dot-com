@@ -1,0 +1,17 @@
+{
+  "case_id": "arm_demo_adapter",
+  "event_id": "evt_adapter_001",
+  "source_record_digest": "5555555555555555555555555555555555555555555555555555555555555555",
+  "occurred_at": "2026-08-23T16:00:00Z",
+  "recorded_at": "2026-08-23T16:00:05Z",
+  "lead": {
+    "name": "Synthetic Example Person",
+    "email": "synthetic@example.invalid",
+    "company": "Synthetic Example Company",
+    "entity_url": "https://example.invalid",
+    "source": "website",
+    "service_interest": "enterprise_visibility",
+    "priority": "medium",
+    "notes": "Requested service: AI Buyer Intelligence Sprint / Category Presence Brief\nRole: VP Product Marketing\nTrigger: Category or product launch\nDecision window: 91–180 days\nACV: $75,000–$149,999\nCategory: Synthetic software category\nPrimary buyer / buying group: Synthetic enterprise team\nPriority buyer question: Can the synthetic product satisfy the stated requirements?\nCompetitors / alternatives: Synthetic alternative\nLaunch source: partner_referral\nUTM source: synthetic_campaign"
+  }
+}

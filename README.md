@@ -67,4 +67,5 @@ node scripts/check-launch-readiness.mjs
 node scripts/check-audit-contract.mjs
 node scripts/check-image-seo.mjs
 node scripts/check-case-ledger.mjs
+node scripts/check-brief-event-candidate.mjs
 ```

@@ -144,6 +144,23 @@ export function validateLedger(events, contract = loadContract()) {
         add(index, event, `data.${field} must be a SHA-256 hex digest`);
       }
     }
+    if (event.type === 'brief.received') {
+      const allowed = contract.brief_classifications;
+      const classifications = {
+        source_channel: allowed.source_channels,
+        trigger_type: allowed.trigger_types,
+        decision_window_band: allowed.decision_window_bands,
+        acv_band: allowed.acv_bands,
+        submitter_role_class: allowed.submitter_role_classes
+      };
+      for (const [field, values] of Object.entries(classifications)) {
+        if (!values.includes(event.data?.[field])) add(index, event, `data.${field} is not an approved classification`);
+      }
+      const expectedContext = ['category', 'buyer_group', 'buyer_question', 'competitors'];
+      if (!sameMembers(event.data?.context_fields_present, expectedContext)) {
+        add(index, event, `data.context_fields_present must contain exactly: ${expectedContext.join(', ')}`);
+      }
+    }
 
     const fromAllowed = spec.from.includes('*') || spec.from.includes(stage);
     if (!fromAllowed) add(index, event, `event cannot occur from stage ${JSON.stringify(stage)}`);

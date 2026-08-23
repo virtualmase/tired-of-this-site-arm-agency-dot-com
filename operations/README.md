@@ -15,6 +15,8 @@ or human judgment. It gives those systems one testable operating contract.
 | `case-contract.json` | Machine-readable stages, events, commercial terms, deliverables, authority boundaries, and required fields |
 | `../scripts/case-ledger.mjs` | Dependency-free JSONL validator and sanitized case summarizer |
 | `../scripts/portfolio-metrics.mjs` | Cross-case count, timing, approval, evidence, and adoption rollup |
+| `../scripts/brief-event-candidate.mjs` | Pure, dry-run translation from the verified Base44-compatible Brief shape to one sanitized candidate event |
+| `../scripts/check-brief-event-candidate.mjs` | Form-drift, classification, fail-closed, and private-field non-disclosure tests |
 | `../scripts/check-case-ledger.mjs` | Adversarial contract tests for approvals, privacy, payment order, delivery completeness, and append-only ordering |
 | `examples/qualified-sprint.jsonl` | Synthetic complete path with no person or company data |
 | `examples/declined-brief.jsonl` | Synthetic human-declined path |
@@ -117,9 +119,11 @@ From the repository root:
 
 ```bash
 node scripts/check-case-ledger.mjs
+node scripts/check-brief-event-candidate.mjs
 node scripts/case-ledger.mjs validate operations/examples/qualified-sprint.jsonl
 node scripts/case-ledger.mjs summarize operations/examples/qualified-sprint.jsonl
 node scripts/portfolio-metrics.mjs operations/examples/qualified-sprint.jsonl operations/examples/declined-brief.jsonl
+node scripts/brief-event-candidate.mjs operations/examples/base44-brief-candidate-input.json
 ```
 
 The case summary exposes case-local funnel booleans, elapsed hours, approval
@@ -141,10 +145,17 @@ the owner approves its access and mutation authority. Each adapter must:
 6. expose retries and dead letters rather than guessing;
 7. pass this validator before an event enters the operating ledger.
 
-The first recommended adapter is a read-only/manual Base44 Lead-to-
-`brief.received` mapper. Notification delivery, Base44 function source, legal
-contracting entity, private payment system, and production ledger host remain
-owner decisions.
+The pure translation portion of the first Base44 adapter now exists as
+`brief-event-candidate.mjs`. It accepts an owner-supplied opaque case ID, event ID,
+HMAC-SHA-256 source-record digest, timestamps, and the verified Lead shape. It
+parses the current public form classifications, omits identity and submitted text,
+validates the resulting event, and prints it without writing or contacting an
+external service. The HMAC must be generated inside the future private adapter
+with a protected key; a raw or unkeyed hash of a source ID is not sufficient.
+
+This is not a production connection. Base44 read access, notification delivery,
+opaque ID mapping, HMAC key custody, the ledger append, legal contracting entity,
+private payment system, and production ledger host remain owner decisions.
 
 ## Metrics this enables
 

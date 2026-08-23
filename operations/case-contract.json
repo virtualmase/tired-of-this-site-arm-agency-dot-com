@@ -40,6 +40,13 @@
     "final_payment_usd": 5000,
     "delivery_business_days": 15
   },
+  "brief_classifications": {
+    "source_channels": ["direct", "organic", "partner_referral", "email", "linkedin", "paid", "other"],
+    "trigger_types": ["category_launch", "enterprise_expansion", "pipeline", "competitive", "transaction", "trust", "other"],
+    "decision_window_bands": ["within_30_days", "31_90_days", "91_180_days", "181_plus_days"],
+    "acv_bands": ["under_25000", "25000_74999", "75000_149999", "150000_499999", "500000_plus", "strategic_or_na"],
+    "submitter_role_classes": ["marketing_leader", "sales_leader", "product_marketing_leader", "executive", "security_leader", "revenue_operations", "other"]
+  },
   "required_deliverables": [
     "buyer_conversation_map",
     "shortlist_source_gap_map",
@@ -56,7 +63,7 @@
     "brief.received": {
       "from": [null],
       "to": "brief_received",
-      "required_data": ["source_channel", "trigger_type", "decision_window_band", "acv_band"]
+      "required_data": ["source_record_digest", "source_channel", "trigger_type", "decision_window_band", "acv_band", "submitter_role_class", "context_fields_present"]
     },
     "fit.review_started": {
       "from": ["brief_received"],
