@@ -12,7 +12,7 @@ private data, contracts, and other consequential decisions.
 | Attract relevant demand | Draft experiment system ready, activation manual | `operations/demand-experiment-contract.json` binds active routes, non-personal attribution, exact artifacts, count-only measures, reviews, and human authority; adversarial checks pass | Approved exact message/publication, channel execution, production observations, and enough real evidence to select channels |
 | Capture demand | Partial | Production Category Presence Brief created a Base44 Lead in a controlled test; signed-notification, canonical-read, HMAC ID, idempotency, privacy, and dead-letter boundaries pass `scripts/check-base44-brief-ingestion.mjs` | Verified notification delivery/signing, named daily owner, Base44 entity read access, production key custody, and durable ledger implementation |
 | Qualify demand | Contract ready, operation manual | `operations/case-contract.json` requires a human fit decision and reason codes | Approved private review queue, response target, and production event store |
-| Scope and book work | Contract ready, not connected | Artifact-bound scope approval, written acceptance, approved $7,500 request, and confirmation order pass contract tests | Legal contracting entity, approved document/payment systems, and adapters |
+| Scope and book work | Live catalog ready, invoicing not connected | Stripe live product and immutable $7,500/$5,000 Prices match `operations/stripe-catalog.json`; artifact-bound scope, written acceptance, request, and confirmation order pass contract tests | Accepted-scope source, private invoice adapter, signed webhook consumer, and production event store |
 | Produce evidence-led work | Package contract and prompt workflow ready | `operations/deliverable-contract.json` enforces the four deliverables, research conditions, evidence/action references, counts, and digest binding; adversarial checks pass | Approved private client workspace and a real attended Sprint proving evidence relevance and human QA |
 | Coordinate owner actions | Queue and contract ready, not connected | `scripts/approval-queue.mjs` derives sanitized pending/ready/expired approvals; actions retain owner, dependency, acceptance test, measure, and review date | Authenticated approval UI, reminders, escalation ownership, and controlled mutations |
 | Run customer operations | Due-work queue and lifecycle ready, not connected | `scripts/customer-ops-queue.mjs` derives delivery, evidence, action, and learning tasks without sending or mutating | Onboarding/access systems, authenticated reminders, communication, billing, and retention integrations |
@@ -44,12 +44,12 @@ Owner decisions required before connecting production data:
 
 | Decision | Why it blocks automation |
 | --- | --- |
-| Legal contracting and invoicing entity | A scope or payment request cannot be issued accurately without it |
+| Legal contracting and invoicing identity | Stripe is configured for Autonomous Resource Management LLC; the written scope template must use the same approved identity |
 | Base44 review owner and response target | A notification without accountable handling is not an operating system |
 | Base44 read access and notification route | The repository cannot verify or poll new Leads today |
 | Private ledger host, access roles, retention, backup, and deletion policy | Real case events must not live in GitHub |
 | Document/acceptance system | Scope acceptance needs durable evidence and signer authority |
-| Private payment system and approver | Payment requests and confirmations must remain private and human-controlled |
+| Private payment adapter and event consumer | Live product/Prices exist; invoice creation and signed confirmation events are not connected yet |
 | Client evidence workspace and permitted-use policy | Delivery automation cannot copy confidential evidence into an unapproved tool |
 | Claim/publication approver | Public output needs one named accountable authority |
 
@@ -130,6 +130,7 @@ node scripts/check-image-seo.mjs
 node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
 node scripts/check-base44-brief-ingestion.mjs
+node scripts/check-stripe-catalog.mjs
 node scripts/check-deliverable-package.mjs
 node scripts/check-customer-ops-queue.mjs
 node scripts/check-demand-experiment.mjs

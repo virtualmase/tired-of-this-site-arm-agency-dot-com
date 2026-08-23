@@ -28,6 +28,8 @@ or human judgment. It gives those systems one testable operating contract.
 | `../scripts/check-brief-event-candidate.mjs` | Form-drift, classification, fail-closed, and private-field non-disclosure tests |
 | `../scripts/base44-brief-ingestion.mjs` | Signed-notification ingestion core with canonical Lead read, opaque HMAC IDs, atomic append interface, idempotency, and sanitized dead letters |
 | `../scripts/check-base44-brief-ingestion.mjs` | Adversarial authentication, privacy, duplicate, source-drift, retry, and dead-letter tests |
+| `stripe-catalog.json` | Non-secret live Stripe product/price IDs, private invoice mode, required metadata, and webhook event contract |
+| `../scripts/check-stripe-catalog.mjs` | Fixed-scope, 60/40 amount, private collection, identifier, secret-exclusion, and event coverage checks |
 | `../scripts/check-case-ledger.mjs` | Adversarial contract tests for approvals, privacy, payment order, delivery completeness, and append-only ordering |
 | `examples/qualified-sprint.jsonl` | Synthetic complete path with no person or company data |
 | `examples/declined-brief.jsonl` | Synthetic human-declined path |
@@ -134,6 +136,7 @@ From the repository root:
 node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
 node scripts/check-base44-brief-ingestion.mjs
+node scripts/check-stripe-catalog.mjs
 node scripts/check-deliverable-package.mjs
 node scripts/check-customer-ops-queue.mjs
 node scripts/check-demand-experiment.mjs
@@ -254,8 +257,25 @@ retention, recovery, and audit controls above.
 
 This is not a production connection. Base44 entity read access, notification
 delivery and signing, production HMAC key custody, the durable atomic ledger
-implementation, legal contracting entity, private payment system, and production
-ledger host remain owner decisions.
+implementation, accepted-scope source, private invoice adapter, signed Stripe
+webhook consumer, and production ledger host remain to be connected.
+
+## Stripe collection catalog
+
+The live Stripe account for Autonomous Resource Management LLC now contains one
+active `AI Buyer Intelligence Sprint` product and two active one-time Prices:
+$7,500 booking (60%) and $5,000 final (40%). Their non-secret IDs and lookup keys
+are recorded in `stripe-catalog.json`. The catalog explicitly selects private
+`send_invoice` collection and forbids public checkout. It does not contain an API
+key, customer identity, invoice, payment, or evidence of revenue.
+
+Every future invoice must carry only the sanitized `arm_case_id`, installment,
+and opaque `source_record_digest` metadata needed to reconcile Stripe events to
+the private ledger. The webhook consumer must verify Stripe's signature and
+handle `invoice.finalized`, `invoice.paid`, `invoice.payment_failed`, and
+`invoice.voided`. A booking invoice still requires written scope acceptance; a
+final invoice still follows delivery QA. Tax calculation remains disabled unless
+the business confirms an active registration for the buyer's jurisdiction.
 
 ## Metrics this enables
 

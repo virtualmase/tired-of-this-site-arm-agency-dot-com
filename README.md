@@ -71,6 +71,7 @@ node scripts/check-image-seo.mjs
 node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
 node scripts/check-base44-brief-ingestion.mjs
+node scripts/check-stripe-catalog.mjs
 node scripts/check-deliverable-package.mjs
 node scripts/check-customer-ops-queue.mjs
 node scripts/check-demand-experiment.mjs

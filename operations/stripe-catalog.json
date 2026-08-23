@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "mode": "live",
+  "account_id": "acct_1TQGpQLROeZlmE6m",
+  "collection_method": "send_invoice",
+  "public_checkout": false,
+  "currency": "usd",
+  "product": {
+    "id": "prod_V7xxv7ZaRnlBUQ",
+    "name": "AI Buyer Intelligence Sprint",
+    "active": true,
+    "total_usd": 12500,
+    "delivery_business_days": 15,
+    "journey": "written_scope_private_collection"
+  },
+  "installments": [
+    {
+      "kind": "booking",
+      "price_id": "price_1U7i2FLROeZlmE6m0f0IHXSU",
+      "lookup_key": "arm_ai_buyer_intelligence_sprint_booking_v1",
+      "amount_usd": 7500,
+      "percent": 60,
+      "active": true
+    },
+    {
+      "kind": "final",
+      "price_id": "price_1U7i2FLROeZlmE6m6Y9YtmVx",
+      "lookup_key": "arm_ai_buyer_intelligence_sprint_final_v1",
+      "amount_usd": 5000,
+      "percent": 40,
+      "active": true
+    }
+  ],
+  "required_invoice_metadata": [
+    "arm_case_id",
+    "installment",
+    "source_record_digest"
+  ],
+  "required_webhook_events": [
+    "invoice.finalized",
+    "invoice.paid",
+    "invoice.payment_failed",
+    "invoice.voided"
+  ],
+  "configured_at": "2026-08-23T20:30:31Z"
+}
