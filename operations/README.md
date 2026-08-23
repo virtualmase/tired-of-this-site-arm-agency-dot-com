@@ -15,6 +15,7 @@ or human judgment. It gives those systems one testable operating contract.
 | `case-contract.json` | Machine-readable stages, events, commercial terms, deliverables, authority boundaries, and required fields |
 | `../scripts/case-ledger.mjs` | Dependency-free JSONL validator and sanitized case summarizer |
 | `../scripts/portfolio-metrics.mjs` | Cross-case count, timing, approval, evidence, and adoption rollup |
+| `../scripts/approval-queue.mjs` | Sanitized pending, ready, expired, rejected, and consumed approval coordination |
 | `../scripts/brief-event-candidate.mjs` | Pure, dry-run translation from the verified Base44-compatible Brief shape to one sanitized candidate event |
 | `../scripts/check-brief-event-candidate.mjs` | Form-drift, classification, fail-closed, and private-field non-disclosure tests |
 | `../scripts/check-case-ledger.mjs` | Adversarial contract tests for approvals, privacy, payment order, delivery completeness, and append-only ordering |
@@ -123,6 +124,7 @@ node scripts/check-brief-event-candidate.mjs
 node scripts/case-ledger.mjs validate operations/examples/qualified-sprint.jsonl
 node scripts/case-ledger.mjs summarize operations/examples/qualified-sprint.jsonl
 node scripts/portfolio-metrics.mjs operations/examples/qualified-sprint.jsonl operations/examples/declined-brief.jsonl
+node scripts/approval-queue.mjs --as-of 2026-08-02T16:30:00Z operations/examples/qualified-sprint.jsonl
 node scripts/brief-event-candidate.mjs operations/examples/base44-brief-candidate-input.json
 ```
 
@@ -131,6 +133,14 @@ counts, confirmed-payment amount, registered evidence, and action-adoption count
 The portfolio summary combines sanitized cases into counts, reason distributions,
 and timing observations. Neither script produces public conversion, revenue, or
 performance claims.
+
+The approval queue derives attention items without opening artifacts. It shows the
+case ID, exact action, boundary set, artifact digest, destination class, expiration,
+and whether the decision is pending, approved and ready, or expired. It never
+executes the action. Its next-event candidates describe the state-machine path;
+they are not authorization to execute an event. The optional `--as-of` argument
+filters by `recorded_at` for deterministic tests and historical review; omit it for
+the current time.
 
 ## Adapter rule
 

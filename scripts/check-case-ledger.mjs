@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadContract, readLedger, summarizeLedger, validateLedger } from './case-ledger.mjs';
 import { buildPortfolioMetrics } from './portfolio-metrics.mjs';
+import { buildApprovalQueue } from './approval-queue.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const contract = loadContract();
@@ -101,4 +102,22 @@ assert.equal(portfolio.approvals.consumed, 4);
 assert.equal(portfolio.actions.cases_with_outcomes, 1);
 assert.equal(portfolio.elapsed_time.brief_to_review.median_hours, 2);
 
-console.log('PASS: case lifecycle, authority gates, commercial terms, privacy boundary, delivery completeness, and portfolio metrics verified');
+const scopeApprovalRequested = qualified.slice(0, 5);
+const pendingQueue = buildApprovalQueue([scopeApprovalRequested], contract, '2026-08-02T16:30:00Z');
+assert.equal(pendingQueue.attention_count, 1);
+assert.equal(pendingQueue.attention_items[0].status, 'pending_human_decision');
+assert.equal(pendingQueue.attention_items[0].action, 'scope.issue');
+assert.deepEqual(pendingQueue.attention_items[0].boundaries, ['external_communication', 'contract_scope']);
+assert.equal(pendingQueue.cases[0].current_stage, 'awaiting_scope_approval');
+
+const approvedQueue = buildApprovalQueue([qualified.slice(0, 6)], contract, '2026-08-02T17:02:00Z');
+assert.equal(approvedQueue.attention_items[0].status, 'approved_ready');
+
+const consumedQueue = buildApprovalQueue([qualified.slice(0, 7)], contract, '2026-08-02T17:06:00Z');
+assert.equal(consumedQueue.attention_count, 0);
+assert.equal(consumedQueue.status_counts.consumed, 1);
+
+const expiredQueue = buildApprovalQueue([scopeApprovalRequested], contract, '2026-08-05T16:30:00Z');
+assert.equal(expiredQueue.attention_items[0].status, 'expired_unreviewed');
+
+console.log('PASS: case lifecycle, authority gates, approval queue, commercial terms, privacy boundary, delivery completeness, and portfolio metrics verified');
