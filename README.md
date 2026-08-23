@@ -40,6 +40,7 @@ Live at [arm-agency.com](https://www.arm-agency.com).
 ## Documentation
 
 - [Backend Pipeline & Operations Scaffold](./BACKEND-PIPELINE.md) — Existing Base44 schema, verified public-intake mapping, and the remaining Sprint close/deal mapping decision.
+- [Market Launch Operating Record](./MARKET-LAUNCH.md) — Current positioning, measurement definitions, controlled-launch cadence, and unresolved gates.
 - [Sales Campaign Roadmap](./SALES-CAMPAIGN-ROADMAP.md) — Archived legacy plan; not approved current offer guidance.
 - [Content Silo Strategy](./CONTENT-SILO-keyword-clusters-and-internal-linking.md) — Archived legacy content plan; not approved current conversion guidance.
 
@@ -50,3 +51,5 @@ Live at [arm-agency.com](https://www.arm-agency.com).
 The public Brief submits to an external Base44 `intakeLead` function using a legacy-compatible service enum. A controlled production test verified Lead creation on 2026-08-22. This repository does not contain the Base44 function source, notification configuration, or a verified Sprint-specific `closeDeal` template.
 
 See [BACKEND-PIPELINE.md](./BACKEND-PIPELINE.md) before changing intake fields or processing the first paid Sprint.
+
+Run `node scripts/check-launch-readiness.mjs` before a production push.
