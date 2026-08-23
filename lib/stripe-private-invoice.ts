@@ -73,7 +73,15 @@ export function stripeClient(secretKey: string | undefined): Stripe {
   return new Stripe(secretKey, { apiVersion: '2026-07-29.dahlia' });
 }
 
+export async function assertStripeAccount(stripe: Stripe): Promise<void> {
+  const account = await stripe.accounts.retrieveCurrent();
+  if (account.id !== catalog.account_id) {
+    throw new InvoiceRequestError('STRIPE_ACCOUNT_MISMATCH', 'Stripe account does not match the approved live catalog', 503);
+  }
+}
+
 export async function createAndSendPrivateInvoice(stripe: Stripe, input: InvoiceRequest) {
+  await assertStripeAccount(stripe);
   const installment = installmentFor(input.installment);
   const key = requestKey(input);
   const metadata = {
@@ -84,7 +92,7 @@ export async function createAndSendPrivateInvoice(stripe: Stripe, input: Invoice
     offer_key: 'ai_buyer_intelligence_sprint'
   };
 
-  const invoice = await stripe.invoices.create({
+  let invoice = await stripe.invoices.create({
     auto_advance: false,
     collection_method: 'send_invoice',
     customer: input.customer_id,
@@ -102,13 +110,15 @@ export async function createAndSendPrivateInvoice(stripe: Stripe, input: Invoice
       quantity: 1,
       metadata
     }, { idempotencyKey: `arm-invoice-item-${key}` });
-    const finalized = await stripe.invoices.finalizeInvoice(invoice.id, { auto_advance: false }, {
+    invoice = await stripe.invoices.finalizeInvoice(invoice.id, { auto_advance: false }, {
       idempotencyKey: `arm-invoice-finalize-${key}`
     });
-    const sent = await stripe.invoices.sendInvoice(finalized.id, {}, {
+  }
+
+  if (invoice.status === 'open') {
+    invoice = await stripe.invoices.sendInvoice(invoice.id, {}, {
       idempotencyKey: `arm-invoice-send-${key}`
     });
-    return sanitizedInvoice(sent, installment.amount_usd);
   }
 
   return sanitizedInvoice(invoice, installment.amount_usd);

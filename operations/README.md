@@ -1,6 +1,6 @@
 # ARM Operating Control Plane
 
-**Status:** Executable contract and Base44 ingestion boundary ready; external systems not connected
+**Status:** Executable contract, guarded Base44 ingestion boundary, and live-account-bound private Stripe invoice operator ready
 **Updated:** 2026-08-23
 
 This directory defines a measurable, append-only case lifecycle from Category
@@ -283,8 +283,18 @@ from any public page. It accepts only a bearer-protected JSON request containing
 an opaque case ID, Stripe Customer ID, installment, opaque source digest, and the
 written-acceptance or delivery-authorization digest. Deterministic Stripe
 idempotency keys make retries converge on the same invoice and line item. The
-route needs `STRIPE_SECRET_KEY` from Vercel's managed Stripe integration and a
-32-byte-or-longer `ARM_OPERATIONS_TOKEN`; neither value belongs in this repo.
+route needs a production-only restricted `STRIPE_SECRET_KEY` and a 32-byte-or-
+longer `ARM_OPERATIONS_TOKEN`; neither value belongs in this repo. Before any
+invoice mutation, the operator reads Stripe's current account and fails closed
+unless it matches the live catalog account. Its send step is also resumable: a
+retry after finalization reuses the same idempotency key, while an already-paid or
+void invoice is never resent.
+
+Vercel preview and development use the separately provisioned Stripe sandbox.
+Production overrides only `STRIPE_SECRET_KEY` with the owner-authorized restricted
+live credential for the ARM account. The current restricted credential expires on
+2026-11-16 and must be rotated before then. The sandbox must never be treated as a
+source of live revenue or used to validate the live catalog IDs.
 
 ## Metrics this enables
 
