@@ -1,6 +1,6 @@
 # ARM Operating Control Plane
 
-**Status:** Executable contract ready; external adapters not connected  
+**Status:** Executable contract and Base44 ingestion boundary ready; external systems not connected
 **Updated:** 2026-08-23
 
 This directory defines a measurable, append-only case lifecycle from Category
@@ -26,6 +26,8 @@ or human judgment. It gives those systems one testable operating contract.
 | `../scripts/check-deliverable-package.mjs` | Adversarial package and post-QA alteration tests |
 | `../scripts/brief-event-candidate.mjs` | Pure, dry-run translation from the verified Base44-compatible Brief shape to one sanitized candidate event |
 | `../scripts/check-brief-event-candidate.mjs` | Form-drift, classification, fail-closed, and private-field non-disclosure tests |
+| `../scripts/base44-brief-ingestion.mjs` | Signed-notification ingestion core with canonical Lead read, opaque HMAC IDs, atomic append interface, idempotency, and sanitized dead letters |
+| `../scripts/check-base44-brief-ingestion.mjs` | Adversarial authentication, privacy, duplicate, source-drift, retry, and dead-letter tests |
 | `../scripts/check-case-ledger.mjs` | Adversarial contract tests for approvals, privacy, payment order, delivery completeness, and append-only ordering |
 | `examples/qualified-sprint.jsonl` | Synthetic complete path with no person or company data |
 | `examples/declined-brief.jsonl` | Synthetic human-declined path |
@@ -131,6 +133,7 @@ From the repository root:
 ```bash
 node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
+node scripts/check-base44-brief-ingestion.mjs
 node scripts/check-deliverable-package.mjs
 node scripts/check-customer-ops-queue.mjs
 node scripts/check-demand-experiment.mjs
@@ -232,9 +235,27 @@ validates the resulting event, and prints it without writing or contacting an
 external service. The HMAC must be generated inside the future private adapter
 with a protected key; a raw or unkeyed hash of a source ID is not sufficient.
 
-This is not a production connection. Base44 read access, notification delivery,
-opaque ID mapping, HMAC key custody, the ledger append, legal contracting entity,
-private payment system, and production ledger host remain owner decisions.
+`base44-brief-ingestion.mjs` implements the surrounding connector contract without
+claiming a live Base44 or database connection. It verifies an HMAC-SHA-256 signed
+notification before parsing it, accepts only a bounded delivery ID, source record
+ID, and notification timestamp, and re-reads the canonical Lead through an
+injected read-only function. A separate 32-byte-or-longer identifier secret
+derives stable opaque case/event IDs and the source-record digest. The adapter
+then calls one required atomic operation,
+`store.appendBriefIfAbsent({idempotency_key, event})`. Retries return `duplicate`
+and cannot append another `brief.received` event.
+
+Trusted failures create a sanitized dead letter containing only an opaque ID,
+opaque source digest, error code, retryability, and recording timestamp. Invalid
+signatures never reach that store. The included in-memory store is a deterministic
+conformance fixture only; it is not durable or approved for production data. A
+production store must implement the same atomic interface and the access, backup,
+retention, recovery, and audit controls above.
+
+This is not a production connection. Base44 entity read access, notification
+delivery and signing, production HMAC key custody, the durable atomic ledger
+implementation, legal contracting entity, private payment system, and production
+ledger host remain owner decisions.
 
 ## Metrics this enables
 

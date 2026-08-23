@@ -10,7 +10,7 @@ private data, contracts, and other consequential decisions.
 | Capability | Current state | Authoritative evidence | What is still missing |
 | --- | --- | --- | --- |
 | Attract relevant demand | Draft experiment system ready, activation manual | `operations/demand-experiment-contract.json` binds active routes, non-personal attribution, exact artifacts, count-only measures, reviews, and human authority; adversarial checks pass | Approved exact message/publication, channel execution, production observations, and enough real evidence to select channels |
-| Capture demand | Partial | Production Category Presence Brief created a Base44 Lead in a controlled test; pure privacy-preserving translation passes `scripts/check-brief-event-candidate.mjs` | Verified notification delivery, named daily owner, Base44 read access, private ID/HMAC service, and ledger append |
+| Capture demand | Partial | Production Category Presence Brief created a Base44 Lead in a controlled test; signed-notification, canonical-read, HMAC ID, idempotency, privacy, and dead-letter boundaries pass `scripts/check-base44-brief-ingestion.mjs` | Verified notification delivery/signing, named daily owner, Base44 entity read access, production key custody, and durable ledger implementation |
 | Qualify demand | Contract ready, operation manual | `operations/case-contract.json` requires a human fit decision and reason codes | Approved private review queue, response target, and production event store |
 | Scope and book work | Contract ready, not connected | Artifact-bound scope approval, written acceptance, approved $7,500 request, and confirmation order pass contract tests | Legal contracting entity, approved document/payment systems, and adapters |
 | Produce evidence-led work | Package contract and prompt workflow ready | `operations/deliverable-contract.json` enforces the four deliverables, research conditions, evidence/action references, counts, and digest binding; adversarial checks pass | Approved private client workspace and a real attended Sprint proving evidence relevance and human QA |
@@ -129,6 +129,7 @@ node scripts/check-audit-contract.mjs
 node scripts/check-image-seo.mjs
 node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
+node scripts/check-base44-brief-ingestion.mjs
 node scripts/check-deliverable-package.mjs
 node scripts/check-customer-ops-queue.mjs
 node scripts/check-demand-experiment.mjs
@@ -142,9 +143,11 @@ that an external adapter, notification, customer operation, or payment is live.
 
 ## Next executable slice
 
-The highest-leverage next build is the external-I/O half of the Base44 read-only
-adapter plus private-ledger deployment. The pure translator, privacy checks, form-
-drift checks, event validator, fixtures, and metrics are ready. Connection is
-blocked by the Base44 access route, HMAC key custody, and private-store decision.
-Until those are authorized, manual Lead review remains the correct production
-control.
+The Base44 adapter core now covers signed notification verification, a canonical
+Lead read boundary, opaque HMAC identifiers, atomic append semantics, duplicate
+handling, and sanitized dead letters. The highest-leverage next build is the two
+external implementations: the owner-authorized Base44 entity reader/notifier and
+an access-controlled transactional ledger store. Connection remains blocked by
+the Base44 entity access route and notification configuration, production HMAC
+key custody, named review owner, and private-store deployment. Until those are
+authorized, manual Lead review remains the correct production control.
