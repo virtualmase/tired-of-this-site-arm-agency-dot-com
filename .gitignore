@@ -1,6 +1,7 @@
 # Local dependencies and build artifacts
 node_modules/
 dist/
+.next/
 .vercel/
 
 # Environment and credentials
