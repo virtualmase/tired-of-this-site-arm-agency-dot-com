@@ -277,6 +277,8 @@ Recommended schedule: Monday at 9:00 AM local time after one attended test.
 ```text
 Prepare ARM's weekly operating review using connected, canonical sources. Aggregate data only; do not copy personal lead data into the report.
 
+For any named demand experiment, validate its private plan and review against operations/demand-experiment-contract.json. Preserve the distinction between route-aggregate page views and campaign-attributed Brief/case counts. Do not calculate an attribution rate when its numerator and denominator do not share the same attribution scope.
+
 Report counts and median elapsed time for:
 - relevant site visits by route, if available;
 - Sprint-page views;
@@ -320,7 +322,7 @@ Recommended schedule: every weekday at 4:30 PM local time after the upstream tas
 ```text
 Create ARM's end-of-day owner command center from the latest verified operating artifacts.
 
-Use the private case ledger with scripts/approval-queue.mjs and scripts/customer-ops-queue.mjs when those tools are available. Treat their outputs as sanitized coordination metadata, not permission to inspect an artifact or execute a task. If the private ledger or a required connector is unavailable, mark that section NEEDS ATTENTION instead of reconstructing it from email or memory.
+Use the private case ledger with scripts/approval-queue.mjs and scripts/customer-ops-queue.mjs, plus scripts/demand-review-queue.mjs for approved experiment drafts, when those tools are available. Treat their outputs as sanitized coordination metadata, not permission to inspect an artifact or execute a task. If the private ledger or a required connector is unavailable, mark that section NEEDS ATTENTION instead of reconstructing it from email or memory.
 
 Show only:
 1. Decisions requiring owner approval, ordered by deadline and business impact.
@@ -354,6 +356,18 @@ For each company provide:
 Deduplicate against connected canonical outreach records. Create an internal research list only. End at APPROVAL REQUIRED before any contact enrichment or outreach draft is created.
 ```
 
+## Prompt 15 — Draft and review a demand experiment
+
+```text
+Prepare one internal demand experiment for ARM using operations/demand-experiment-contract.json.
+
+Use one evidence-backed hypothesis, one active sitemap route, one channel, one non-personal campaign-label set, and an exact draft artifact digest. For owner outreach, keep the batch at 15 accounts or fewer and use only owner-approved public research. Do not include prospect identities in the experiment plan.
+
+Use only the contract metrics. Preserve route-aggregate versus campaign-attributed scope, record counts rather than rates, mark unavailable evidence null, and set a review inside 14 days. Keep claim, publication, external-send, spend, and CRM-mutation approvals false. Validate and summarize the plan; then stop at APPROVAL REQUIRED with the exact artifact, channel, audience rule, proposed spend, data affected, and rollback.
+
+At review time, bind the review to the exact plan digest. Use verified private source digests for available counts and mark everything else unavailable. If every metric is unavailable, the assessment must be inconclusive. Recommend continue, revise, or stop, but do not record the human decision or execute it.
+```
+
 ## Recommended initial sequence
 
 Run in this order:
@@ -364,6 +378,7 @@ Run in this order:
 4. Prompts 3 and 4 — one synthetic or owner-approved case.
 5. Prompts 5–10 — only after the corresponding human approvals exist.
 6. Schedule Prompt 11 after sources reconcile for one full week.
-7. Schedule Prompts 12 and 13 only when their notification thresholds are useful.
+7. Run Prompt 15 attended before the first controlled demand experiment.
+8. Schedule Prompts 12 and 13 only when their notification thresholds are useful.
 
 Do not start with all recurring tasks at once. Each Computer run consumes credits, and a scheduled task starts with fresh background context; keep the operating boundary and canonical-source instructions inside every scheduled prompt.

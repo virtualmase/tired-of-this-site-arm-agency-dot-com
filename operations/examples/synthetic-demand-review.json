@@ -1,0 +1,31 @@
+{
+  "review_version": 1,
+  "experiment_id": "dem_synthetic_001",
+  "experiment_digest": "7343d632d686d0b7c4d8db1e4af1696d5ebd70eec591420ff30184bdc673f54c",
+  "classification": "internal_operations",
+  "observed_from": "2026-08-24T16:00:00Z",
+  "observed_through": "2026-09-06T16:00:00Z",
+  "reviewed_at": "2026-09-06T17:00:00Z",
+  "metric_observations": [
+    {"metric_id":"target_route_page_views","source":"vercel_web_analytics","attribution_scope":"route_aggregate","evidence_status":"unavailable","value":null,"source_ref_digest":null},
+    {"metric_id":"brief_requested_count","source":"base44_lead","attribution_scope":"campaign_attributed","evidence_status":"unavailable","value":null,"source_ref_digest":null},
+    {"metric_id":"fit_proceeded_count","source":"private_case_ledger","attribution_scope":"campaign_attributed","evidence_status":"unavailable","value":null,"source_ref_digest":null},
+    {"metric_id":"scope_issued_count","source":"private_case_ledger","attribution_scope":"campaign_attributed","evidence_status":"unavailable","value":null,"source_ref_digest":null},
+    {"metric_id":"sprint_booked_count","source":"private_case_ledger","attribution_scope":"campaign_attributed","evidence_status":"unavailable","value":null,"source_ref_digest":null},
+    {"metric_id":"action_outcome_count","source":"private_case_ledger","attribution_scope":"campaign_attributed","evidence_status":"unavailable","value":null,"source_ref_digest":null}
+  ],
+  "hypothesis_assessment": "inconclusive",
+  "recommended_decision": "stop",
+  "decision_reasons": [
+    "Synthetic fixture contains no production observations.",
+    "No real decision can be supported from unavailable evidence."
+  ],
+  "limitations": [
+    "This is structural test data, not a campaign result or conversion claim."
+  ],
+  "authority": {
+    "human_decision_recorded": false,
+    "public_claim_approved": false,
+    "action_execution_approved": false
+  }
+}

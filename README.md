@@ -28,6 +28,7 @@ Live at [arm-agency.com](https://www.arm-agency.com).
 ├── operations/
 │   ├── case-contract.json                 # Measurable lifecycle and authority gates
 │   ├── deliverable-contract.json          # Evidence-led private Sprint package contract
+│   ├── demand-experiment-contract.json    # Approval-gated attraction and learning contract
 │   ├── README.md                          # Operating-control boundaries and adapter rules
 │   └── examples/                          # Synthetic validator fixtures, never real cases
 ├── resources/
@@ -71,4 +72,5 @@ node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
 node scripts/check-deliverable-package.mjs
 node scripts/check-customer-ops-queue.mjs
+node scripts/check-demand-experiment.mjs
 ```

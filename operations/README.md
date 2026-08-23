@@ -18,6 +18,10 @@ or human judgment. It gives those systems one testable operating contract.
 | `../scripts/approval-queue.mjs` | Sanitized pending, ready, expired, rejected, and consumed approval coordination |
 | `../scripts/customer-ops-queue.mjs` | Sanitized delivery, evidence-freshness, action, and learning due-work coordination |
 | `deliverable-contract.json` | Private package bounds for the four Sprint deliverables, evidence references, research conditions, and claim boundary |
+| `demand-experiment-contract.json` | Draft campaign, count-only measurement, attribution, review, and authority boundaries |
+| `../scripts/demand-experiment.mjs` | Demand-plan/review validation, canonical digesting, and sanitized summaries |
+| `../scripts/demand-review-queue.mjs` | Experiment evidence-review and human-decision due-work coordination |
+| `../scripts/check-demand-experiment.mjs` | Route, campaign-label, attribution, evidence, result, and authority adversarial tests |
 | `../scripts/deliverable-package.mjs` | Package validation, sanitized summary, canonical SHA-256 digest, and lifecycle cross-checking |
 | `../scripts/check-deliverable-package.mjs` | Adversarial package and post-QA alteration tests |
 | `../scripts/brief-event-candidate.mjs` | Pure, dry-run translation from the verified Base44-compatible Brief shape to one sanitized candidate event |
@@ -129,6 +133,7 @@ node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
 node scripts/check-deliverable-package.mjs
 node scripts/check-customer-ops-queue.mjs
+node scripts/check-demand-experiment.mjs
 node scripts/case-ledger.mjs validate operations/examples/qualified-sprint.jsonl
 node scripts/case-ledger.mjs summarize operations/examples/qualified-sprint.jsonl
 node scripts/portfolio-metrics.mjs operations/examples/qualified-sprint.jsonl operations/examples/declined-brief.jsonl
@@ -136,6 +141,9 @@ node scripts/approval-queue.mjs --as-of 2026-08-02T16:30:00Z operations/examples
 node scripts/brief-event-candidate.mjs operations/examples/base44-brief-candidate-input.json
 node scripts/deliverable-package.mjs summarize operations/examples/synthetic-deliverable-package.json
 node scripts/customer-ops-queue.mjs --as-of 2026-09-13T12:00:00Z operations/examples/qualified-sprint.jsonl
+node scripts/demand-experiment.mjs summarize-plan operations/examples/synthetic-demand-plan.json
+node scripts/demand-experiment.mjs summarize-review operations/examples/synthetic-demand-plan.json operations/examples/synthetic-demand-review.json
+node scripts/demand-review-queue.mjs --as-of 2026-09-07T16:00:00Z --review operations/examples/synthetic-demand-review.json operations/examples/synthetic-demand-plan.json
 ```
 
 The case summary exposes case-local funnel booleans, elapsed hours, approval
@@ -174,6 +182,34 @@ metadata. `overdue`, `due_soon`, and `scheduled` are internal coordination state
 the queue neither sends reminders nor records a human decision. A stale evidence
 decision creates remediation work, a withdrawn source closes its freshness task,
 and accepted actions remain open until outcome evidence is recorded.
+
+## Demand experiment boundary
+
+A demand plan is an `internal_operations` draft, not a campaign authorization. It
+defines one hypothesis, an accountable role, a maximum 15-account batch, active
+site route, non-personal attribution labels, an exact artifact digest, a one-to-
+fourteen-day review window, and these count-only measures:
+
+- target-route page views from aggregate Vercel analytics;
+- campaign-attributed Briefs created in Base44;
+- campaign-attributed human fit proceeds, scopes, bookings, and action outcomes
+  from the private case ledger.
+
+Route page views are not represented as campaign-attributed because the current
+analytics plan does not provide that evidence. The draft validator rejects result,
+conversion-rate, win-rate, revenue-target, structured personal-data, inactive-route,
+malformed label, oversized batch, and embedded approval fields. Required privacy
+attestations also keep prospect identities, purchased/scraped lists, sensitive-
+attribute inference, and private-profile scraping outside the plan. Pattern and key
+checks cannot determine whether arbitrary prose contains an identity; a human must
+still inspect the private draft and campaign labels before approval.
+
+A demand review binds to the exact plan digest. Each metric is either a verified
+non-negative count with a private source digest or `unavailable` with a null value.
+If every metric is unavailable, the assessment must be `inconclusive`. A review
+may recommend continue, revise, or stop, but its human-decision, public-claim, and
+execution approvals remain false. The review queue keeps that human decision open;
+it never launches the experiment or adopts the recommendation.
 
 ## Adapter rule
 

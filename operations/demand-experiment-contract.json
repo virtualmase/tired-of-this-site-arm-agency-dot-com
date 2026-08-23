@@ -1,0 +1,44 @@
+{
+  "contract_version": 1,
+  "plan_version": 1,
+  "review_version": 1,
+  "classification": "internal_operations",
+  "plan_status": "draft",
+  "maximum_account_batch": 15,
+  "review_window_days": {"minimum": 1, "maximum": 14},
+  "channels": ["owner_outreach", "organic_content", "partner_referral", "community", "paid"],
+  "trigger_types": ["category_launch", "enterprise_expansion", "pipeline", "competitive", "transaction", "trust", "other"],
+  "artifact_kinds": ["message_draft", "page_revision_draft", "resource_draft", "partner_brief_draft"],
+  "campaign_label_pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$",
+  "campaign_label_maximum_length": 80,
+  "required_metrics": {
+    "target_route_page_views": {"source": "vercel_web_analytics", "attribution_scope": "route_aggregate"},
+    "brief_requested_count": {"source": "base44_lead", "attribution_scope": "campaign_attributed"},
+    "fit_proceeded_count": {"source": "private_case_ledger", "attribution_scope": "campaign_attributed"},
+    "scope_issued_count": {"source": "private_case_ledger", "attribution_scope": "campaign_attributed"},
+    "sprint_booked_count": {"source": "private_case_ledger", "attribution_scope": "campaign_attributed"},
+    "action_outcome_count": {"source": "private_case_ledger", "attribution_scope": "campaign_attributed"}
+  },
+  "evidence_statuses": ["verified", "unavailable"],
+  "hypothesis_assessments": ["supported", "not_supported", "inconclusive"],
+  "decision_options": ["continue", "revise", "stop"],
+  "required_plan_authority": {
+    "claim_approved": false,
+    "publication_approved": false,
+    "external_send_approved": false,
+    "spend_approved": false,
+    "crm_mutation_approved": false
+  },
+  "required_plan_privacy": {
+    "personal_data_in_campaign_labels": false,
+    "prospect_identities_in_plan": false,
+    "purchased_or_scraped_list": false,
+    "sensitive_attribute_inference": false,
+    "private_profile_scraping": false
+  },
+  "required_review_authority": {
+    "human_decision_recorded": false,
+    "public_claim_approved": false,
+    "action_execution_approved": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "plan_version": 1,
+  "experiment_id": "dem_synthetic_001",
+  "classification": "internal_operations",
+  "status": "draft",
+  "created_at": "2026-08-23T17:00:00Z",
+  "starts_at": "2026-08-24T16:00:00Z",
+  "review_at": "2026-09-06T16:00:00Z",
+  "owner_role": "demand_experiment_owner",
+  "hypothesis": "A source-visible buyer-intelligence resource may produce more relevant Category Presence Briefs than an unsupported promotional message.",
+  "audience": {
+    "account_type": "high_acv_b2b_team",
+    "trigger_types": ["category_launch", "pipeline", "competitive"],
+    "account_batch_limit": 15,
+    "exclusion_rules": [
+      "No purchased or scraped contact list.",
+      "No inferred sensitive attribute or buyer intent.",
+      "No contact before exact-message human approval."
+    ]
+  },
+  "channel": {
+    "type": "owner_outreach",
+    "target_route": "/brief/",
+    "source": "linkedin_operator_outreach",
+    "utm_source": "linkedin",
+    "utm_medium": "organic",
+    "utm_campaign": "buyer_intelligence_launch",
+    "utm_content": "source_visible_resource_v1",
+    "proposed_spend_usd": 0
+  },
+  "artifact": {
+    "kind": "message_draft",
+    "artifact_digest": "8888888888888888888888888888888888888888888888888888888888888888"
+  },
+  "hypothesis_evidence": [
+    {
+      "evidence_id": "evd_demand_synthetic_001",
+      "source_ref_digest": "9999999999999999999999999999999999999999999999999999999999999999",
+      "observed_or_published_at": "2026-08-22T16:00:00Z",
+      "accessed_at": "2026-08-23T16:00:00Z",
+      "permitted_use": "internal_demand_planning",
+      "limitations": "Synthetic fixture only; it does not support a real campaign claim."
+    }
+  ],
+  "measurement": {
+    "baseline_status": "not_established",
+    "minimum_observation_count": 1,
+    "metrics": [
+      {"metric_id":"target_route_page_views","source":"vercel_web_analytics","attribution_scope":"route_aggregate","definition":"Aggregate page views for the target route; not attributable to this campaign on the current plan."},
+      {"metric_id":"brief_requested_count","source":"base44_lead","attribution_scope":"campaign_attributed","definition":"Successful Base44 Lead creations carrying this non-personal campaign label."},
+      {"metric_id":"fit_proceeded_count","source":"private_case_ledger","attribution_scope":"campaign_attributed","definition":"Human fit decisions marked proceed for Briefs carrying this campaign label."},
+      {"metric_id":"scope_issued_count","source":"private_case_ledger","attribution_scope":"campaign_attributed","definition":"Approved written scopes issued for cases carrying this campaign label."},
+      {"metric_id":"sprint_booked_count","source":"private_case_ledger","attribution_scope":"campaign_attributed","definition":"Cases with written acceptance and confirmed booking payment carrying this campaign label."},
+      {"metric_id":"action_outcome_count","source":"private_case_ledger","attribution_scope":"campaign_attributed","definition":"Registered actions with observed outcome evidence for cases carrying this campaign label."}
+    ],
+    "decision_options": ["continue", "revise", "stop"],
+    "stop_conditions": [
+      "Any privacy, consent, attribution, or claim-boundary failure.",
+      "Audience or trigger evidence cannot be verified.",
+      "The owner withdraws the experiment authorization."
+    ]
+  },
+  "authority": {
+    "claim_approved": false,
+    "publication_approved": false,
+    "external_send_approved": false,
+    "spend_approved": false,
+    "crm_mutation_approved": false
+  },
+  "privacy": {
+    "personal_data_in_campaign_labels": false,
+    "prospect_identities_in_plan": false,
+    "purchased_or_scraped_list": false,
+    "sensitive_attribute_inference": false,
+    "private_profile_scraping": false
+  }
+}
