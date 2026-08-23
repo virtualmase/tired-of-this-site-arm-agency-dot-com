@@ -1,4 +1,6 @@
-# ARM Agency — Prospect List: Campaign 1A (Pre-Raise Founders)
+# ARM Agency — Prospect List: Campaign 1A (Pre-Raise Founders) (Archived)
+
+> **Archived 2026-08-22:** This prospecting plan references retired offers and is not approved for execution. Do not contact any listed person based on this document. Current outreach requires owner approval and must use the Category Presence Brief → human fit review path.
 
 **Generated:** 2026-08-11  
 **Source:** Public funding announcements (TechCrunch, Crunchbase News, VC News Daily)  

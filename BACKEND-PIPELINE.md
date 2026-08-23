@@ -1,14 +1,16 @@
 # ARM Agency — Backend Pipeline & Operations Scaffold
 
-**Version:** 1.0  
-**Last updated:** 2026-08-11  
-**Status:** Deployed and operational
+**Version:** 1.1
+**Last updated:** 2026-08-22
+**Status:** External Base44 scaffold; public Lead intake verified, paid-Sprint mapping pending operator confirmation
+
+> **Current-offer boundary:** The public site offers a no-cost Category Presence Brief followed, when fit and scope are confirmed, by a $12,500 AI Buyer Intelligence Sprint. The Base44 schema and function source are not stored in this repository and still use legacy enum and entity names. Those names below describe the external compatibility layer; they are not approved public product names.
 
 ---
 
 ## 1. Architecture Overview
 
-The backend scaffold covers the full operational lifecycle of ARM Agency — from inbound lead through sales pipeline, client onboarding, campaign execution, deliverable fulfillment, and ongoing Share of Model tracking.
+The documented backend scaffold covers lead intake, a legacy sales pipeline, client and campaign records, deliverables, and observation tracking. A controlled public-form submission on 2026-08-22 verified that `intakeLead()` created a Lead. Notification delivery, automatic creation of a secondary audit record, and a Sprint-specific `closeDeal()` template could not be verified from this repository.
 
 ```
 Lead → Opportunity → Client → Campaign → Deliverables
@@ -174,7 +176,7 @@ Weekly tracking record. The ongoing KPI that proves the work is working.
 
 ## 3. Backend Functions
 
-All functions deployed as HTTP endpoints on Base44. Callable via POST with JSON body.
+Prior documentation describes these functions as Base44 HTTP endpoints callable with JSON. Only `intakeLead()` has been exercised through the current public site. Treat the other contracts and side effects as a legacy implementation description until the external Base44 source and configuration are reviewed.
 
 ### 3.1 intakeLead
 **Trigger:** Website form submission, manual lead entry, API call from referral sources.  
@@ -311,20 +313,30 @@ All functions deployed as HTTP endpoints on Base44. Callable via POST with JSON 
 
 | Integration | Function | Status |
 |-------------|----------|--------|
-| Website form (arm-agency.com) | intakeLead | Ready to wire |
-| Telegram bot (@ops_1337_bot) | Pipeline notifications | Configured |
-| Redis (Upstash) | Caching, state | Connected |
-| Make.com MCP | Workflow orchestration | Connected |
-| Notion | Content calendars, trend logs | Connected |
-| Google Drive | Report exports | Connected |
-| Apollo.io | Lead enrichment | Connected |
-| GitHub | Repo versioning | Connected |
+| Website form (arm-agency.com) | intakeLead | Connected; Lead creation verified 2026-08-22; notification pending confirmation |
+| Telegram bot (@ops_1337_bot) | Pipeline notifications | Legacy documentation; not verified in this repository |
+| Redis (Upstash) | Caching, state | Legacy documentation; not verified in this repository |
+| Make.com MCP | Workflow orchestration | Legacy documentation; not verified in this repository |
+| Notion | Content calendars, trend logs | Legacy documentation; not verified in this repository |
+| Google Drive | Report exports | Legacy documentation; not verified in this repository |
+| Apollo.io | Lead enrichment | Legacy documentation; not verified in this repository |
+| GitHub | Repo versioning | Repository remote verified 2026-08-22 |
 
 ---
 
-## 6. Service Type → Campaign → Deliverable Mapping
+## 6. Current Public Offer → Legacy Backend Mapping
 
-This is the decision matrix built into `closeDeal()`. When an opportunity closes, the service type determines which campaign template fires and which deliverables get scaffolded.
+| Public step | Verified request mapping | Verified result | Remaining decision |
+|-------------|--------------------------|-----------------|--------------------|
+| Category Presence Brief | `intakeLead()` with `service_interest: enterprise_visibility`; notes begin `Requested service: AI Buyer Intelligence Sprint / Category Presence Brief` | Lead creation returned HTTP 200 and a `lead_id` on 2026-08-22 | Confirm notification delivery and whether a secondary record is created |
+| Human fit review | Manual review of buyer, category, trigger, competitors, decision window, ACV, and submitted contact context | No repository-controlled automation | Name the operator, response owner, response-time target, and qualification record |
+| AI Buyer Intelligence Sprint | Written scope before private collection; public price is $12,500 with 60/40 payment timing | Public scope and terms are live | Before the first paid Sprint, explicitly map the legacy Opportunity, Client, Campaign, and Deliverable enums to the four Sprint deliverables |
+
+Do not infer a paid-Sprint mapping from `enterprise_visibility`, `visibility_audit`, or any other legacy enum. Until the external function configuration is reviewed, process a qualified Sprint manually under written scope and record the four approved deliverables without promising an automated scaffold.
+
+### 6.1 Legacy Service Type → Campaign → Deliverable Mapping
+
+The following matrix is retained as a snapshot of the previously documented `closeDeal()` contract. It has not been verified against current external function source and does not define the public offer.
 
 | Service Type | Campaign Type | Deliverable Count | Key Deliverables |
 |-------------|---------------|-------------------|------------------|

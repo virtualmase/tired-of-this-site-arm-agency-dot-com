@@ -1,4 +1,6 @@
-# ARM Agency — Content Silo: Keyword Clusters & Internal Linking Architecture
+# ARM Agency — Content Silo: Keyword Clusters & Internal Linking Architecture (Archived)
+
+> **Archived 2026-08-22:** This strategy includes retired conversion paths and is not approved current publishing guidance. New content must use the Category Presence Brief as the consultative CTA and follow the live site's claim boundaries.
 
 **Method:** SearchFit.ai keyword-clustering + internal-linking frameworks
 **Data note:** Semrush MCP returned "insufficient API units" when queried live — the volume/difficulty figures below are directional estimates from manual SERP research (see search notes per cluster), not pulled Semrush numbers. Swap in real numbers once units are restored; flagged as `[EST]` throughout. Everything else — clustering logic, cannibalization checks, silo structure — doesn't depend on that data and is ready to build against now.

@@ -1,6 +1,6 @@
 # ARM Agency
 
-Reputation management for the AI era.
+AI Buyer Intelligence for high-ACV B2B teams facing a category, launch, pipeline, or competitive trigger.
 
 Live at [arm-agency.com](https://www.arm-agency.com).
 
@@ -15,11 +15,14 @@ Live at [arm-agency.com](https://www.arm-agency.com).
 
 ```
 /
-├── index.html                          # Homepage
-├── llms.txt                             # AI crawler guidance
-├── robots.txt                           # Crawler directives
-├── sitemap.xml                          # URL map
-├── vercel.json                          # Deployment config
+├── index.html                             # Homepage and current offer
+├── brief/index.html                       # Category Presence Brief intake
+├── sprint/index.html                      # AI Buyer Intelligence Sprint
+├── audit/index.html                       # Self-guided buyer research orientation
+├── llms.txt                               # AI crawler guidance
+├── robots.txt                             # Crawler directives
+├── sitemap.xml                            # URL map
+├── vercel.json                            # Deployment config
 ├── resources/
 │   ├── index.html                       # Resources hub
 │   ├── agentic-reputation-infrastructure/  # Flagship pillar
@@ -30,19 +33,19 @@ Live at [arm-agency.com](https://www.arm-agency.com).
 │   └── reputation-due-diligence-ai-search/ # Pillar: due diligence
 ├── CONTENT-SILO-keyword-clusters-and-internal-linking.md  # Content strategy
 ├── BACKEND-PIPELINE.md                  # Backend ops documentation
-└── SALES-CAMPAIGN-ROADMAP.md            # 90-day sales roadmap
+└── SALES-CAMPAIGN-ROADMAP.md            # Archived legacy sales roadmap
 ```
 
 ## Documentation
 
-- [Backend Pipeline & Operations Scaffold](./BACKEND-PIPELINE.md) — Entity schemas, backend functions, pipeline flow, fulfillment workflow.
-- [Sales Campaign Roadmap](./SALES-CAMPAIGN-ROADMAP.md) — 90-day sales motion, revenue projections, campaign-to-backend mapping.
-- [Content Silo Strategy](./CONTENT-SILO-keyword-clusters-and-internal-linking.md) — Keyword clusters, internal linking architecture, GEO content standard.
+- [Backend Pipeline & Operations Scaffold](./BACKEND-PIPELINE.md) — Existing Base44 schema, verified public-intake mapping, and the remaining Sprint close/deal mapping decision.
+- [Sales Campaign Roadmap](./SALES-CAMPAIGN-ROADMAP.md) — Archived legacy plan; not approved current offer guidance.
+- [Content Silo Strategy](./CONTENT-SILO-keyword-clusters-and-internal-linking.md) — Archived legacy content plan; not approved current conversion guidance.
 
-## Backend
+## Current engagement path
 
-Seven entities: Lead → Opportunity → Client → Campaign → Deliverable + SignalAudit + ShareOfModel.
+`Category Presence Brief → human fit review → written Sprint scope → private collection → AI Buyer Intelligence Sprint`
 
-Six deployed functions: intakeLead, qualifyLead, closeDeal, updateDeliverable, logShareOfModel, getPipelineDashboard.
+The public Brief submits to an external Base44 `intakeLead` function using a legacy-compatible service enum. A controlled production test verified Lead creation on 2026-08-22. This repository does not contain the Base44 function source, notification configuration, or a verified Sprint-specific `closeDeal` template.
 
-See [BACKEND-PIPELINE.md](./BACKEND-PIPELINE.md) for full documentation.
+See [BACKEND-PIPELINE.md](./BACKEND-PIPELINE.md) before changing intake fields or processing the first paid Sprint.

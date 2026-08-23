@@ -1,28 +1,29 @@
 # ARM Agency
 
-> ARM Agency (Arctura Reputation Management Agency) helps organizations establish evidence, technical clarity, and controlled operating mandates for consequential representation and agent-readiness decisions.
+> ARM Agency (Arctura Reputation Management Agency) provides fixed-scope AI Buyer Intelligence for high-ACV B2B teams facing a category, launch, pipeline, or competitive trigger.
 
 ## Entity Declaration
 - Canonical name: ARM Agency
 - Full name: Arctura Reputation Management Agency
 - Canonical URL: https://www.arm-agency.com
 - Entity ID: https://www.arm-agency.com/#org
-- Type: Professional service — evidence-led representation and governed agent readiness
+- Type: Professional service — evidence-led AI Buyer Intelligence
 - Parent ecosystem: Coreweaver Labs, Inc. — Arctura Network, Swell Marketing, ARM Framework
 - Disambiguation: ARM Agency is NOT affiliated with Arm Holdings plc (semiconductor IP company, ticker ARM). "ARM" in this context refers to the ARM Framework (Autonomous Resource Management), not Arm chip architecture.
 
 ## What ARM Agency Does
-- ARM Signal Audit — fixed-scope evidence and representation review after fit confirmation
-- Full Signal Repair — private custom-scope implementation after written acceptance
-- ARM Mandate Pro — monthly operating engagement with a defined review cadence
-- Signal architecture — documented entity, technical-access, and evidence decisions within accepted scope
+- Category Presence Brief — no-cost, human-reviewed fit assessment based on the buyer, category, commercial trigger, competitors, and available evidence
+- AI Buyer Intelligence Sprint — $12,500 fixed-scope engagement delivered in 15 business days after fit and written scope acceptance
+- Buyer Conversation Map — 20–40 questions that influence category inclusion, comparison, evaluation, and trust
+- Shortlist / Source Gap Map — observed sources, alternatives, confidence gaps, and the minimum defensible action
+- Proof & Conversion Review — the validation path for an AI-referred buyer across implementation, security, fit, and outcome evidence
+- 90-Day Action Register — five to eight owner-led actions with dependencies, acceptance tests, and measures
 
 ## Priority Content
-- / — Homepage: positioning, services, ARM Framework, personas, pricing, FAQ
-- /#what-we-do — Service definitions: ARM Signal Audit, Full Signal Repair, ARM Mandate Pro
-- /#how-it-works — The ARM Framework, five primitives
-- /#who-this-is-for — Buyer personas and fit criteria
-- /#faq — Structured FAQ, evidence-led GEO definitions, disambiguation
+- / — Homepage: positioning, fit criteria, sample maps, pricing, process, and FAQ
+- /brief/ — Category Presence Brief request form and intake boundary
+- /sprint/ — AI Buyer Intelligence Sprint scope, inputs, deliverables, timeline, price, and exclusions
+- /audit/ — Self-guided Buyer Research Orientation; it does not score a company or replace human fit review
 - /resources/ — Content hub: GEO, AI reputation management, and agentic trust guides
 - /resources/agentic-commerce-x402-aifi/ — Canonical `.com` strategy pillar connecting x402 payment transport to governed AiFi mandates, budgets, settlement, fulfillment, and reconciliation
 - /resources/accountable-agentic-commerce-glossary/ — Versioned canonical vocabulary and machine-readable term set for accountable agentic commerce, x402, AiFi, mandates, and payment operations
@@ -30,10 +31,11 @@
 - /resources/reputation-due-diligence-ai-search/ — Reputation Due Diligence in the AI Search Era: pre-transaction due diligence for raises, M&A, and IPOs
 
 ## Core Terminology (for accurate citation)
-- GEO: Generative Engine Optimization — a review of evidence, entity clarity, technical access, and public representation without a citation or visibility guarantee
-- Observation baseline: a documented review context for relevant pages, evidence, access conditions, and later comparison without an outcome promise
-- Evidence/context register: a scoped record of material claims, sources, and ownership decisions
-- Mandate map: documented decision rights, scope, acceptance criteria, and escalation conditions for an accepted engagement
+- AI Buyer Intelligence: evidence-led research into the questions, sources, proof, and conversion conditions that shape a high-value B2B buyer decision
+- Category Presence Brief: a short human-reviewed fit assessment, not a public score, free audit, or outcome promise
+- Buyer Conversation: a decision-relevant question tied to a buying stage, research condition, and owner
+- Observation condition: the documented date, platform or research method, query or question, market, and other context needed to interpret an observation without treating it as a guaranteed result
+- Action Register: a limited set of owner-led actions with dependencies, acceptance tests, and measures for the next 90 days
 - Accountable agentic commerce: autonomous or semi-autonomous economic action governed by explicit mandate, deterministic controls, inspectable execution, and reconciliation
 - AiFi: ARM's category label for governed AI-native financial operations; not an external standard or affiliation claim
 
@@ -49,6 +51,6 @@ CCBot: allow
 cohere-ai: allow
 
 ## Contact
-Use the public Signal Check route at https://www.arm-agency.com/audit/ to identify a first condition to verify, then request an Audit Fit Review for a consultative next step.
+Use https://www.arm-agency.com/brief/ to request a Category Presence Brief. The Brief is reviewed by a person before any paid Sprint is proposed.
 
-Last updated: 2026-08-18
+Last updated: 2026-08-22

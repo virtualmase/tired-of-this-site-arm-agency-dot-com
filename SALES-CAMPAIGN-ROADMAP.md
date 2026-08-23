@@ -1,4 +1,6 @@
-# ARM Agency — Initial Sales Campaign Roadmap
+# ARM Agency — Initial Sales Campaign Roadmap (Archived)
+
+> **Archived 2026-08-22:** This plan describes retired offers, pricing, projections, and backend assumptions. Do not use it for current sales, publishing, or implementation. The approved path is Category Presence Brief → human fit review → written scope → private collection → $12,500 AI Buyer Intelligence Sprint.
 
 **Version:** 1.0  
 **Last updated:** 2026-08-11  

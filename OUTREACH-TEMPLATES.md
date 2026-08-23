@@ -1,4 +1,6 @@
-# ARM Agency — Outreach Email Templates
+# ARM Agency — Outreach Email Templates (Archived)
+
+> **Archived 2026-08-22:** These templates promote retired offers and are not approved for outreach. Current outreach must invite an appropriate prospect to request a Category Presence Brief and must not promise rankings, citations, repairs, scores, or a specific third-party answer.
 
 **Version:** 1.0  
 **Created:** 2026-08-11  
