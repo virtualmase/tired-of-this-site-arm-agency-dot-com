@@ -1,0 +1,98 @@
+{
+  "package_version": 1,
+  "case_id": "arm_demo_sprint",
+  "classification": "private_client_work",
+  "publication_status": "internal_only",
+  "claim_boundary": {
+    "outcome_guarantee": false,
+    "third_party_model_control": false,
+    "public_claim_approved": false,
+    "source_limitations_acknowledged": true
+  },
+  "research_conditions": {
+    "approved_at": "2026-08-04T16:00:00Z",
+    "observation_started_at": "2026-08-05T14:30:00Z",
+    "observation_ended_at": "2026-08-11T16:00:00Z",
+    "primary_market": "synthetic_primary_market",
+    "category_count": 1,
+    "competitor_count": 3,
+    "owned_surface_count": 1,
+    "environments": [
+      {
+        "id": "env_synthetic_001",
+        "system_label": "synthetic_research_environment",
+        "location_class": "approved_primary_market",
+        "language": "en",
+        "account_context": "signed_out",
+        "observed_at": "2026-08-05T14:30:00Z"
+      }
+    ],
+    "sampling_notes": "Synthetic fixture used only to verify the private delivery contract.",
+    "limitations": [
+      "This fixture is not customer research, proof, revenue, or a third-party model observation.",
+      "The single synthetic evidence record does not establish a real commercial finding."
+    ]
+  },
+  "evidence_register": [
+    {
+      "id": "evd_public_001",
+      "source_class": "public",
+      "source_ref_digest": "6666666666666666666666666666666666666666666666666666666666666666",
+      "observed_or_published_at": "2026-08-05T14:30:00Z",
+      "accessed_at": "2026-08-05T15:00:00Z",
+      "permitted_use": "private_sprint_delivery",
+      "confidence": "direct",
+      "limitations": "Synthetic source inventory record with no evidentiary value outside contract testing."
+    }
+  ],
+  "buyer_conversation_map": {
+    "questions": [
+      {"id":"q_001","stage":"discovery","question":"Which approaches define the synthetic category?","priority":1,"basis":"client_stated","owner_role":"product_marketing_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_002","stage":"discovery","question":"Which business condition causes a buyer to investigate this category?","priority":1,"basis":"inferred","owner_role":"product_marketing_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_003","stage":"shortlist","question":"Which synthetic alternatives enter the initial shortlist?","priority":1,"basis":"observed","owner_role":"product_marketing_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_004","stage":"shortlist","question":"What evidence supports inclusion in the synthetic shortlist?","priority":1,"basis":"observed","owner_role":"sales_enablement_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_005","stage":"comparison","question":"How do the synthetic alternatives differ in implementation approach?","priority":1,"basis":"inferred","owner_role":"solutions_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_006","stage":"comparison","question":"Which comparison criteria are supported by inspectable evidence?","priority":1,"basis":"observed","owner_role":"product_marketing_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_007","stage":"comparison","question":"Where does the synthetic comparison rely on unsupported language?","priority":2,"basis":"observed","owner_role":"content_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_008","stage":"evaluation","question":"Can a buyer verify the synthetic deployment path?","priority":1,"basis":"observed","owner_role":"solutions_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_009","stage":"evaluation","question":"Can a buyer validate synthetic integration coverage?","priority":1,"basis":"observed","owner_role":"integration_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_010","stage":"evaluation","question":"Which synthetic evaluation requirement lacks an owner?","priority":2,"basis":"inferred","owner_role":"sales_enablement_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_011","stage":"objection","question":"Which synthetic objection recurs during technical review?","priority":1,"basis":"client_stated","owner_role":"solutions_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_012","stage":"objection","question":"What approved evidence answers the synthetic risk objection?","priority":1,"basis":"observed","owner_role":"security_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_013","stage":"procurement","question":"Which synthetic procurement requirement is documented?","priority":2,"basis":"observed","owner_role":"procurement_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_014","stage":"procurement","question":"Where does the synthetic buyer request contractual clarification?","priority":2,"basis":"client_stated","owner_role":"legal_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_015","stage":"validation","question":"Can a buyer verify synthetic implementation timing?","priority":1,"basis":"observed","owner_role":"services_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_016","stage":"validation","question":"Can a buyer inspect synthetic outcome evidence under stated conditions?","priority":1,"basis":"observed","owner_role":"customer_evidence_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_017","stage":"validation","question":"Which synthetic proof surface becomes stale first?","priority":2,"basis":"inferred","owner_role":"web_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_018","stage":"trust","question":"Can a buyer locate current synthetic security material?","priority":1,"basis":"observed","owner_role":"security_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_019","stage":"trust","question":"Are synthetic limitations visible before a buyer commits?","priority":2,"basis":"observed","owner_role":"legal_owner","evidence_ids":["evd_public_001"]},
+      {"id":"q_020","stage":"trust","question":"Which synthetic claims require human approval before publication?","priority":1,"basis":"inferred","owner_role":"claim_approver","evidence_ids":["evd_public_001"]}
+    ]
+  },
+  "shortlist_source_gap_map": {
+    "gaps": [
+      {"id":"gap_category_001","gap_type":"category","question_ids":["q_001","q_002","q_003","q_004"],"observed_condition":"Synthetic category evidence is incomplete in the test fixture.","interpretation":"A real package would require corroborated category evidence before recommendation.","evidence_ids":["evd_public_001"],"minimum_action_id":"act_category_001"},
+      {"id":"gap_comparison_001","gap_type":"proof","question_ids":["q_005","q_006","q_007"],"observed_condition":"Synthetic comparison evidence is intentionally limited.","interpretation":"A real package must separate observed comparison conditions from inference.","evidence_ids":["evd_public_001"],"minimum_action_id":"act_proof_001"},
+      {"id":"gap_integration_001","gap_type":"conversion","question_ids":["q_008","q_009","q_010"],"observed_condition":"Synthetic integration validation is incomplete.","interpretation":"An owned integration surface would need an acceptance test and source approval.","evidence_ids":["evd_public_001"],"minimum_action_id":"act_integration_001"},
+      {"id":"gap_security_001","gap_type":"risk","question_ids":["q_011","q_012","q_013","q_014","q_018","q_019"],"observed_condition":"Synthetic trust evidence is not sufficient for a real buyer decision.","interpretation":"A real trust index must use current owner-approved security evidence.","evidence_ids":["evd_public_001"],"minimum_action_id":"act_security_001"},
+      {"id":"gap_conversion_001","gap_type":"conversion","question_ids":["q_015","q_016","q_017","q_020"],"observed_condition":"Synthetic outcome and implementation proof are incomplete.","interpretation":"A real conversion path must disclose limitations and retain claim approval.","evidence_ids":["evd_public_001"],"minimum_action_id":"act_conversion_001"}
+    ]
+  },
+  "proof_conversion_review": {
+    "checks": [
+      {"dimension":"implementation","status":"partial","observed_condition":"Synthetic implementation evidence is partial.","buyer_validation_effect":"A real buyer could not complete validation from this fixture.","evidence_ids":["evd_public_001"]},
+      {"dimension":"security","status":"missing","observed_condition":"Synthetic security evidence is intentionally absent.","buyer_validation_effect":"A real security review would remain blocked.","evidence_ids":["evd_public_001"]},
+      {"dimension":"fit","status":"partial","observed_condition":"Synthetic fit evidence is partial.","buyer_validation_effect":"A real buyer would require category-specific support.","evidence_ids":["evd_public_001"]},
+      {"dimension":"outcome","status":"missing","observed_condition":"No real outcome evidence exists in this fixture.","buyer_validation_effect":"No outcome claim can be supported or published.","evidence_ids":["evd_public_001"]}
+    ]
+  },
+  "action_register_90_day": {
+    "actions": [
+      {"id":"act_category_001","priority":1,"owner_role":"product_marketing_owner","trigger":"approved_category_evidence_available","dependency":"approved_category_source_inventory","acceptance_test":"owner accepts a sourced category evidence surface","measure":"owner acceptance record","stop_condition":"source approval is withdrawn","review_at":"2026-09-12T16:00:00Z","status":"proposed","evidence_ids":["evd_public_001"]},
+      {"id":"act_proof_001","priority":1,"owner_role":"client_marketing_owner","trigger":"approved_source_inventory_available","dependency":"approved_source_inventory","acceptance_test":"approved proof surface is published by its owner","measure":"owner acceptance evidence","stop_condition":"supporting evidence becomes stale or disputed","review_at":"2026-09-12T16:00:00Z","status":"proposed","evidence_ids":["evd_public_001"]},
+      {"id":"act_integration_001","priority":1,"owner_role":"integration_owner","trigger":"integration_scope_confirmed","dependency":"approved_integration_inventory","acceptance_test":"owner accepts an inspectable integration matrix","measure":"matrix acceptance record","stop_condition":"integration scope changes materially","review_at":"2026-09-12T16:00:00Z","status":"proposed","evidence_ids":["evd_public_001"]},
+      {"id":"act_security_001","priority":1,"owner_role":"security_owner","trigger":"security_material_approved","dependency":"approved_security_inventory","acceptance_test":"owner accepts a current trust evidence index","measure":"trust index acceptance record","stop_condition":"security approval expires","review_at":"2026-09-12T16:00:00Z","status":"proposed","evidence_ids":["evd_public_001"]},
+      {"id":"act_conversion_001","priority":2,"owner_role":"web_owner","trigger":"proof_and_limits_approved","dependency":"approved_conversion_inventory","acceptance_test":"owner accepts the buyer validation path and disclosed limitations","measure":"validation path acceptance record","stop_condition":"claim approver rejects a required statement","review_at":"2026-09-12T16:00:00Z","status":"proposed","evidence_ids":["evd_public_001"]}
+    ]
+  }
+}

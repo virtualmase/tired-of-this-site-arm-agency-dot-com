@@ -84,7 +84,7 @@ assert.equal(summary.current_stage, 'closed');
 assert.equal(summary.payments_confirmed_usd, 12500);
 assert.equal(summary.approvals.requested, 4);
 assert.equal(summary.approvals.consumed, 4);
-assert.equal(summary.actions.registered, 1);
+assert.equal(summary.actions.registered, 5);
 assert.equal(summary.actions.owner_accepted, 1);
 assert.equal(summary.actions.outcomes_observed, 1);
 assert.equal(summary.elapsed_hours.brief_to_review, 2);

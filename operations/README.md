@@ -16,6 +16,9 @@ or human judgment. It gives those systems one testable operating contract.
 | `../scripts/case-ledger.mjs` | Dependency-free JSONL validator and sanitized case summarizer |
 | `../scripts/portfolio-metrics.mjs` | Cross-case count, timing, approval, evidence, and adoption rollup |
 | `../scripts/approval-queue.mjs` | Sanitized pending, ready, expired, rejected, and consumed approval coordination |
+| `deliverable-contract.json` | Private package bounds for the four Sprint deliverables, evidence references, research conditions, and claim boundary |
+| `../scripts/deliverable-package.mjs` | Package validation, sanitized summary, canonical SHA-256 digest, and lifecycle cross-checking |
+| `../scripts/check-deliverable-package.mjs` | Adversarial package and post-QA alteration tests |
 | `../scripts/brief-event-candidate.mjs` | Pure, dry-run translation from the verified Base44-compatible Brief shape to one sanitized candidate event |
 | `../scripts/check-brief-event-candidate.mjs` | Form-drift, classification, fail-closed, and private-field non-disclosure tests |
 | `../scripts/check-case-ledger.mjs` | Adversarial contract tests for approvals, privacy, payment order, delivery completeness, and append-only ordering |
@@ -121,11 +124,13 @@ From the repository root:
 ```bash
 node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
+node scripts/check-deliverable-package.mjs
 node scripts/case-ledger.mjs validate operations/examples/qualified-sprint.jsonl
 node scripts/case-ledger.mjs summarize operations/examples/qualified-sprint.jsonl
 node scripts/portfolio-metrics.mjs operations/examples/qualified-sprint.jsonl operations/examples/declined-brief.jsonl
 node scripts/approval-queue.mjs --as-of 2026-08-02T16:30:00Z operations/examples/qualified-sprint.jsonl
 node scripts/brief-event-candidate.mjs operations/examples/base44-brief-candidate-input.json
+node scripts/deliverable-package.mjs summarize operations/examples/synthetic-deliverable-package.json
 ```
 
 The case summary exposes case-local funnel booleans, elapsed hours, approval
@@ -141,6 +146,21 @@ executes the action. Its next-event candidates describe the state-machine path;
 they are not authorization to execute an event. The optional `--as-of` argument
 filters by `recorded_at` for deterministic tests and historical review; omit it for
 the current time.
+
+The deliverable validator enforces the offer's measurable bounds: one category,
+one primary market, one to five competitors, up to twenty owned surfaces, 20–40
+buyer conversations, one to three documented research environments, all four
+Proof & Conversion dimensions, five to eight proposed actions, evidence cross-
+references, and owner/dependency/acceptance/measure fields. Every action review
+must fall inside the 90-day window. It generates a canonical package digest that
+must match the QA event, delivery approval, and sent event. Changing the package
+after QA invalidates the delivery path.
+
+Validation proves structural completeness and traceability, not the truth of a
+finding or permission to publish it. The package remains `internal_only`; human QA
+must inspect evidence relevance, inference, limitations, confidentiality, and
+claims before authorizing delivery. A real package belongs only in the approved
+private workspace and must never be committed to this repository.
 
 ## Adapter rule
 

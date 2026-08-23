@@ -347,6 +347,13 @@ timestamps, opaque IDs, and a caller-supplied HMAC source digest. It does not re
 Base44, copy identity fields, or append to a production ledger. Run
 `node scripts/check-brief-event-candidate.mjs` to verify form-to-contract mapping.
 
+The four current Sprint deliverables have a separate private-package contract in
+[`operations/deliverable-contract.json`](./operations/deliverable-contract.json).
+It enforces the public count bounds, research conditions, evidence/action cross-
+references, non-guarantee flags, and a canonical digest that the lifecycle binds
+through QA, approval, and delivery. This verifies structure and change integrity;
+it does not verify the truth of a finding or authorize client delivery.
+
 ### 6.1 Legacy Service Type → Campaign → Deliverable Mapping
 
 The following matrix is retained as a snapshot of the previously documented `closeDeal()` contract. It has not been verified against current external function source and does not define the public offer.

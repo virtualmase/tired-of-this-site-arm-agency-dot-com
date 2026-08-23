@@ -13,7 +13,7 @@ private data, contracts, and other consequential decisions.
 | Capture demand | Partial | Production Category Presence Brief created a Base44 Lead in a controlled test; pure privacy-preserving translation passes `scripts/check-brief-event-candidate.mjs` | Verified notification delivery, named daily owner, Base44 read access, private ID/HMAC service, and ledger append |
 | Qualify demand | Contract ready, operation manual | `operations/case-contract.json` requires a human fit decision and reason codes | Approved private review queue, response target, and production event store |
 | Scope and book work | Contract ready, not connected | Artifact-bound scope approval, written acceptance, approved $7,500 request, and confirmation order pass contract tests | Legal contracting entity, approved document/payment systems, and adapters |
-| Produce evidence-led work | Contract and prompt workflow ready | Four-deliverable QA gate, evidence register fields, `PERPLEXITY-COMPUTER-PROMPTS.md` | Approved private client workspace and a real attended Sprint proving the workflow |
+| Produce evidence-led work | Package contract and prompt workflow ready | `operations/deliverable-contract.json` enforces the four deliverables, research conditions, evidence/action references, counts, and digest binding; adversarial checks pass | Approved private client workspace and a real attended Sprint proving evidence relevance and human QA |
 | Coordinate owner actions | Queue and contract ready, not connected | `scripts/approval-queue.mjs` derives sanitized pending/ready/expired approvals; actions retain owner, dependency, acceptance test, measure, and review date | Authenticated approval UI, reminders, escalation ownership, and controlled mutations |
 | Run customer operations | Designed, not operating | Booked → collection authorization → delivery → adoption lifecycle | Onboarding, access, schedule, communication, billing, and retention integrations |
 | Learn from outcomes | Executable on sanitized ledgers | `scripts/case-ledger.mjs` and `scripts/portfolio-metrics.mjs` | Production observations, owner-selected service levels, and a recurring learning review |
@@ -129,6 +129,7 @@ node scripts/check-audit-contract.mjs
 node scripts/check-image-seo.mjs
 node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
+node scripts/check-deliverable-package.mjs
 node scripts/approval-queue.mjs --as-of 2026-08-02T16:30:00Z operations/examples/qualified-sprint.jsonl
 node scripts/case-ledger.mjs validate operations/examples/qualified-sprint.jsonl
 node scripts/portfolio-metrics.mjs operations/examples/qualified-sprint.jsonl operations/examples/declined-brief.jsonl

@@ -1,0 +1,26 @@
+{
+  "contract_version": 1,
+  "package_version": 1,
+  "classification": "private_client_work",
+  "publication_status": "internal_only",
+  "question_count": {"minimum": 20, "maximum": 40},
+  "research_environment_count": {"minimum": 1, "maximum": 3},
+  "action_count": {"minimum": 5, "maximum": 8},
+  "competitor_count": {"minimum": 1, "maximum": 5},
+  "owned_surface_count": {"minimum": 0, "maximum": 20},
+  "action_review_window_days": 90,
+  "question_stages": ["discovery", "shortlist", "comparison", "evaluation", "objection", "procurement", "validation", "trust"],
+  "question_bases": ["observed", "inferred", "client_stated"],
+  "gap_types": ["category", "proof", "risk", "conversion"],
+  "proof_dimensions": ["implementation", "security", "fit", "outcome"],
+  "proof_statuses": ["verified", "partial", "missing", "not_applicable"],
+  "evidence_source_classes": ["public", "approved_private"],
+  "evidence_confidences": ["direct", "corroborated", "inferred", "unverified"],
+  "action_statuses": ["proposed"],
+  "required_claim_boundary": {
+    "outcome_guarantee": false,
+    "third_party_model_control": false,
+    "public_claim_approved": false,
+    "source_limitations_acknowledged": true
+  }
+}

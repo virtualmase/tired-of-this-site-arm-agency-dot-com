@@ -211,6 +211,8 @@ Using the approved scope and evidence register for [CASE_ID], create an internal
 
 Every finding must reference an evidence ID. Every action must contain a named role owner, trigger, dependency, acceptance test, stop condition, and review date. Mark personal names and confidential fields as controlled data and keep them in the approved private workspace, not GitHub.
 
+Also create a private machine-readable package that conforms to operations/deliverable-contract.json. Use the repository's synthetic package only as a structural example, never as client evidence or copy. Validate the private package with scripts/deliverable-package.mjs, register every package evidence ID and action ID in the case ledger, and record the canonical package digest. Never commit a real package to GitHub.
+
 Do not publish, send, invent client results, or fill unsupported gaps. Return a completeness report and the items requiring human review.
 ```
 
@@ -232,6 +234,8 @@ Check every material sentence and table row for:
 - scope and exclusions consistent with the accepted agreement.
 
 Return a blocking-issues table and a non-blocking improvement table. For each blocker, provide the exact unsafe passage, why it fails, and a claim-safe revision. Do not modify the approved source artifacts or send anything. Delivery remains blocked until a human marks every blocking item resolved.
+
+Run the private package validator and cross-check it against the case ledger. Confirm that the 20–40 question bound, four proof dimensions, five-to-eight action bound, evidence registrations, action registrations, and package digest all pass. Treat structural validation as necessary but insufficient: the human reviewer must still assess truth, relevance, confidentiality, inference, and claims. Bind the human QA event and delivery approval to the exact canonical digest; any package change requires a new QA review and approval.
 ```
 
 ## Prompt 9 — Executive readout package

@@ -140,7 +140,7 @@
     "action.registered": {
       "from": ["delivery", "delivered", "adoption"],
       "to": "same",
-      "required_data": ["action_id", "owner_role", "dependency", "acceptance_test", "measure", "review_at"]
+      "required_data": ["action_id", "owner_role", "trigger", "dependency", "acceptance_test", "measure", "stop_condition", "review_at"]
     },
     "delivery.qa_completed": {
       "from": ["delivery"],
