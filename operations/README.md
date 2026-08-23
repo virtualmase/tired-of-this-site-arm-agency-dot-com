@@ -296,6 +296,15 @@ live credential for the ARM account. The current restricted credential expires o
 2026-11-16 and must be rotated before then. The sandbox must never be treated as a
 source of live revenue or used to validate the live catalog IDs.
 
+The signed webhook route at `/api/operations/stripe/webhooks` accepts only the four
+catalog events. It verifies Stripe's signature against `STRIPE_WEBHOOK_SECRET`,
+rejects test-mode, foreign-offer, wrong-account, malformed-metadata, amount, and
+status mismatches, and writes only sanitized reconciliation metadata back to the
+canonical Stripe Invoice. The update uses a digest-derived idempotency key, so
+Stripe retries converge without copying customer or payment details into another
+store. A confirmed payment remains an external fact; it does not authorize private
+collection, delivery, or any other human-only case event.
+
 ## Metrics this enables
 
 Across an approved private store, event timestamps can support:
