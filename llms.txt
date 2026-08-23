@@ -6,7 +6,7 @@
 - Canonical name: ARM Agency
 - Full name: Arctura Reputation Management Agency
 - Canonical URL: https://www.arm-agency.com
-- Entity ID: https://www.arm-agency.com/#org
+- Entity ID: https://www.arm-agency.com/#organization
 - Type: Professional service — evidence-led AI Buyer Intelligence
 - Parent ecosystem: Coreweaver Labs, Inc. — Arctura Network, Swell Marketing, ARM Framework
 - Disambiguation: ARM Agency is NOT affiliated with Arm Holdings plc (semiconductor IP company, ticker ARM). "ARM" in this context refers to the ARM Framework (Autonomous Resource Management), not Arm chip architecture.
