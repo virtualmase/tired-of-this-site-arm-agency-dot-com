@@ -24,6 +24,8 @@
 - /brief/ — Category Presence Brief request form and intake boundary
 - /sprint/ — AI Buyer Intelligence Sprint scope, inputs, deliverables, timeline, price, and exclusions
 - /audit/ — Self-guided Buyer Research Orientation; it does not score a company or replace human fit review
+- /about/ — ARM Agency's ethos, four revenue triggers, operating model, and current platform boundary
+- /glossary/ — Canonical AI Buyer Intelligence, enterprise GTM, signal orchestration, and ARM-method vocabulary
 - /resources/ — Content hub: GEO, AI reputation management, and agentic trust guides
 - /resources/agentic-commerce-x402-aifi/ — Canonical `.com` strategy pillar connecting x402 payment transport to governed AiFi mandates, budgets, settlement, fulfillment, and reconciliation
 - /resources/accountable-agentic-commerce-glossary/ — Versioned canonical vocabulary and machine-readable term set for accountable agentic commerce, x402, AiFi, mandates, and payment operations

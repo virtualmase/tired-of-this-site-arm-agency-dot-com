@@ -19,6 +19,8 @@ Live at [arm-agency.com](https://www.arm-agency.com).
 ├── brief/index.html                       # Category Presence Brief intake
 ├── sprint/index.html                      # AI Buyer Intelligence Sprint
 ├── audit/index.html                       # Self-guided buyer research orientation
+├── about/index.html                       # Company ethos and operating model
+├── glossary/index.html                    # Searchable industry and ARM vocabulary
 ├── llms.txt                               # AI crawler guidance
 ├── robots.txt                             # Crawler directives
 ├── sitemap.xml                            # URL map
