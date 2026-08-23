@@ -86,6 +86,7 @@ assert.equal(summary.approvals.requested, 4);
 assert.equal(summary.approvals.consumed, 4);
 assert.equal(summary.actions.registered, 5);
 assert.equal(summary.actions.owner_accepted, 1);
+assert.equal(summary.actions.owner_rejected, 4);
 assert.equal(summary.actions.outcomes_observed, 1);
 assert.equal(summary.elapsed_hours.brief_to_review, 2);
 
@@ -100,7 +101,26 @@ assert.equal(portfolio.trigger_counts.pipeline, 1);
 assert.equal(portfolio.decline_reason_counts.decision_window_outside_fit, 1);
 assert.equal(portfolio.approvals.consumed, 4);
 assert.equal(portfolio.actions.cases_with_outcomes, 1);
+assert.equal(portfolio.actions.owner_rejected, 4);
 assert.equal(portfolio.elapsed_time.brief_to_review.median_hours, 2);
+
+{
+  const events = clone(qualified);
+  events.find((event) => event.type === 'evidence.review_recorded').actor.type = 'agent';
+  expectFailure('agent evidence decision', events, 'requires a human actor');
+}
+
+{
+  const events = clone(qualified);
+  events.find((event) => event.type === 'evidence.review_recorded').data.evidence_id = 'evd_unknown_001';
+  expectFailure('unknown evidence review', events, 'was not registered earlier');
+}
+
+{
+  const events = clone(qualified);
+  events.find((event) => event.type === 'learning.review_completed').data.next_review_at = '2026-10-01T17:00:00Z';
+  expectFailure('reversed learning review date', events, 'must be later than review_period_ended_at');
+}
 
 const scopeApprovalRequested = qualified.slice(0, 5);
 const pendingQueue = buildApprovalQueue([scopeApprovalRequested], contract, '2026-08-02T16:30:00Z');

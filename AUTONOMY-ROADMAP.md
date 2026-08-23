@@ -15,8 +15,8 @@ private data, contracts, and other consequential decisions.
 | Scope and book work | Contract ready, not connected | Artifact-bound scope approval, written acceptance, approved $7,500 request, and confirmation order pass contract tests | Legal contracting entity, approved document/payment systems, and adapters |
 | Produce evidence-led work | Package contract and prompt workflow ready | `operations/deliverable-contract.json` enforces the four deliverables, research conditions, evidence/action references, counts, and digest binding; adversarial checks pass | Approved private client workspace and a real attended Sprint proving evidence relevance and human QA |
 | Coordinate owner actions | Queue and contract ready, not connected | `scripts/approval-queue.mjs` derives sanitized pending/ready/expired approvals; actions retain owner, dependency, acceptance test, measure, and review date | Authenticated approval UI, reminders, escalation ownership, and controlled mutations |
-| Run customer operations | Designed, not operating | Booked → collection authorization → delivery → adoption lifecycle | Onboarding, access, schedule, communication, billing, and retention integrations |
-| Learn from outcomes | Executable on sanitized ledgers | `scripts/case-ledger.mjs` and `scripts/portfolio-metrics.mjs` | Production observations, owner-selected service levels, and a recurring learning review |
+| Run customer operations | Due-work queue and lifecycle ready, not connected | `scripts/customer-ops-queue.mjs` derives delivery, evidence, action, and learning tasks without sending or mutating | Onboarding/access systems, authenticated reminders, communication, billing, and retention integrations |
+| Learn from outcomes | Executable on sanitized ledgers | Portfolio metrics plus human-only evidence and recurring learning-review events pass lifecycle tests | Production observations, owner-selected service levels, and an attended recurring review |
 | Engineering reproducibility | Prompted and contract-tested | Repository validators and `DOCKER-GORDON-PROMPTS.md` | Optional approved local QA containers; Docker is not required for production hosting |
 
 No row above is evidence of a customer result, earned revenue, production
@@ -130,6 +130,7 @@ node scripts/check-image-seo.mjs
 node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
 node scripts/check-deliverable-package.mjs
+node scripts/check-customer-ops-queue.mjs
 node scripts/approval-queue.mjs --as-of 2026-08-02T16:30:00Z operations/examples/qualified-sprint.jsonl
 node scripts/case-ledger.mjs validate operations/examples/qualified-sprint.jsonl
 node scripts/portfolio-metrics.mjs operations/examples/qualified-sprint.jsonl operations/examples/declined-brief.jsonl

@@ -354,6 +354,12 @@ references, non-guarantee flags, and a canonical digest that the lifecycle binds
 through QA, approval, and delivery. This verifies structure and change integrity;
 it does not verify the truth of a finding or authorize client delivery.
 
+Sanitized customer operations can be derived with
+`scripts/customer-ops-queue.mjs`: delivery deadlines, evidence freshness, action
+decisions/outcomes, and recurring learning reviews. It performs no notification,
+communication, billing, or external mutation; those integrations remain pending
+owner-approved systems and access.
+
 ### 6.1 Legacy Service Type → Campaign → Deliverable Mapping
 
 The following matrix is retained as a snapshot of the previously documented `closeDeal()` contract. It has not been verified against current external function source and does not define the public offer.

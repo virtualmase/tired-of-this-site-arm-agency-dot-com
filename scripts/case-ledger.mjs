@@ -65,6 +65,7 @@ export function validateLedger(events, contract = loadContract()) {
   const eventIds = new Set();
   const priorTypes = new Set();
   const actionIds = new Set();
+  const evidenceIds = new Set();
   const prohibited = new Set(contract.prohibited_data_keys);
   const casePattern = new RegExp(contract.case_id_pattern);
   const eventPattern = new RegExp(contract.event_id_pattern);
@@ -222,9 +223,19 @@ export function validateLedger(events, contract = loadContract()) {
     }
     if (event.type === 'evidence.registered') {
       if (!evidenceIdPattern.test(event.data?.evidence_id || '')) add(index, event, 'data.evidence_id is invalid');
+      if (evidenceIds.has(event.data?.evidence_id)) add(index, event, `evidence ${event.data?.evidence_id} is duplicated`);
+      evidenceIds.add(event.data?.evidence_id);
       if (!['public', 'approved_private'].includes(event.data?.source_class)) add(index, event, 'data.source_class must be public or approved_private');
       if (!['direct', 'corroborated', 'inferred', 'unverified'].includes(event.data?.confidence)) add(index, event, 'data.confidence is invalid');
       if (!isIsoDate(event.data?.observed_at) || !isIsoDate(event.data?.freshness_review_at)) add(index, event, 'evidence dates must be ISO UTC timestamps');
+    }
+    if (event.type === 'evidence.review_recorded') {
+      if (!evidenceIds.has(event.data?.evidence_id)) add(index, event, `evidence ${event.data?.evidence_id} was not registered earlier`);
+      if (!['current', 'stale', 'withdrawn'].includes(event.data?.decision)) add(index, event, 'data.decision must be current, stale, or withdrawn');
+      if (!isIsoDate(event.data?.reviewed_at) || !isIsoDate(event.data?.next_review_at)) add(index, event, 'evidence review dates must be ISO UTC timestamps');
+      if (isIsoDate(event.data?.reviewed_at) && isIsoDate(event.data?.next_review_at) && Date.parse(event.data.next_review_at) <= Date.parse(event.data.reviewed_at)) {
+        add(index, event, 'data.next_review_at must be later than data.reviewed_at');
+      }
     }
     if (event.type === 'action.registered') {
       if (!actionIdPattern.test(event.data?.action_id || '')) add(index, event, 'data.action_id is invalid');
@@ -236,6 +247,17 @@ export function validateLedger(events, contract = loadContract()) {
     }
     if (event.type === 'action.approved' && !['accepted', 'rejected'].includes(event.data?.decision)) {
       add(index, event, 'data.decision must be accepted or rejected');
+    }
+    if (event.type === 'learning.review_completed') {
+      for (const field of ['review_period_started_at', 'review_period_ended_at', 'next_review_at']) {
+        if (!isIsoDate(event.data?.[field])) add(index, event, `data.${field} must be an ISO UTC timestamp`);
+      }
+      if (isIsoDate(event.data?.review_period_started_at) && isIsoDate(event.data?.review_period_ended_at) && Date.parse(event.data.review_period_ended_at) < Date.parse(event.data.review_period_started_at)) {
+        add(index, event, 'learning review period is reversed');
+      }
+      if (isIsoDate(event.data?.review_period_ended_at) && isIsoDate(event.data?.next_review_at) && Date.parse(event.data.next_review_at) <= Date.parse(event.data.review_period_ended_at)) {
+        add(index, event, 'data.next_review_at must be later than review_period_ended_at');
+      }
     }
 
     if (expectedTo) stage = expectedTo;
@@ -260,6 +282,7 @@ export function summarizeLedger(events, contract = loadContract()) {
   const decisions = events.filter((event) => event.type === 'approval.decided');
   const registeredActions = events.filter((event) => event.type === 'action.registered');
   const approvedActions = events.filter((event) => event.type === 'action.approved' && event.data.decision === 'accepted');
+  const rejectedActions = events.filter((event) => event.type === 'action.approved' && event.data.decision === 'rejected');
   const booking = first('booking_payment.confirmed');
   const final = first('final_payment.confirmed');
 
@@ -293,6 +316,7 @@ export function summarizeLedger(events, contract = loadContract()) {
     actions: {
       registered: registeredActions.length,
       owner_accepted: approvedActions.length,
+      owner_rejected: rejectedActions.length,
       outcomes_observed: count('outcome.observed')
     }
   };

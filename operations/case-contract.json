@@ -57,6 +57,8 @@
     "fit.decision_recorded",
     "collection.authorized",
     "action.approved",
+    "evidence.review_recorded",
+    "learning.review_completed",
     "case.closed"
   ],
   "events": {
@@ -185,10 +187,20 @@
       "to": "same",
       "required_data": ["action_id", "outcome_type", "evidence_ref", "observed_at"]
     },
+    "evidence.review_recorded": {
+      "from": ["evidence_collection", "delivery", "delivered", "adoption", "closed"],
+      "to": "same",
+      "required_data": ["evidence_id", "decision", "reviewed_at", "next_review_at", "evidence_ref"]
+    },
     "case.closed": {
       "from": ["declined", "delivered", "adoption"],
       "to": "closed",
       "required_data": ["reason_code", "learning_review_due_at"]
+    },
+    "learning.review_completed": {
+      "from": ["closed"],
+      "to": "same",
+      "required_data": ["review_period_started_at", "review_period_ended_at", "learning_digest", "next_review_at"]
     }
   }
 }

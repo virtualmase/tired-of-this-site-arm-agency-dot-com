@@ -320,14 +320,17 @@ Recommended schedule: every weekday at 4:30 PM local time after the upstream tas
 ```text
 Create ARM's end-of-day owner command center from the latest verified operating artifacts.
 
+Use the private case ledger with scripts/approval-queue.mjs and scripts/customer-ops-queue.mjs when those tools are available. Treat their outputs as sanitized coordination metadata, not permission to inspect an artifact or execute a task. If the private ledger or a required connector is unavailable, mark that section NEEDS ATTENTION instead of reconstructing it from email or memory.
+
 Show only:
 1. Decisions requiring owner approval, ordered by deadline and business impact.
 2. New Briefs at SLA risk.
 3. Active Sprint blockers.
 4. Client actions awaiting acceptance evidence.
-5. External actions fully prepared but not executed.
-6. Connector or data-quality failures.
-7. Tomorrow's three highest-leverage reversible actions.
+5. Delivery deadlines, evidence freshness reviews, and learning reviews due soon or overdue.
+6. External actions fully prepared but not executed.
+7. Connector or data-quality failures.
+8. Tomorrow's three highest-leverage reversible actions.
 
 For every approval item, show the proposed action, evidence, destination, data affected, cost, risk, and rollback path. Do not execute any external action. Stay silent if there is no change and no approaching deadline.
 ```

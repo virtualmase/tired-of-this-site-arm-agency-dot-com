@@ -70,4 +70,5 @@ node scripts/check-image-seo.mjs
 node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
 node scripts/check-deliverable-package.mjs
+node scripts/check-customer-ops-queue.mjs
 ```

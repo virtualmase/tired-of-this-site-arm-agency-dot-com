@@ -16,6 +16,7 @@ or human judgment. It gives those systems one testable operating contract.
 | `../scripts/case-ledger.mjs` | Dependency-free JSONL validator and sanitized case summarizer |
 | `../scripts/portfolio-metrics.mjs` | Cross-case count, timing, approval, evidence, and adoption rollup |
 | `../scripts/approval-queue.mjs` | Sanitized pending, ready, expired, rejected, and consumed approval coordination |
+| `../scripts/customer-ops-queue.mjs` | Sanitized delivery, evidence-freshness, action, and learning due-work coordination |
 | `deliverable-contract.json` | Private package bounds for the four Sprint deliverables, evidence references, research conditions, and claim boundary |
 | `../scripts/deliverable-package.mjs` | Package validation, sanitized summary, canonical SHA-256 digest, and lifecycle cross-checking |
 | `../scripts/check-deliverable-package.mjs` | Adversarial package and post-QA alteration tests |
@@ -95,9 +96,10 @@ deliverables requires a prior `approval.requested` and human
 - single-use;
 - invalid after rejection, alteration, reuse, or expiry.
 
-Fit decisions, private collection authorization, client action acceptance, and
-case closure are human-only events. Confirmation from a payment system records an
-external fact; it does not grant permission to request or spend money.
+Fit decisions, private collection authorization, client action acceptance,
+evidence freshness decisions, learning reviews, and case closure are human-only
+events. Confirmation from a payment system records an external fact; it does not
+grant permission to request or spend money.
 
 ## Ordered lifecycle
 
@@ -110,6 +112,7 @@ Brief received
         → private collection authorized → evidence registered → delivery
           → QA pass → approved 40% request → final payment confirmed
             → human-approved delivery → adoption review → outcomes → closed
+              → evidence freshness review and recurring learning review
 ```
 
 The contract rejects delivery unless all four approved Sprint deliverables pass QA
@@ -125,12 +128,14 @@ From the repository root:
 node scripts/check-case-ledger.mjs
 node scripts/check-brief-event-candidate.mjs
 node scripts/check-deliverable-package.mjs
+node scripts/check-customer-ops-queue.mjs
 node scripts/case-ledger.mjs validate operations/examples/qualified-sprint.jsonl
 node scripts/case-ledger.mjs summarize operations/examples/qualified-sprint.jsonl
 node scripts/portfolio-metrics.mjs operations/examples/qualified-sprint.jsonl operations/examples/declined-brief.jsonl
 node scripts/approval-queue.mjs --as-of 2026-08-02T16:30:00Z operations/examples/qualified-sprint.jsonl
 node scripts/brief-event-candidate.mjs operations/examples/base44-brief-candidate-input.json
 node scripts/deliverable-package.mjs summarize operations/examples/synthetic-deliverable-package.json
+node scripts/customer-ops-queue.mjs --as-of 2026-09-13T12:00:00Z operations/examples/qualified-sprint.jsonl
 ```
 
 The case summary exposes case-local funnel booleans, elapsed hours, approval
@@ -161,6 +166,14 @@ finding or permission to publish it. The package remains `internal_only`; human 
 must inspect evidence relevance, inference, limitations, confidentiality, and
 claims before authorizing delivery. A real package belongs only in the approved
 private workspace and must never be committed to this repository.
+
+The customer-operations queue derives open delivery deadlines, evidence freshness
+reviews, action-owner decisions or outcome reviews, and post-case learning reviews.
+It uses only sanitized case, evidence, and action IDs plus role and due-date
+metadata. `overdue`, `due_soon`, and `scheduled` are internal coordination states;
+the queue neither sends reminders nor records a human decision. A stale evidence
+decision creates remediation work, a withdrawn source closes its freshness task,
+and accepted actions remain open until outcome evidence is recorded.
 
 ## Adapter rule
 
@@ -199,6 +212,7 @@ Across an approved private store, event timestamps can support:
 - pending, rejected, expired, and consumed approvals;
 - evidence registered by source class and freshness status;
 - actions registered, owner-accepted, and supported by outcome evidence.
+- owner-rejected actions, evidence freshness decisions, and completed learning reviews.
 
 Targets are intentionally absent until the owner selects operating service levels
 and a real baseline exists. Counts from synthetic examples must never be combined

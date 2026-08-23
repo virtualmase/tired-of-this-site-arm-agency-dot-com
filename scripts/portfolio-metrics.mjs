@@ -72,6 +72,7 @@ export function buildPortfolioMetrics(ledgers, contract = loadContract()) {
     actions: {
       registered: summaries.reduce((total, summary) => total + summary.actions.registered, 0),
       owner_accepted: summaries.reduce((total, summary) => total + summary.actions.owner_accepted, 0),
+      owner_rejected: summaries.reduce((total, summary) => total + summary.actions.owner_rejected, 0),
       outcomes_observed: summaries.reduce((total, summary) => total + summary.actions.outcomes_observed, 0),
       cases_with_outcomes: summaries.filter((summary) => summary.actions.outcomes_observed > 0).length
     }
