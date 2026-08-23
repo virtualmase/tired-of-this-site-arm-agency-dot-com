@@ -1,6 +1,6 @@
 # ARM Agency — Market Launch Operating Record
 
-**Status:** Controlled launch preparation
+**Status:** Controlled launch technically ready; manual intake monitoring required
 
 **Updated:** 2026-08-22
 
@@ -86,8 +86,8 @@ For communities or partner referrals, change the source and medium; never encode
 - Production deployment, DNS, TLS, sitemap, and redirects pass.
 - Brief success and failure paths pass with a controlled test.
 - Vercel Web Analytics collection is visible after production deployment.
-- The owner confirms the legal contracting entity shown in written scopes and invoices.
-- The owner confirms where new Base44 Leads are reviewed and whether notifications arrive.
+- The owner confirms where new Base44 Leads will be reviewed manually during the controlled launch.
+- Before issuing a paid scope, the owner confirms the legal contracting entity shown in scopes and invoices.
 
 ### Days 1–3
 
@@ -118,7 +118,7 @@ For communities or partner referrals, change the source and medium; never encode
 | Controlled Lead creation test | Pass |
 | Anonymous page-view analytics | Pass; production script, collection POST, and aggregate API count verified |
 | Source attribution in successful Brief records | Instrumentation live and mocked payload test passed; verify notes on the next real Brief |
-| Browser security headers and content policy | Configured; production verification pending deployment |
+| Browser security headers and content policy | Pass; production headers and mocked form path verified |
 | Base44 notification delivery and downstream automation | Unverified; manual Lead review required |
 | Legal contracting entity | Owner confirmation required before paid scope |
 | Backend rate limiting and restrictive CORS | Not available in this repository |
