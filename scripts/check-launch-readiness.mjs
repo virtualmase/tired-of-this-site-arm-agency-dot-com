@@ -29,7 +29,8 @@ const indexedContent = [
   'resources/buyer-intent-vs-buyer-intelligence/index.html',
   'resources/enterprise-buying-committee-intelligence/index.html',
   'resources/enterprise-proof-readiness/index.html',
-  'resources/category-narrative-intelligence/index.html'
+  'resources/category-narrative-intelligence/index.html',
+  'resources/arm-buyer-proof-path/index.html'
 ].map(read).join('\n');
 
 for (const retired of ['Generative Engine Optimization', 'GEO vs SEO', 'AI Reputation Management', 'AI visibility reporting']) {

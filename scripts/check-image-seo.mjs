@@ -23,6 +23,13 @@ const pages = [
     width: 1536,
     height: 1024,
   },
+  {
+    file: 'resources/arm-buyer-proof-path/index.html',
+    pageUrl: 'https://www.arm-agency.com/resources/arm-buyer-proof-path/',
+    imagePath: '/assets/images/ai-citation-infrastructure.webp',
+    width: 1672,
+    height: 941,
+  },
 ];
 
 let failed = false;
