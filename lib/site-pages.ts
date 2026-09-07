@@ -9,6 +9,8 @@ const PAGE_FILES = {
   '/glossary/': 'glossary/index.html',
   '/privacy/': 'privacy/index.html',
   '/resources/': 'resources/index.html',
+  '/resources/arm-buyer-proof-path/':
+    'resources/arm-buyer-proof-path/index.html',
   '/resources/accountable-agentic-commerce-glossary/':
     'resources/accountable-agentic-commerce-glossary/index.html',
   '/resources/agentic-commerce-x402-aifi/':

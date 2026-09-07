@@ -22,6 +22,7 @@ const nextConfig = {
       './glossary/index.html',
       './privacy/index.html',
       './resources/index.html',
+      './resources/arm-buyer-proof-path/index.html',
       './resources/accountable-agentic-commerce-glossary/index.html',
       './resources/agentic-commerce-x402-aifi/index.html',
       './resources/buyer-intent-vs-buyer-intelligence/index.html',
